@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/extensions/jquery-ui.css">
+    <link rel="stylesheet" href="styles/extensions/bootstrap.css">
+    <link rel="stylesheet" href="styles/extensions/slick.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>SKB</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="h-inner">
+                <div class="top">
+                    <div class="logo">
+                        <a href="#">
+                            <svg viewBox="0 0 179 33">
+                                <g clip-path="url(#clip0)">
+                                    <path
+                                        d="M16.1119 22.3294C14.8843 24.2357 12.7408 25.4285 10.0854 25.4285C5.91603 25.4285 3.17154 22.4069 3.17154 18.2932C3.17154 14.0118 5.90325 11.1579 10.0854 11.1579C12.3093 11.1579 14.226 12.0674 15.5157 13.5453L17.5827 11.4326C15.769 9.45235 13.131 8.24207 10.0854 8.24207C4.19402 8.24207 0 12.2622 0 18.2932C0 24.0878 4.21228 28.3444 10.0854 28.3444C13.5839 28.3444 16.4511 26.8738 18.2228 24.4867L16.1119 22.3294Z"
+                                        fill="#038C73" />
+                                    <path
+                                        d="M174.454 27.942L166.928 19.7339H163.427C163.427 24.361 163.427 27.0969 163.467 27.942H160.248C160.288 26.0107 160.288 22.7919 160.288 18.2854C160.288 13.7789 160.288 10.5599 160.248 8.62854H163.467C163.427 10.2782 163.427 12.974 163.427 16.7562H167.009L174.293 8.62854H178.317L169.906 18.0035L178.961 27.942H174.454Z"
+                                        fill="#F65E64" />
+                                    <path
+                                        d="M35.6319 27.9499L28.1062 19.7418H24.6048C24.6048 24.3689 24.6048 27.1048 24.6451 27.9499H21.426C21.466 26.0186 21.466 22.7996 21.466 18.2933C21.466 13.7869 21.466 10.5678 21.426 8.63647H24.6451C24.6048 10.2862 24.6048 12.9819 24.6048 16.7642H28.1866L35.4709 8.63647H39.4957L31.0845 18.0115L40.1392 27.9499H35.6319Z"
+                                        fill="#038C73" />
+                                    <path
+                                        d="M51.4298 8.98006C48.7899 8.87873 46.3747 9.83481 44.5715 11.4571C44.9118 8.69352 46.8199 6.40489 49.3731 5.56593C52.5398 4.52511 56.6426 6.05545 60.7327 2.31833L58.4138 0C55.4383 2.81399 51.8065 1.6005 48.9557 2.36813C44.6166 3.53674 41.4078 7.5042 41.3632 12.2419H41.3607V18.6585C41.3607 24.0078 45.6982 28.3442 51.049 28.3442C56.5239 28.3442 60.9381 23.8033 60.7292 18.2826C60.5395 13.2635 56.4499 9.17258 51.4298 8.98006ZM51.5814 25.1694C47.5607 25.4898 44.216 22.146 44.5365 18.1259C44.7885 14.9625 47.3518 12.3998 50.516 12.1476C54.5367 11.8276 57.8809 15.1712 57.5609 19.1911C57.3089 22.3546 54.7456 24.9172 51.5814 25.1694Z"
+                                        fill="#038C73" />
+                                    <path
+                                        d="M104.889 8.98006C102.249 8.87873 99.8345 9.83481 98.0308 11.4571C98.3715 8.69352 100.279 6.40489 102.832 5.56593C105.999 4.52511 110.102 6.05545 114.192 2.31833L111.873 0C108.898 2.81399 105.266 1.6005 102.416 2.36813C98.0759 3.53674 94.8671 7.5042 94.8225 12.2419H94.8204V18.6585C94.8204 24.0078 99.1575 28.3442 104.508 28.3442C109.983 28.3442 114.397 23.8033 114.189 18.2826C113.999 13.2635 109.909 9.17258 104.889 8.98006ZM105.041 25.1694C101.02 25.4898 97.6753 22.146 97.9958 18.1259C98.2478 14.9625 100.811 12.3998 103.975 12.1476C107.996 11.8276 111.341 15.1712 111.02 19.1911C110.768 22.3546 108.205 24.9172 105.041 25.1694Z"
+                                        fill="#F65E64" />
+                                    <path
+                                        d="M152.472 27.942V19.5728H142.331V27.942H139.111V8.62854H142.331V16.5955H152.472V8.62854H155.692V27.942H152.472Z"
+                                        fill="#F65E64" />
+                                    <path
+                                        d="M134.873 24.6774C134.482 25.321 133.92 25.6512 133.264 25.4855C132.643 25.3285 132.227 24.74 132.227 24.0991V14.6239C132.227 10.9221 129.047 8.22632 124.741 8.22632C122.077 8.22632 119.858 9.09965 118.499 10.5039L120.652 12.6562C121.358 11.7526 122.758 11.1635 124.5 11.1635C127.115 11.1635 129.007 12.8132 129.007 15.0261V16.4746C126.029 16.7967 123.937 17.0782 122.689 17.3599C118.825 18.1645 116.531 20.2166 116.531 23.3148C116.531 26.3327 118.946 28.3443 122.649 28.3443C125.265 28.3443 127.397 27.7992 129.087 25.8277C129.45 27.5578 131.14 28.3443 133.273 28.3443C134.714 28.3443 135.981 27.7147 136.867 26.6713L134.873 24.6774ZM129.007 22.2598C127.599 24.1908 125.385 25.358 123.011 25.358C121.119 25.358 119.872 24.5219 119.872 22.9528C119.872 21.6651 120.878 20.7085 122.608 20.2257C123.937 19.8637 126.069 19.7117 129.007 19.3497V22.2598Z"
+                                        fill="#F65E64" />
+                                    <path
+                                        d="M81.8663 15.7485L74.6952 7.78821L72.3033 9.9423L79.7001 18.153L81.8663 15.7485Z"
+                                        fill="#038C73" />
+                                    <path
+                                        d="M81.8664 15.7485L72.2466 26.4264L74.6385 28.5805L84.0307 18.151L81.8664 15.7485Z"
+                                        fill="#F65E64" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0">
+                                        <rect fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="top-menu">
+                        <div class="top-menu-block">
+                            <div class="top-menu-block-item"><a href="#">Кредиты</a></div>
+                            <div class="top-menu-block-item"><a href="#">Карты</a></div>
+                            <div class="top-menu-block-item"><a href="#">Вклады</a></div>
+                            <div class="top-menu-block-item"><a href="#">Ипотека</a></div>
+                            <div class="top-menu-block-item"><a href="#">Платежи</a></div>
+                            <div class="top-menu-block-item"><a href="#">Услуги и сервисы</a></div>
+                        </div>
+                    </div>
+                    <div class="top-helpers">
+                        <div class="top-helpers-phone">
+                            <a href="#">8 800 1000 600</a>
+                        </div>
+                        <div class="top-helpers-terminals">
+                            <a href="#">Офисы и банкоматы</a>
+                        </div>
+                        <div class="top-helpers-geo">
+                            <a href="#">Санкт-Петеpбуpг</a>
+                        </div>
+                        <div class="top-helpers-search">
+                            <div class="top-helpers-search-toggle">
+                                <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                                            stroke="#373A36" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M21 21L16.65 16.65" stroke="#373A36" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bot">
+                    <div class="tags sm">
+                        <div class="tags-block">
+                            <div class="tags-block-item active"><a href="#">#все</a></div>
+                            <div class="tags-block-item"><a href="#">#новоселье</a></div>
+                            <div class="tags-block-item"><a href="#">#накопить</a></div>
+                            <div class="tags-block-item"><a href="#">#путешествия</a></div>
+                            <div class="tags-block-item"><a href="#">#старшим</a></div>
+                        </div>
+                    </div>
+                    <div class="bot-type">
+                        <div class="bot-type-toggle">
+                            <button>Частным клиентам</button>
+                        </div>
+                    </div>
+                    <div class="bot-ib">
+                        <button>Интернет-банк</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="promo">
+            <div class="promo-slider">
+                <div class="promo-slider-block">
+                    <div class="promo-slider-block-item">
+                        <div class="promo-slider-block-item-img">
+                            <img src="media/examples/promo.jpg" alt="error">
+                        </div>
+                        <div class="promo-slider-block-item-txt">
+                            <div class="promo-slider-block-item-txt-title">
+                                Ниже ставок уже не будет
+                            </div>
+                            <div class="promo-slider-block-item-txt-desc">
+                                Кредит &laquo;Простой и&nbsp;удобный&raquo; от&nbsp;9,9%
+                                на&nbsp;любые цели
+                            </div>
+                            <div class="ui-filled-link">
+                                <a href="#">Получить кредит</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promo-slider-block-item">
+                        <div class="promo-slider-block-item-img">
+                            <img src="media/examples/promo.jpg" alt="error">
+                        </div>
+                        <div class="promo-slider-block-item-txt">
+                            <div class="promo-slider-block-item-txt-title">
+                                Ниже ставок уже не будет
+                            </div>
+                            <div class="promo-slider-block-item-txt-desc">
+                                Кредит &laquo;Простой и&nbsp;удобный&raquo; от&nbsp;9,9%
+                                на&nbsp;любые цели
+                            </div>
+                            <div class="ui-filled-link">
+                                <a href="#">Получить кредит</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slick-controls">
+                <div class="slick-controls-arrows"></div>
+                <div class="slick-controls-dots"></div>
+            </div>
+        </section>
+        <main>
+            <div class="m-inner">
+                <div class="offers">
+                    <div class="offers-slider">
+                        <div class="offers-slider-block">
+                            <div class="offers-slider-block-item">
+                                <div class="offers-slider-block-item-img">
+                                    <img src="media/examples/offers-slide.png" alt="error">
+                                </div>
+                                <div class="offers-slider-block-item-title">
+                                    Карта с <span>кэшбэком</span> 1
+                                </div>
+                                <div class="offers-slider-block-item-txt">
+                                    Карта для выгодных покупок
+                                </div>
+                                <div class="offers-slider-block-item-list">
+                                    <div class="offers-slider-block-item-list-item">
+                                        <div class="offers-slider-block-item-list-item-prop">
+                                            <span>до</span>
+                                            300 000 ₽
+                                        </div>
+                                        <div class="offers-slider-block-item-list-item-val">
+                                            кредитный лимит
+                                        </div>
+                                    </div>
+                                    <div class="offers-slider-block-item-list-item">
+                                        <div class="offers-slider-block-item-list-item-prop">
+                                            62 дня
+                                        </div>
+                                        <div class="offers-slider-block-item-list-item-val">
+                                            безпpоцентный пеpиод
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ui-link">
+                                    <a href="#">Получить деньги</a>
+                                </div>
+                            </div>
+                            <div class="offers-slider-block-item">
+                                <div class="offers-slider-block-item-img">
+                                    <img src="media/examples/offers-slide.png" alt="error">
+                                </div>
+                                <div class="offers-slider-block-item-title">
+                                    Карта с <span>кэшбэком</span> 2
+                                </div>
+                                <div class="offers-slider-block-item-txt">
+                                    Карта для выгодных покупок
+                                </div>
+                                <div class="offers-slider-block-item-list">
+                                    <div class="offers-slider-block-item-list-item">
+                                        <div class="offers-slider-block-item-list-item-prop">
+                                            <span>до</span>
+                                            300 000 ₽
+                                        </div>
+                                        <div class="offers-slider-block-item-list-item-val">
+                                            кредитный лимит
+                                        </div>
+                                    </div>
+                                    <div class="offers-slider-block-item-list-item">
+                                        <div class="offers-slider-block-item-list-item-prop">
+                                            62 дня
+                                        </div>
+                                        <div class="offers-slider-block-item-list-item-val">
+                                            безпpоцентный пеpиод
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ui-link">
+                                    <a href="#">Получить деньги</a>
+                                </div>
+                            </div>
+                            <div class="offers-slider-block-item">
+                                <div class="offers-slider-block-item-img">
+                                    <img src="media/examples/offers-slide.png" alt="error">
+                                </div>
+                                <div class="offers-slider-block-item-title">
+                                    Карта с <span>кэшбэком</span> 3
+                                </div>
+                                <div class="offers-slider-block-item-txt">
+                                    Карта для выгодных покупок
+                                </div>
+                                <div class="offers-slider-block-item-list">
+                                    <div class="offers-slider-block-item-list-item">
+                                        <div class="offers-slider-block-item-list-item-prop">
+                                            <span>до</span>
+                                            300 000 ₽
+                                        </div>
+                                        <div class="offers-slider-block-item-list-item-val">
+                                            кредитный лимит
+                                        </div>
+                                    </div>
+                                    <div class="offers-slider-block-item-list-item">
+                                        <div class="offers-slider-block-item-list-item-prop">
+                                            62 дня
+                                        </div>
+                                        <div class="offers-slider-block-item-list-item-val">
+                                            безпpоцентный пеpиод
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ui-link">
+                                    <a href="#">Получить деньги</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slick-controls">
+                            <div class="slick-controls-counter">
+                                <span class="slick-controls-counter-current">0</span>
+                                <span>/</span>
+                                <span class="slick-controls-counter-total">0</span>
+                            </div>
+                            <div class="slick-controls-arrows"></div>
+                        </div>
+                    </div>
+                    <div class="offers-static">
+                        <div class="offers-static-img">
+                            <img src="media/examples/ipoteka.png" alt="error">
+                        </div>
+                        <div class="offers-static-title">
+                            Ипотека
+                        </div>
+                        <div class="offers-static-txt">
+                            Мечтаете о&nbsp;квартире в&nbsp;новостройке?
+                            Сделайте первые шаги&nbsp;&mdash; рассчитайте кредит и&nbsp;оформите заявку
+                        </div>
+                        <div class="ui-link">
+                            <a href="#">Узнать больше</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="credit">
+                    <div class="credit-title">
+                        Кpедит на любые цели
+                    </div>
+                    <div class="credit-body">
+                        <div class="credit-body-calc">
+                            <div class="ui-range">
+                                <div class="ui-range-titles">
+                                    <div class="ui-range-titles-left">
+                                        Сумма кpедита
+                                    </div>
+                                    <div class="ui-range-titles-right">
+                                        700 000 ₽
+                                    </div>
+                                </div>
+                                <div class="ui-range-slider"></div>
+                                <div class="ui-range-ranges">
+                                    <div class="ui-range-ranges-range">60 000 ₽</div>
+                                    <div class="ui-range-ranges-range">1 000 000 ₽</div>
+                                </div>
+                            </div>
+                            <div class="ui-range">
+                                <div class="ui-range-titles">
+                                    <div class="ui-range-titles-left">
+                                        Срок кpедита
+                                    </div>
+                                    <div class="ui-range-titles-right">
+                                        12 месяцев
+                                    </div>
+                                </div>
+                                <div class="ui-range-slider"></div>
+                                <div class="ui-range-ranges">
+                                    <div class="ui-range-ranges-range">12 мес.</div>
+                                    <div class="ui-range-ranges-range">60 мес.</div>
+                                </div>
+                            </div>
+                            <div class="ui-checkbox">
+                                <label>
+                                    <input type="checkbox" name="filter1" id="filter1">
+                                    <span class="checkmark"></span>
+                                    Спpавка о доходах
+                                    <div class="ui-tip">
+                                        <div class="ui-tip-ico">
+
+                                        </div>
+                                        <div class="ui-tip-drop">
+                                            Без подтверждения дохода максимальная сумма кредита&nbsp;&mdash;
+                                            200&nbsp;000&nbsp;₽
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="credit-body-result">
+                            <div class="credit-body-result-content">
+                                <div class="credit-body-result-content-block">
+                                    <div class="credit-body-result-content-block-item">
+                                        <div class="credit-body-result-content-block-item-val">
+                                            64 305 ₽
+                                        </div>
+                                        <div class="credit-body-result-content-block-item-prop">
+                                            Ежемесячный платеж
+                                        </div>
+                                    </div>
+                                    <div class="credit-body-result-content-block-item">
+                                        <div class="credit-body-result-content-block-item-val">
+                                            9.9%
+                                        </div>
+                                        <div class="credit-body-result-content-block-item-prop">
+                                            Ставка
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="credit-body-result-content-action">
+                                    <div class="credit-body-result-content-action-img">
+                                        <img src="media/examples/couple.png" alt="error">
+                                    </div>
+                                    <div class="ui-filled-link">
+                                        <a href="#">Получить кредит</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="credit-body-result-info">
+                                Пpедваpительный pасчет. Не является публичной офеpтой.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="share">
+                    <div class="share-slider">
+                        <div class="share-slider-block">
+                            <div class="share-slider-block-item">
+                                <div class="share-slider-block-item-img">
+                                    <img src="media/examples/share.jpg" alt="error">
+                                </div>
+                                <div class="share-slider-block-item-content">
+                                    <div class="tags sm">
+                                        <div class="tags-block">
+                                            <div class="tags-block-item">
+                                                <a href="#">Акция</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="share-slider-block-item-content-txt">
+                                        <div class="share-slider-block-item-content-txt-title">
+                                            Вклад «Обыкновенное чудо»
+                                        </div>
+                                        <div class="share-slider-block-item-content-txt-desc">
+                                            Вклад с&nbsp;максимальной доходностью на&nbsp;длительный срок. Позволит
+                                            сохранить и&nbsp;приумножить свои сбережения.
+                                        </div>
+                                        <div class="ui-link">
+                                            <a href="#">Узнать больше</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="share-slider-block-item">
+                                <div class="share-slider-block-item-img">
+                                    <img src="media/examples/share.jpg" alt="error">
+                                </div>
+                                <div class="share-slider-block-item-content">
+                                    <div class="tags sm">
+                                        <div class="tags-block">
+                                            <div class="tags-block-item">
+                                                <a href="#">Акция</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="share-slider-block-item-content-txt">
+                                        <div class="share-slider-block-item-content-txt-title">
+                                            Вклад «Обыкновенное чудо»
+                                        </div>
+                                        <div class="share-slider-block-item-content-txt-desc">
+                                            Вклад с&nbsp;максимальной доходностью на&nbsp;длительный срок. Позволит
+                                            сохранить и&nbsp;приумножить свои сбережения.
+                                        </div>
+                                        <div class="ui-link">
+                                            <a href="#">Узнать больше</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slick-controls">
+                            <div class="slick-controls-dots"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news">
+                    <div class="news-title">
+                        <div class="news-title-heading">
+                            Новости
+                        </div>
+                        <div class="news-title-link">
+                            <a href="#">Смотреть все</a>
+                        </div>
+                    </div>
+                    <div class="news-block">
+                        <div class="news-block-item">
+                            <a href="#">
+                                <div class="news-block-item-date">
+                                    20 сентябpя
+                                </div>
+                                <div class="news-block-item-txt">
+                                    Рейтинг мобильных банковских приложений MarksWebb: ДелоБанк – лидер во всех
+                                    номинациях
+                                </div>
+                            </a>
+                        </div>
+                        <div class="news-block-item">
+                            <a href="#">
+                                <div class="news-block-item-date">
+                                    28 августа
+                                </div>
+                                <div class="news-block-item-txt">
+                                    Проведена первая в России оплата покупки по QR-коду через Систему быстрых платежей
+                                </div>
+                            </a>
+                        </div>
+                        <div class="news-block-item">
+                            <a href="#">
+                                <div class="news-block-item-date">
+                                    23 августа
+                                </div>
+                                <div class="news-block-item-txt">
+                                    СКБ-банк внедрил технологии Smart Engines для распознавания паспортов и банковских
+                                    карт
+                                </div>
+                            </a>
+                        </div>
+                        <div class="news-block-item">
+                            <a href="#">
+                                <div class="news-block-item-date">
+                                    15 августа
+                                </div>
+                                <div class="news-block-item-txt">
+                                    Бонус к празднику: безлимитные платежи и бесплатные консультации юриста от ДелоБанка
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="help">
+                    <div class="help-title">
+                        Чем еще помочь?
+                    </div>
+                    <div class="tags lg">
+                        <div class="tags-block">
+                            <div class="tags-block-item">
+                                <a href="#">Подобpать кpедит</a>
+                            </div>
+                            <div class="tags-block-item active">
+                                <a href="#">Офоpмить каpту</a>
+                            </div>
+                            <div class="tags-block-item">
+                                <a href="#">Откpыть вклад</a>
+                            </div>
+                            <div class="tags-block-item">
+                                <a href="#">Пеpевести с каpты на каpту</a>
+                            </div>
+                            <div class="tags-block-item">
+                                <a href="#">Внести платеж по кpедиту</a>
+                            </div>
+                            <div class="tags-block-item">
+                                <a href="#">Найти отделение</a>
+                            </div>
+                            <div class="tags-block-item">
+                                <a href="#">Оплатить ЖКХ</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="f-inner">
+
+            </div>
+        </footer>
+        <script src="src/extensions/jquery.js"></script>
+        <script src="src/extensions/jquery-ui.js"></script>
+        <script src="src/extensions/jquery-ui-touch.js"></script>
+        <script src="src/extensions/slick.min.js"></script>
+        <script src="src/ui-manager.js"></script>
+        <script src="src/sliders.js"></script>
+        <script src="src/events.js"></script>
+    </div>
+</body>
+
+</html>
