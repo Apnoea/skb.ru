@@ -119,16 +119,51 @@ body {
             background: transparent;
         }
 
+        h1 {
+            margin: 0;
+            padding: 0;
+            font: 700 60px/65px @font;
+            color: @black;
+        }
+
+        h2 {
+            margin: 0;
+            padding: 0;
+            font: 700 36px/42px @font;
+            color: @black;
+
+            span {
+                color: @green;
+                background: linear-gradient(270deg, #6CC47B 0%, #038C73 100%);
+                background-clip: none;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
         ul {
             &.list {
                 margin: 0;
                 padding: 0;
                 list-style: none;
 
+                &.big {
+                    li {
+                        margin-top: 22px;
+                        font-size: 18px;
+                        line-height: 26px;
+                        font-weight: 300;
+
+                        &:before {
+                            top: 10px;
+                        }
+                    }
+                }
+
                 li {
                     position: relative;
                     padding-left: 22px;
-                    margin-top: 1em;
+                    margin-top: 18px;
                     font: 16px/22px @font;
                     color: @black;
 
@@ -145,6 +180,17 @@ body {
                         height: 6px;
                         background: @red;
                         border-radius: 50%;
+                    }
+
+                    a {
+                        color: @green;
+                        border-bottom: 1px solid @green;
+                        white-space: nowrap;
+                        transition: .2s;
+
+                        &:hover {
+                            border-color: transparent;
+                        }
                     }
                 }
             }
@@ -219,6 +265,47 @@ body {
                         border: 2px solid @green;
                         border-radius: 25px;
                         transition: .3s;
+                    }
+                }
+            }
+        }
+
+        .breadcrumbs {
+            &-list {
+                display: flex;
+                align-items: baseline;
+
+                &-item {
+                    margin-left: 7px;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                    &:last-child {
+                        a {
+                            color: @black;
+                            pointer-events: none;
+
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        font: 15px/18px @font;
+                        color: @gray-txt;
+
+                        &:after {
+                            content: '';
+                            margin-left: 7px;
+                            width: 1px;
+                            height: 14px;
+                            background: @black;
+                        }
                     }
                 }
             }
@@ -755,6 +842,35 @@ body {
                 }
             }
 
+            &-content {
+                position: relative;
+                border-radius: 10px;
+                overflow: hidden;
+
+                &-img {
+                    img {
+                        max-width: 100%;
+                    }
+                }
+
+                &-info {
+                    position: absolute;
+                    top: 80px;
+                    left: 145px;
+
+                    h1 {
+                        max-width: 490px;
+                    }
+
+                    &-txt {
+                        margin-top: 30px;
+                        max-width: 600px;
+                        font: 22px/30px @font;
+                        color: @black;
+                    }
+                }
+            }
+
             .slick-controls {
                 &-arrows {
                     position: absolute;
@@ -979,10 +1095,7 @@ body {
                     background: @gray-bg;
                     .bg-outside;
 
-                    &-title {
-                        font: 700 36px/1 @font;
-                        color: @black;
-                    }
+                    &-title {}
 
                     &-body {
                         margin-top: 60px;
@@ -1103,8 +1216,6 @@ body {
 
                                         &-title {
                                             max-width: 520px;
-                                            font: 700 36px/1 @font;
-                                            color: @black;
                                         }
 
                                         &-desc {
@@ -1138,10 +1249,7 @@ body {
                         align-items: baseline;
                         justify-content: space-between;
 
-                        &-heading {
-                            font: 700 36px/1 @font;
-                            color: @black;
-                        }
+                        &-heading {}
 
                         &-link {
                             a {
@@ -1253,13 +1361,10 @@ body {
                             max-width: 435px;
                             border-radius: 10px;
 
-                            &-title {
-                                font: 700 36px/52px @font;
-                                color: @black;
-                            }
+                            &-title {}
 
                             &-txt {
-                                margin-top: 15px;
+                                margin-top: 25px;
                             }
 
                             &-app-list {
@@ -1333,13 +1438,95 @@ body {
                 .help {
                     padding: 40px 0 55px 0;
 
-                    &-title {
-                        font: 700 36px/1 @font;
-                        color: @black;
-                    }
+                    &-title {}
 
                     .tags {
                         margin-top: 25px;
+                    }
+                }
+
+                .advantages {
+                    padding: 75px 0 60px 0;
+
+                    &-title {}
+
+                    &-block {
+                        margin-top: 40px;
+                        padding: 40px 60px 60px 60px;
+                        display: flex;
+                        justify-content: space-between;
+                        box-shadow: 0px 10px 30px rgba(204, 208, 214, 0.5) !important;
+
+                        &-item {
+                            width: ~"calc((100% - 280px)/4)";
+
+                            &-img {
+                                width: 56px;
+                                height: 56px;
+
+                                svg {
+                                    max-width: 100%;
+                                    max-height: 100%;
+                                }
+                            }
+
+                            &-txt {
+                                margin-top: 16px;
+                                font: 300 18px/21px @font;
+                                color: @black;
+                            }
+                        }
+                    }
+                }
+
+                .steps-advantages {
+                    padding: 60px 0 40px 0;
+                    display: flex;
+                    align-items: flex-start;
+
+                    &-img {
+                        width: 50%;
+                    }
+
+                    &-content {
+                        width: 50%;
+                        padding-left: 60px;
+
+                        h2 {
+                            margin-bottom: 32px;
+                            max-width: 490px;
+                        }
+                    }
+                }
+
+                .helping-contacts {
+                    padding: 40px 0 85px 0;
+                    display: flex;
+                    align-items: center;
+
+                    &-img {
+                        width: 72px;
+                        height: 53px;
+
+                        svg {
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                    }
+
+                    &-txt {
+                        margin-left: 28px;
+                        max-width: 655px;
+                        font: 300 18px/21px @font;
+                        color: @black;
+
+                        a {
+                            color: @red;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
                     }
                 }
             }
