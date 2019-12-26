@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/extensions/jquery-ui.css">
+    <link rel="stylesheet" href="styles/extensions/bootstrap.css">
+    <link rel="stylesheet" href="styles/extensions/slick.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>SKB - Online</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="h-inner">
+                <div class="top">
+                    <div class="logo">
+                        <a href="#">
+                            <svg viewBox="0 0 179 33">
+                                <g clip-path="url(#clip0)">
+                                    <path
+                                        d="M16.1119 22.3294C14.8843 24.2357 12.7408 25.4285 10.0854 25.4285C5.91603 25.4285 3.17154 22.4069 3.17154 18.2932C3.17154 14.0118 5.90325 11.1579 10.0854 11.1579C12.3093 11.1579 14.226 12.0674 15.5157 13.5453L17.5827 11.4326C15.769 9.45235 13.131 8.24207 10.0854 8.24207C4.19402 8.24207 0 12.2622 0 18.2932C0 24.0878 4.21228 28.3444 10.0854 28.3444C13.5839 28.3444 16.4511 26.8738 18.2228 24.4867L16.1119 22.3294Z"
+                                        fill="#038C73" />
+                                    <path
+                                        d="M174.454 27.942L166.928 19.7339H163.427C163.427 24.361 163.427 27.0969 163.467 27.942H160.248C160.288 26.0107 160.288 22.7919 160.288 18.2854C160.288 13.7789 160.288 10.5599 160.248 8.62854H163.467C163.427 10.2782 163.427 12.974 163.427 16.7562H167.009L174.293 8.62854H178.317L169.906 18.0035L178.961 27.942H174.454Z"
+                                        fill="#F65E64" />
+                                    <path
+                                        d="M35.6319 27.9499L28.1062 19.7418H24.6048C24.6048 24.3689 24.6048 27.1048 24.6451 27.9499H21.426C21.466 26.0186 21.466 22.7996 21.466 18.2933C21.466 13.7869 21.466 10.5678 21.426 8.63647H24.6451C24.6048 10.2862 24.6048 12.9819 24.6048 16.7642H28.1866L35.4709 8.63647H39.4957L31.0845 18.0115L40.1392 27.9499H35.6319Z"
+                                        fill="#038C73" />
+                                    <path
+                                        d="M51.4298 8.98006C48.7899 8.87873 46.3747 9.83481 44.5715 11.4571C44.9118 8.69352 46.8199 6.40489 49.3731 5.56593C52.5398 4.52511 56.6426 6.05545 60.7327 2.31833L58.4138 0C55.4383 2.81399 51.8065 1.6005 48.9557 2.36813C44.6166 3.53674 41.4078 7.5042 41.3632 12.2419H41.3607V18.6585C41.3607 24.0078 45.6982 28.3442 51.049 28.3442C56.5239 28.3442 60.9381 23.8033 60.7292 18.2826C60.5395 13.2635 56.4499 9.17258 51.4298 8.98006ZM51.5814 25.1694C47.5607 25.4898 44.216 22.146 44.5365 18.1259C44.7885 14.9625 47.3518 12.3998 50.516 12.1476C54.5367 11.8276 57.8809 15.1712 57.5609 19.1911C57.3089 22.3546 54.7456 24.9172 51.5814 25.1694Z"
+                                        fill="#038C73" />
+                                    <path
+                                        d="M104.889 8.98006C102.249 8.87873 99.8345 9.83481 98.0308 11.4571C98.3715 8.69352 100.279 6.40489 102.832 5.56593C105.999 4.52511 110.102 6.05545 114.192 2.31833L111.873 0C108.898 2.81399 105.266 1.6005 102.416 2.36813C98.0759 3.53674 94.8671 7.5042 94.8225 12.2419H94.8204V18.6585C94.8204 24.0078 99.1575 28.3442 104.508 28.3442C109.983 28.3442 114.397 23.8033 114.189 18.2826C113.999 13.2635 109.909 9.17258 104.889 8.98006ZM105.041 25.1694C101.02 25.4898 97.6753 22.146 97.9958 18.1259C98.2478 14.9625 100.811 12.3998 103.975 12.1476C107.996 11.8276 111.341 15.1712 111.02 19.1911C110.768 22.3546 108.205 24.9172 105.041 25.1694Z"
+                                        fill="#F65E64" />
+                                    <path
+                                        d="M152.472 27.942V19.5728H142.331V27.942H139.111V8.62854H142.331V16.5955H152.472V8.62854H155.692V27.942H152.472Z"
+                                        fill="#F65E64" />
+                                    <path
+                                        d="M134.873 24.6774C134.482 25.321 133.92 25.6512 133.264 25.4855C132.643 25.3285 132.227 24.74 132.227 24.0991V14.6239C132.227 10.9221 129.047 8.22632 124.741 8.22632C122.077 8.22632 119.858 9.09965 118.499 10.5039L120.652 12.6562C121.358 11.7526 122.758 11.1635 124.5 11.1635C127.115 11.1635 129.007 12.8132 129.007 15.0261V16.4746C126.029 16.7967 123.937 17.0782 122.689 17.3599C118.825 18.1645 116.531 20.2166 116.531 23.3148C116.531 26.3327 118.946 28.3443 122.649 28.3443C125.265 28.3443 127.397 27.7992 129.087 25.8277C129.45 27.5578 131.14 28.3443 133.273 28.3443C134.714 28.3443 135.981 27.7147 136.867 26.6713L134.873 24.6774ZM129.007 22.2598C127.599 24.1908 125.385 25.358 123.011 25.358C121.119 25.358 119.872 24.5219 119.872 22.9528C119.872 21.6651 120.878 20.7085 122.608 20.2257C123.937 19.8637 126.069 19.7117 129.007 19.3497V22.2598Z"
+                                        fill="#F65E64" />
+                                    <path
+                                        d="M81.8663 15.7485L74.6952 7.78821L72.3033 9.9423L79.7001 18.153L81.8663 15.7485Z"
+                                        fill="#038C73" />
+                                    <path
+                                        d="M81.8664 15.7485L72.2466 26.4264L74.6385 28.5805L84.0307 18.151L81.8664 15.7485Z"
+                                        fill="#F65E64" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0">
+                                        <rect fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="top-menu">
+                        <div class="top-menu-block">
+                            <div class="top-menu-block-item"><a href="#">Кредиты</a></div>
+                            <div class="top-menu-block-item"><a href="#">Карты</a></div>
+                            <div class="top-menu-block-item"><a href="#">Вклады</a></div>
+                            <div class="top-menu-block-item"><a href="#">Ипотека</a></div>
+                            <div class="top-menu-block-item"><a href="#">Платежи</a></div>
+                            <div class="top-menu-block-item"><a href="#">Услуги и сервисы</a></div>
+                        </div>
+                    </div>
+                    <div class="top-helpers">
+                        <div class="top-helpers-phone">
+                            <a href="#">8 800 1000 600</a>
+                        </div>
+                        <div class="top-helpers-terminals">
+                            <a href="#">Офисы и банкоматы</a>
+                        </div>
+                        <div class="top-helpers-geo">
+                            <a href="#">Санкт-Петеpбуpг</a>
+                        </div>
+                        <div class="top-helpers-search">
+                            <div class="top-helpers-search-toggle">
+                                <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                                            stroke="#373A36" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M21 21L16.65 16.65" stroke="#373A36" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bot">
+                    <div class="breadcrumbs">
+                        <div class="breadcrumbs-list">
+                            <div class="breadcrumbs-list-item"><a href="#">Частным лицам</a></div>
+                            <div class="breadcrumbs-list-item"><a href="#">СКБ-онлайн</a></div>
+                        </div>
+                    </div>
+                    <div class="bot-type">
+                        <div class="bot-type-toggle">
+                            <button>Частным клиентам</button>
+                        </div>
+                    </div>
+                    <div class="ui-btn-hollow">
+                        <a href="#">Интернет-банк</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="promo online-page">
+            <div class="promo-static">
+                <div class="promo-static-img">
+                    <img src="media/img/online-banner.png" alt="error">
+                </div>
+                <div class="promo-static-info">
+                    <h1>Управляй своими счетами с&nbsp;помощью СКБ-онлайн</h1>
+                    <div class="promo-static-info-txt">
+                        Бесплатный интернет-банк и мобильное приложение всегда под рукой
+                    </div>
+                    <div class="ui-btn">
+                        <a href="#">Войти</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <main>
+            <div class="m-inner">
+                <div class="advantages">
+                    <div class="advantages-title">
+                        <h2>Полная совместимость с вашими привычками</h2>
+                    </div>
+                    <div class="advantages-block">
+                        <div class="advantages-block-item">
+                            <div class="advantages-block-item-img">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="56" height="56" viewBox="0 0 56 56" fill="none">
+                                    <rect width="56" height="56" fill="url(#pattern0)" />
+                                    <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1"
+                                            height="1">
+                                            <use xlink:href="#image0" transform="scale(0.0178571)" />
+                                        </pattern>
+                                        <image id="image0" width="56" height="56"
+                                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY2QjQwMDFGMDEyMTExRUE4RjFGOEYzRUIyQzY0Q0U3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY2QjQwMDIwMDEyMTExRUE4RjFGOEYzRUIyQzY0Q0U3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjZCNDAwMUQwMTIxMTFFQThGMUY4RjNFQjJDNjRDRTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjZCNDAwMUUwMTIxMTFFQThGMUY4RjNFQjJDNjRDRTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5bsfgjAAAHG0lEQVR42txa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" />
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="advantages-block-item-txt">
+                                Работает одинаково хорошо на&nbsp;компьютере, телефоне или планшете
+                            </div>
+                        </div>
+                        <div class="advantages-block-item">
+                            <div class="advantages-block-item-img">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56"
+                                    fill="none">
+                                    <g clip-path="url(#clip5)">
+                                        <path
+                                            d="M53.92 42.69C52.39 46.73 49.67 50.06 46.27 52.4C45.77 52.75 45.68 53.45 46.05 53.94C46.05 53.95 46.06 53.95 46.06 53.96C46.4 54.42 47.05 54.54 47.52 54.21C51.27 51.62 54.26 47.92 55.95 43.46C56.2 42.81 55.8 42.09 55.11 41.98C54.6 41.9 54.11 42.2 53.92 42.69Z"
+                                            fill="#F65E64" />
+                                        <path
+                                            d="M26.8 52.27C12.39 52.27 0.669983 40.55 0.669983 26.14C0.669983 11.73 12.39 0 26.8 0C41.21 0 52.93 11.72 52.93 26.13C52.93 40.54 41.21 52.27 26.8 52.27ZM26.8 1.87C13.42 1.87 2.52998 12.76 2.52998 26.14C2.52998 39.52 13.42 50.41 26.8 50.41C40.18 50.41 51.07 39.52 51.07 26.14C51.07 12.75 40.18 1.87 26.8 1.87ZM26.8 47.6C14.96 47.6 5.32998 37.97 5.32998 26.13C5.32998 14.29 14.96 4.67 26.8 4.67C38.64 4.67 48.27 14.3 48.27 26.14C48.27 37.98 38.64 47.6 26.8 47.6ZM26.8 6.53C15.99 6.53 7.19998 15.32 7.19998 26.13C7.19998 36.94 15.99 45.73 26.8 45.73C37.61 45.73 46.4 36.94 46.4 26.13C46.4 15.32 37.61 6.53 26.8 6.53ZM26.8 56C12.39 56 0.669983 44.28 0.669983 29.87C0.669983 29.28 0.699983 28.67 0.749983 27.94C0.789983 27.45 1.18998 27.07 1.67998 27.07C2.16998 27.07 2.57998 27.45 2.60998 27.94C3.52998 40.53 14.16 50.4 26.8 50.4C39.44 50.4 50.07 40.53 50.99 27.93C51.03 27.44 51.43 27.06 51.92 27.06C52.41 27.06 52.82 27.44 52.85 27.93C52.9 28.66 52.93 29.28 52.93 29.86C52.93 44.28 41.21 56 26.8 56ZM4.95998 40.43C8.88998 48.53 17.21 54.13 26.8 54.13C36.39 54.13 44.71 48.53 48.64 40.43C43.94 47.57 35.85 52.26 26.8 52.26C17.75 52.26 9.65998 47.57 4.95998 40.43ZM29.83 28.59H25.79V30.62H32.01V32.33H25.79V35.32H23.48V32.33H21.35V30.62H23.48V28.59H21.35V26.48H23.48V17.75H29.83C31.35 17.75 32.65 18.29 33.72 19.36C34.79 20.41 35.33 21.69 35.33 23.2C35.33 24.71 34.79 25.98 33.72 27.04C32.64 28.07 31.35 28.59 29.83 28.59ZM29.83 19.94H25.79V26.49H29.83C30.68 26.49 31.43 26.17 32.06 25.54C32.69 24.87 33.01 24.09 33.01 23.21C33.01 22.29 32.7 21.52 32.08 20.9C31.45 20.25 30.7 19.94 29.83 19.94Z"
+                                            fill="url(#paint0_linear)" />
+                                    </g>
+                                    <defs>
+                                        <linearGradient id="paint0_linear" x1="0.666883" y1="28" x2="52.9336" y2="28"
+                                            gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#038C73" />
+                                            <stop offset="1" stop-color="#6CC47B" />
+                                        </linearGradient>
+                                        <clipPath id="clip5">
+                                            <rect width="56" height="56" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="advantages-block-item-txt">
+                                Без флешек, токенов и&nbsp;установочных программ
+                            </div>
+                        </div>
+                        <div class="advantages-block-item">
+                            <div class="advantages-block-item-img">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56"
+                                    fill="none">
+                                    <path
+                                        d="M47.17 11.27H33.72C36 9.68001 37.82 7.39001 38.51 4.66001C38.97 3.52001 38.51 2.15001 37.6 1.24001C36.69 0.330006 35.55 0.100006 34.18 0.330006C30.54 1.47001 27.8 3.97001 26.44 7.17001C25.07 3.98001 22.11 1.24001 18.7 0.330006C17.56 -0.129994 16.19 0.330006 15.28 1.24001C14.37 2.15001 14.14 3.29001 14.37 4.66001C15.28 7.39001 16.88 9.67001 19.16 11.27H5.69C2.5 11.27 0 13.78 0 16.96V23.8C0 24.48 0.46 24.94 1.14 24.94H2.28V44.31C2.29 47.5 4.8 50 7.98 50H44.44C47.63 50 50.13 47.49 50.13 44.31V24.94H51.27C51.95 24.94 52.41 24.48 52.41 23.8V16.96C52.6 13.71 50.36 11.27 47.17 11.27ZM16.87 3.97001C16.87 3.51001 16.87 3.29001 17.09 2.83001C17.09 2.83001 17.55 2.61001 17.77 2.61001H18C21.88 3.75001 24.84 7.17001 25.3 11.27C21.42 10.81 18 7.85001 16.87 3.97001ZM25.52 47.72H8.43C6.6 47.72 5.01 46.13 5.01 44.3V24.94H25.52V47.72ZM25.52 22.67H2.31V16.97C2.31 15.14 3.9 13.55 5.73 13.55H23.93L19.14 18.34C18.68 18.8 18.68 19.48 19.14 19.93C19.6 20.38 20.28 20.39 20.73 19.93L25.52 15.14V22.67ZM35.09 2.61001C35.77 2.61001 36 2.83001 36 2.83001C36.22 3.05001 36.46 3.51001 36.22 3.97001C35.08 7.85001 31.66 10.81 27.56 11.27C28.25 7.17001 31.22 3.75001 35.09 2.61001ZM48.31 44.31C48.31 46.14 46.72 47.73 44.89 47.73H27.8V24.94H48.31V44.31ZM50.16 22.67H27.8V15.15L32.59 19.94C32.81 20.16 33.05 20.16 33.5 20.16C33.95 20.16 34.18 20.16 34.41 19.94C34.87 19.48 34.87 18.8 34.41 18.35L29.62 13.55H46.74C48.57 13.55 50.16 15.14 50.16 16.97V22.67Z"
+                                        fill="url(#paint0_linear)" />
+                                    <path
+                                        d="M53.62 45.81V49.54C53.62 51.51 52.01 53.12 50.04 53.12H46.96C46.29 53.12 45.73 53.67 45.78 54.34C45.78 54.35 45.78 54.36 45.78 54.36C45.83 55 46.32 55.5 46.96 55.5H49.56C52.91 55.5 55.52 52.87 55.52 49.54V45.81C55.52 45.27 55.07 44.84 54.53 44.86C54.02 44.88 53.62 45.3 53.62 45.81Z"
+                                        fill="#F65E64" />
+                                    <defs>
+                                        <linearGradient id="paint0_linear" x1="0" y1="25.0748" x2="52.4256" y2="25.0748"
+                                            gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#038C73" />
+                                            <stop offset="1" stop-color="#6CC47B" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="advantages-block-item-txt">
+                                Везде, где есть интернет
+                            </div>
+                        </div>
+                        <div class="advantages-block-item">
+                            <div class="advantages-block-item-img">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="56" height="56" viewBox="0 0 56 56" fill="none">
+                                    <rect width="56" height="56" fill="url(#pattern0)" />
+                                    <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1"
+                                            height="1">
+                                            <use xlink:href="#image0" transform="scale(0.0178571)" />
+                                        </pattern>
+                                        <image id="image0" width="56" height="56"
+                                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY2QjQwMDFGMDEyMTExRUE4RjFGOEYzRUIyQzY0Q0U3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY2QjQwMDIwMDEyMTExRUE4RjFGOEYzRUIyQzY0Q0U3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjZCNDAwMUQwMTIxMTFFQThGMUY4RjNFQjJDNjRDRTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjZCNDAwMUUwMTIxMTFFQThGMUY4RjNFQjJDNjRDRTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5bsfgjAAAHG0lEQVR42txa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" />
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="advantages-block-item-txt">
+                                В&nbsp;любой операционной системе и&nbsp;браузере
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="functions">
+                    <div class="functions-content">
+                        <div class="functions-content-block">
+                            <div class="functions-content-block-item">
+                                <div class="functions-content-block-item-img">
+                                    <img src="media/img/IPhoneX.png" alt="error">
+                                </div>
+                                <div class="functions-content-block-item-tips">
+                                    <div class="functions-content-block-item-tips-tip slide-1-1">
+                                        <div class="functions-content-block-item-tips-tip-img">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32"
+                                                viewBox="0 0 32 32" fill="none">
+                                                <rect width="32" height="32" fill="url(#pattern0)" />
+                                                <defs>
+                                                    <pattern id="pattern0" patternContentUnits="objectBoundingBox"
+                                                        width="1" height="1">
+                                                        <use xlink:href="#image0" transform="scale(0.0178571)" />
+                                                    </pattern>
+                                                    <image id="image0" width="56" height="56"
+                                                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY2QjQwMDFGMDEyMTExRUE4RjFGOEYzRUIyQzY0Q0U3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY2QjQwMDIwMDEyMTExRUE4RjFGOEYzRUIyQzY0Q0U3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjZCNDAwMUQwMTIxMTFFQThGMUY4RjNFQjJDNjRDRTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjZCNDAwMUUwMTIxMTFFQThGMUY4RjNFQjJDNjRDRTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5bsfgjAAAHG0lEQVR42txa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" />
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                        <div class="functions-content-block-item-tips-tip-txt">
+                                            Оплачивай квитанции в&nbsp;один клик по&nbsp;QR-коду
+                                        </div>
+                                    </div>
+                                    <div class="functions-content-block-item-tips-tip slide-1-2">
+                                        <div class="functions-content-block-item-tips-tip-txt">
+                                            Автоплатеж имеет гибкую настройку и&nbsp;сделает оплату вовремя
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="functions-content-block-item">
+                                <div class="functions-content-block-item-img">
+                                    <img src="media/img/IPhoneX2.png" alt="error">
+                                </div>
+                                <div class="functions-content-block-item-tips">
+                                    <div class="functions-content-block-item-tips-tip slide-2-1">
+                                        <div class="functions-content-block-item-tips-tip-txt">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa repellat
+                                            quaerat quod ipsum vero.
+                                        </div>
+                                    </div>
+                                    <div class="functions-content-block-item-tips-tip slide-2-2">
+                                        <div class="functions-content-block-item-tips-tip-img">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32"
+                                                viewBox="0 0 32 32" fill="none">
+                                                <rect width="32" height="32" fill="url(#pattern0)" />
+                                                <defs>
+                                                    <pattern id="pattern0" patternContentUnits="objectBoundingBox"
+                                                        width="1" height="1">
+                                                        <use xlink:href="#image0" transform="scale(0.0178571)" />
+                                                    </pattern>
+                                                    <image id="image0" width="56" height="56"
+                                                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY2QjQwMDFGMDEyMTExRUE4RjFGOEYzRUIyQzY0Q0U3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY2QjQwMDIwMDEyMTExRUE4RjFGOEYzRUIyQzY0Q0U3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjZCNDAwMUQwMTIxMTFFQThGMUY4RjNFQjJDNjRDRTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjZCNDAwMUUwMTIxMTFFQThGMUY4RjNFQjJDNjRDRTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5bsfgjAAAHG0lEQVR42txa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" />
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                        <div class="functions-content-block-item-tips-tip-txt">
+                                            Автоплатеж имеет гибкую настройку и&nbsp;сделает оплату вовремя
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="functions-content-block-item">
+                                3
+                            </div>
+                            <div class="functions-content-block-item">
+                                4
+                            </div>
+                            <div class="functions-content-block-item">
+                                5
+                            </div>
+                            <div class="functions-content-block-item">
+                                6
+                            </div>
+                        </div>
+                    </div>
+                    <div class="functions-steps">
+                        <div class="functions-steps-tabs-list">
+                            <div class="functions-steps-tabs-list-item">
+                                <div class="functions-steps-tabs-list-item-title">
+                                    <div class="functions-steps-tabs-list-item-title-round"></div>
+                                    <div class="functions-steps-tabs-list-item-title-txt">
+                                        Оплачивай услуги
+                                    </div>
+                                </div>
+                                <div class="functions-steps-tabs-list-item-desc">
+                                    Совершай платежи за&nbsp;сотовую связь, интернет, услуги ЖКХ и&nbsp;прочее
+                                </div>
+                            </div>
+                            <div class="functions-steps-tabs-list-item">
+                                <div class="functions-steps-tabs-list-item-title">
+                                    <div class="functions-steps-tabs-list-item-title-round"></div>
+                                    <div class="functions-steps-tabs-list-item-title-txt">
+                                        Переводи средства
+                                    </div>
+                                </div>
+                                <div class="functions-steps-tabs-list-item-desc">
+                                    по&nbsp;номеру телефона или карты любого банка
+                                </div>
+                            </div>
+                            <div class="functions-steps-tabs-list-item">
+                                <div class="functions-steps-tabs-list-item-title">
+                                    <div class="functions-steps-tabs-list-item-title-round"></div>
+                                    <div class="functions-steps-tabs-list-item-title-txt">
+                                        Управляй кредитами
+                                    </div>
+                                </div>
+                                <div class="functions-steps-tabs-list-item-desc">
+                                    Подавай заявки и&nbsp;гаси кредиты любого банка
+                                </div>
+                            </div>
+                            <div class="functions-steps-tabs-list-item">
+                                <div class="functions-steps-tabs-list-item-title">
+                                    <div class="functions-steps-tabs-list-item-title-round"></div>
+                                    <div class="functions-steps-tabs-list-item-title-txt">
+                                        Пополняй вклады
+                                    </div>
+                                </div>
+                                <div class="functions-steps-tabs-list-item-desc">
+                                    Открывай вклады и&nbsp;копилки в&nbsp;один клик
+                                </div>
+                            </div>
+                            <div class="functions-steps-tabs-list-item">
+                                <div class="functions-steps-tabs-list-item-title">
+                                    <div class="functions-steps-tabs-list-item-title-round"></div>
+                                    <div class="functions-steps-tabs-list-item-title-txt">
+                                        Привяжи карту любого Банка
+                                    </div>
+                                </div>
+                                <div class="functions-steps-tabs-list-item-desc">
+                                    Поясняющий текст про услугу в&nbsp;одну
+                                    или две строки
+                                </div>
+                            </div>
+                            <div class="functions-steps-tabs-list-item">
+                                <div class="functions-steps-tabs-list-item-title">
+                                    <div class="functions-steps-tabs-list-item-title-round"></div>
+                                    <div class="functions-steps-tabs-list-item-title-txt">
+                                        Пиши в любое время
+                                    </div>
+                                </div>
+                                <div class="functions-steps-tabs-list-item-desc">
+                                    Получи поддержку от&nbsp;банка в&nbsp;чате 24/7, будь
+                                    в&nbsp;курсе состояния своего счета, кредита, вклада
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-app-list">
+                            <div class="ui-app-list-item">
+                                <a href="#">
+                                    <img class="default" src="media/img/big_app_store.svg" alt="error">
+                                    <img class="hover" src="media/img/big_app_store_hover.svg" alt="error">
+                                </a>
+                            </div>
+                            <div class="ui-app-list-item">
+                                <a href="#">
+                                    <img class="default" src="media/img/big_google_play.svg" alt="error">
+                                    <img class="hover" src="media/img/big_google_play_hover.svg" alt="error">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="online-advantages">
+                    <div class="online-advantages-content">
+                        <h2>Все возможности управления финансами с компьютера</h2>
+                        <span>
+                            Надежный, понятный и&nbsp;удобный онлайн-банк для управления личными финансами 24/7. Решает
+                            ваши задачи везде, где есть интернет, и&nbsp;при необходимости легко помещается
+                            в&nbsp;кармане.
+                        </span>
+                        <ul class="list big">
+                            <li>
+                                между счетами и&nbsp;картами в&nbsp;онлайн-режиме
+                            </li>
+                            <li>
+                                по&nbsp;номеру карты на&nbsp;карты других банков
+                            </li>
+                            <li>
+                                шаблоны позволят совершать платежи в&nbsp;один клик
+                            </li>
+                            <li>
+                                автоплатеж имеет гибкую настройку и&nbsp;сделает перевод вовремя
+                            </li>
+                        </ul>
+                        <div class="ui-btn">
+                            <a href="#">Войти</a>
+                        </div>
+                    </div>
+                    <div class="online-advantages-img">
+                        <img src="media/img/online-advantages.png" alt="error">
+                    </div>
+                </div>
+                <div class="sub-banners">
+                    <div class="sub-banners-list">
+                        <div class="sub-banners-list-item big">
+                            <div class="sub-banners-list-item-img">
+                                <img src="media/img/sub-banners-notebook.png" alt="error">
+                            </div>
+                            <div class="sub-banners-list-item-content">
+                                <div class="tags sm">
+                                    <div class="tags-block">
+                                        <div class="tags-block-item">
+                                            <a href="#">Вопросы</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sub-banners-list-item-content-title">
+                                    Как получить доступ?
+                                </div>
+                                <div class="sub-banners-list-item-content-txt">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, provident et?
+                                    Mollitia voluptate ut ducimus.
+                                </div>
+                                <div class="sub-banners-list-item-content-link">
+                                    <a href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-banners-list-item">
+                            <div class="sub-banners-list-item-img">
+                                <img src="media/img/sub-banners-card.png" alt="error">
+                            </div>
+                            <div class="sub-banners-list-item-content">
+                                <div class="tags sm">
+                                    <div class="tags-block">
+                                        <div class="tags-block-item">
+                                            <a href="#">Сервисы</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sub-banners-list-item-content-title">
+                                    Перевод по номеру карты
+                                </div>
+                                <div class="sub-banners-list-item-content-txt">
+                                    Управляйте вашими картами, находясь в любой точке мира
+                                </div>
+                                <div class="sub-banners-list-item-content-link">
+                                    <a href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs">
+                    <div class="tabs-headings-list">
+                        <div class="tabs-headings-list-item">
+                            <button>Тарифы и документы</button>
+                        </div>
+                        <div class="tabs-headings-list-item">
+                            <button>Помощь</button>
+                        </div>
+                    </div>
+                    <div class="tabs-content-list">
+                        <div class="tabs-content-list-item">
+                            <div class="docs-list">
+                                <div class="docs-list-item"><a href="#">Тарифы Банка</a></div>
+                                <div class="docs-list-item"><a href="#">Условия подключения и эксплуатации систем
+                                        Дистанционного банковского обслуживания для физических лиц в ПАО "СКБ-банк"
+                                        (Банковские правила)</a></div>
+                                <div class="docs-list-item"><a href="#">Политика конфиденциальности при использовании
+                                        функционала "Мобильный банк "СКБ-online"</a></div>
+                                <div class="docs-list-item"><a href="#">Правила комплексного обслуживания физических лиц
+                                        в ПАО "СКБ-банк". Версия 5.0</a></div>
+                                <div class="docs-list-item"><a href="#">Архив правил комплексного обслуживания
+                                        физических лиц в ПАО "СКБ-банк"</a></div>
+                            </div>
+                        </div>
+                        <div class="tabs-content-list-item">
+                            <div class="docs-list">
+                                <div class="docs-list-item"><a href="#">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Sequi iure molestias expedita dolorum magnam corrupti pariatur
+                                        nobis itaque eius. Aliquid porro totam consequatur adipisci ut? Dolorum ipsam
+                                        praesentium reprehenderit perspiciatis.</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="helping-contacts">
+                    <div class="helping-contacts-img">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72"
+                            height="53" viewBox="0 0 72 53" fill="none">
+                            <rect width="72" height="53" fill="url(#pattern0)" />
+                            <defs>
+                                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0" transform="scale(0.0138889 0.0188679)" />
+                                </pattern>
+                                <image id="image0" width="72" height="53"
+                                    xlink:href="data:image/png;base64,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" />
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="helping-contacts-txt">
+                        Если у&nbsp;вас остались вопросы, звоните нам по&nbsp;телефону: <a href="#">8-800-1000-600</a>
+                        или приходите
+                        в&nbsp;<a href="#">офис</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="f-inner">
+                <div class="top">
+                    <div class="logo">
+                        <a href="#">
+                            <svg viewBox="0 0 179 33">
+                                <g clip-path="url(#clip0)">
+                                    <path
+                                        d="M16.1119 22.3294C14.8843 24.2357 12.7408 25.4285 10.0854 25.4285C5.91603 25.4285 3.17154 22.4069 3.17154 18.2932C3.17154 14.0118 5.90325 11.1579 10.0854 11.1579C12.3093 11.1579 14.226 12.0674 15.5157 13.5453L17.5827 11.4326C15.769 9.45235 13.131 8.24207 10.0854 8.24207C4.19402 8.24207 0 12.2622 0 18.2932C0 24.0878 4.21228 28.3444 10.0854 28.3444C13.5839 28.3444 16.4511 26.8738 18.2228 24.4867L16.1119 22.3294Z"
+                                        fill="#038C73" />
+                                    <path
+                                        d="M174.454 27.942L166.928 19.7339H163.427C163.427 24.361 163.427 27.0969 163.467 27.942H160.248C160.288 26.0107 160.288 22.7919 160.288 18.2854C160.288 13.7789 160.288 10.5599 160.248 8.62854H163.467C163.427 10.2782 163.427 12.974 163.427 16.7562H167.009L174.293 8.62854H178.317L169.906 18.0035L178.961 27.942H174.454Z"
+                                        fill="#F65E64" />
+                                    <path
+                                        d="M35.6319 27.9499L28.1062 19.7418H24.6048C24.6048 24.3689 24.6048 27.1048 24.6451 27.9499H21.426C21.466 26.0186 21.466 22.7996 21.466 18.2933C21.466 13.7869 21.466 10.5678 21.426 8.63647H24.6451C24.6048 10.2862 24.6048 12.9819 24.6048 16.7642H28.1866L35.4709 8.63647H39.4957L31.0845 18.0115L40.1392 27.9499H35.6319Z"
+                                        fill="#038C73" />
+                                    <path
+                                        d="M51.4298 8.98006C48.7899 8.87873 46.3747 9.83481 44.5715 11.4571C44.9118 8.69352 46.8199 6.40489 49.3731 5.56593C52.5398 4.52511 56.6426 6.05545 60.7327 2.31833L58.4138 0C55.4383 2.81399 51.8065 1.6005 48.9557 2.36813C44.6166 3.53674 41.4078 7.5042 41.3632 12.2419H41.3607V18.6585C41.3607 24.0078 45.6982 28.3442 51.049 28.3442C56.5239 28.3442 60.9381 23.8033 60.7292 18.2826C60.5395 13.2635 56.4499 9.17258 51.4298 8.98006ZM51.5814 25.1694C47.5607 25.4898 44.216 22.146 44.5365 18.1259C44.7885 14.9625 47.3518 12.3998 50.516 12.1476C54.5367 11.8276 57.8809 15.1712 57.5609 19.1911C57.3089 22.3546 54.7456 24.9172 51.5814 25.1694Z"
+                                        fill="#038C73" />
+                                    <path
+                                        d="M104.889 8.98006C102.249 8.87873 99.8345 9.83481 98.0308 11.4571C98.3715 8.69352 100.279 6.40489 102.832 5.56593C105.999 4.52511 110.102 6.05545 114.192 2.31833L111.873 0C108.898 2.81399 105.266 1.6005 102.416 2.36813C98.0759 3.53674 94.8671 7.5042 94.8225 12.2419H94.8204V18.6585C94.8204 24.0078 99.1575 28.3442 104.508 28.3442C109.983 28.3442 114.397 23.8033 114.189 18.2826C113.999 13.2635 109.909 9.17258 104.889 8.98006ZM105.041 25.1694C101.02 25.4898 97.6753 22.146 97.9958 18.1259C98.2478 14.9625 100.811 12.3998 103.975 12.1476C107.996 11.8276 111.341 15.1712 111.02 19.1911C110.768 22.3546 108.205 24.9172 105.041 25.1694Z"
+                                        fill="#F65E64" />
+                                    <path
+                                        d="M152.472 27.942V19.5728H142.331V27.942H139.111V8.62854H142.331V16.5955H152.472V8.62854H155.692V27.942H152.472Z"
+                                        fill="#F65E64" />
+                                    <path
+                                        d="M134.873 24.6774C134.482 25.321 133.92 25.6512 133.264 25.4855C132.643 25.3285 132.227 24.74 132.227 24.0991V14.6239C132.227 10.9221 129.047 8.22632 124.741 8.22632C122.077 8.22632 119.858 9.09965 118.499 10.5039L120.652 12.6562C121.358 11.7526 122.758 11.1635 124.5 11.1635C127.115 11.1635 129.007 12.8132 129.007 15.0261V16.4746C126.029 16.7967 123.937 17.0782 122.689 17.3599C118.825 18.1645 116.531 20.2166 116.531 23.3148C116.531 26.3327 118.946 28.3443 122.649 28.3443C125.265 28.3443 127.397 27.7992 129.087 25.8277C129.45 27.5578 131.14 28.3443 133.273 28.3443C134.714 28.3443 135.981 27.7147 136.867 26.6713L134.873 24.6774ZM129.007 22.2598C127.599 24.1908 125.385 25.358 123.011 25.358C121.119 25.358 119.872 24.5219 119.872 22.9528C119.872 21.6651 120.878 20.7085 122.608 20.2257C123.937 19.8637 126.069 19.7117 129.007 19.3497V22.2598Z"
+                                        fill="#F65E64" />
+                                    <path
+                                        d="M81.8663 15.7485L74.6952 7.78821L72.3033 9.9423L79.7001 18.153L81.8663 15.7485Z"
+                                        fill="#038C73" />
+                                    <path
+                                        d="M81.8664 15.7485L72.2466 26.4264L74.6385 28.5805L84.0307 18.151L81.8664 15.7485Z"
+                                        fill="#F65E64" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0">
+                                        <rect fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="f-inner-row">
+                        <div class="f-inner-row-clm">
+                            <div class="f-inner-row-clm-menu">
+                                <div class="f-inner-row-clm-menu-item"><a href="#">О банке</a></div>
+                                <div class="f-inner-row-clm-menu-item"><a href="#">Партнерам</a></div>
+                                <div class="f-inner-row-clm-menu-item"><a href="#">Безопасность</a></div>
+                                <div class="f-inner-row-clm-menu-item"><a href="#">Новости</a></div>
+                                <div class="f-inner-row-clm-menu-item"><a href="#">Вакансии</a></div>
+                                <div class="f-inner-row-clm-menu-item"><a href="#">Офисы и банкоматы</a></div>
+                                <div class="f-inner-row-clm-menu-item"><a href="#">Акции и бонусы</a></div>
+                                <div class="f-inner-row-clm-menu-item"><a href="#">Реквизиты</a></div>
+                                <div class="f-inner-row-clm-menu-item"><a href="#">Раскрытие информации</a></div>
+                                <div class="f-inner-row-clm-menu-item"><a href="#">Пресс-центр</a></div>
+                            </div>
+                            <div class="f-inner-row-clm-subtxt">
+                                <a href="#">Карта сайта</a>
+                            </div>
+                        </div>
+                        <div class="f-inner-row-clm">
+                            <div class="f-inner-row-clm-valutes">
+                                <table>
+                                    <tr>
+                                        <th></th>
+                                        <th>Покупка</th>
+                                        <th>Продажа</th>
+                                        <th>ЦБ РФ</th>
+                                    </tr>
+                                    <tr>
+                                        <td><span>USD</span></td>
+                                        <td><span class="up">63,04</span></td>
+                                        <td><span class="up">65,22</span></td>
+                                        <td><span>65,22</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>EUR</span></td>
+                                        <td><span class="up">68,89</span></td>
+                                        <td><span class="down">72,34</span></td>
+                                        <td><span>72,34</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="f-inner-row-clm-subtxt">
+                                Действуют с 10:04 МСК 19.09.2019
+                            </div>
+                        </div>
+                        <div class="f-inner-row-clm">
+                            <div class="f-inner-row-clm-contacting">
+                                <div class="f-inner-row-clm-contacting-info">
+                                    Бесплатно по России
+                                </div>
+                                <div class="f-inner-row-clm-contacting-phone">
+                                    <a href="#">8 800 1000 600</a>
+                                </div>
+                                <div class="f-inner-row-clm-contacting-callback">
+                                    <a href="#">Обратная связь</a>
+                                </div>
+                            </div>
+                            <div class="f-inner-row-clm-care">
+                                <img src="media/img/care.png" alt="error">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-inner-row">
+                        <div class="f-inner-row-clm">
+                            <div class="f-inner-row-clm-serv-links">
+                                <a href="#">Раскрытие информации профессионального участника рынка ценных бумаг</a>
+                                <a href="#">Раскрытие информации на&nbsp;странице ООО &laquo;Интерфакс-ЦРКИ&raquo;</a>
+                            </div>
+                        </div>
+                        <div class="f-inner-row-clm">
+                            <div class="f-inner-row-clm-serv-links">
+                                <a href="#">Список лиц, под контролем либо значительным влиянием которых находится
+                                    банк</a>
+                                <a href="#">Информация о&nbsp;максимальных процентных ставках по&nbsp;вкладам физических
+                                    лиц</a>
+                            </div>
+                        </div>
+                        <div class="f-inner-row-clm">
+                            <div class="f-inner-row-clm-owner">
+                                <a href="#">
+                                    <span>Наш акционер</span>
+                                    <img src="media/img/sinara.png" alt="error">
+                                </a>
+                            </div>
+                            <div class="f-inner-row-clm-group">
+                                <div class="f-inner-row-clm-group-title">
+                                    Банковская группа СКБ-банка:
+                                </div>
+                                <div class="f-inner-row-clm-group-list">
+                                    <div class="f-inner-row-clm-group-list-item"><a href="#">СКБ-банк</a></div>
+                                    <div class="f-inner-row-clm-group-list-item"><a href="#">СКБ-финанс</a></div>
+                                    <div class="f-inner-row-clm-group-list-item"><a href="#">Газэнергобанк</a></div>
+                                    <div class="f-inner-row-clm-group-list-item"><a href="#">SKB LAB</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bot">
+                    <div class="f-inner-row">
+                        <div class="f-inner-row-clm">
+                            <div class="f-inner-row-clm-license">
+                                &copy;&nbsp;СКБ-банк, 2019 Генеральная лицензия &#8470;&nbsp;705 Центрального банка
+                                Российской Федерации
+                            </div>
+                        </div>
+                        <div class="f-inner-row-clm">
+                            <div class="f-inner-row-clm-socials-list">
+                                <div class="f-inner-row-clm-socials-list-item">
+                                    <a href="#">
+                                        <img src="media/img/fb.svg" alt="error">
+                                    </a>
+                                </div>
+                                <div class="f-inner-row-clm-socials-list-item">
+                                    <a href="#">
+                                        <img src="media/img/vk.svg" alt="error">
+                                    </a>
+                                </div>
+                                <div class="f-inner-row-clm-socials-list-item">
+                                    <a href="#">
+                                        <img src="media/img/inst.svg" alt="error">
+                                    </a>
+                                </div>
+                                <div class="f-inner-row-clm-socials-list-item">
+                                    <a href="#">
+                                        <img src="media/img/ok.svg" alt="error">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f-inner-row-clm">
+                            <div class="ui-app-list">
+                                <div class="ui-app-list-item">
+                                    <a href="#">
+                                        <img class="default" src="media/img/app_store_footer.svg" alt="error">
+                                        <img class="hover" src="media/img/app_store_footer_hover.svg" alt="error">
+                                    </a>
+                                </div>
+                                <div class="ui-app-list-item">
+                                    <a href="#">
+                                        <img class="default" src="media/img/google_play_footer.svg" alt="error">
+                                        <img class="hover" src="media/img/google_play_footer_hover.svg" alt="error">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="src/extensions/jquery.js"></script>
+        <script src="src/extensions/jquery-ui.js"></script>
+        <script src="src/extensions/jquery-ui-touch.js"></script>
+        <script src="src/extensions/slick.min.js"></script>
+        <script src="src/ui-manager.js"></script>
+        <script src="src/sliders.js"></script>
+        <script src="src/events.js"></script>
+    </div>
+</body>
+
+</html>
