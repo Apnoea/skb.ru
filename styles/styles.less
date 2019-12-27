@@ -96,6 +96,7 @@ html {
 body {
     min-width: 320px;
     max-width: 1920px;
+    margin: 0 auto;
     overflow-x: hidden;
 
     .wrapper {
@@ -1323,6 +1324,16 @@ body {
                                     display: flex;
                                     align-items: flex-start;
 
+                                    .tags {
+                                        &-block {
+                                            &-item {
+                                                a {
+                                                    border-width: 1px;
+                                                }
+                                            }
+                                        }
+                                    }
+
                                     &-txt {
                                         margin-left: 50px;
 
@@ -1648,8 +1659,7 @@ body {
                                 button {
                                     &:after {
                                         visibility: visible;
-                                        transform: translateY(0);
-                                        opacity: 1;
+                                        transform: translateX(0);
                                     }
                                 }
                             }
@@ -1670,8 +1680,7 @@ body {
                                     height: 5px;
                                     background: @green;
                                     visibility: hidden;
-                                    transform: translateY(6px);
-                                    opacity: 0;
+                                    transform: translateX(-100%);
                                     transition: .3s;
                                 }
                             }
@@ -1975,6 +1984,7 @@ body {
                                             left: -67px;
                                             width: 67px;
                                             background: @white;
+                                            pointer-events: none;
                                         }
                                     }
                                 }
@@ -2039,6 +2049,7 @@ body {
 
                         .ui-app-list {
                             margin-top: 65px;
+                            padding-left: 65px;
                         }
                     }
                 }

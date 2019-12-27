@@ -63,6 +63,7 @@ $(() => {
             arrows: false,
             dots: false,
             swipe: false,
+            fade: true,
             touchMove: false,
             zIndex: 5,
             adaptiveHeight: true
