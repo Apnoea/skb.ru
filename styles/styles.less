@@ -63,6 +63,7 @@
 @gray-counter-bg: #C9C9C9;
 @gray-txt: #858F9A;
 @gray-txt-2: #767474;
+@gray-txt-3: #666666;
 @gray-check: #737C87;
 @gray-tooltip: #CACDC2;
 @gray-lt: #EDEDED;
@@ -89,6 +90,14 @@
     &:after {
         left: 100%;
     }
+}
+
+.green-grad-txt {
+    color: @green;
+    background: linear-gradient(270deg, #6CC47B 0%, #038C73 100%);
+    background-clip: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 html {
@@ -129,6 +138,11 @@ body {
             padding: 0;
             font: 700 60px/65px @font;
             color: @black;
+
+            &.detail {
+                font-size: 48px;
+                line-height: 60px;
+            }
         }
 
         h2 {
@@ -138,11 +152,7 @@ body {
             color: @black;
 
             span {
-                color: @green;
-                background: linear-gradient(270deg, #6CC47B 0%, #038C73 100%);
-                background-clip: none;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+                .green-grad-txt;
             }
         }
 
@@ -499,8 +509,11 @@ body {
 
                     &:checked {
                         &~.checkmark {
+                            border-color: @green;
+                            background-color: @green;
+
                             &:after {
-                                transform: scale(1);
+                                opacity: 1;
                             }
                         }
                     }
@@ -511,24 +524,23 @@ body {
                     position: absolute;
                     top: 0;
                     left: 0;
-                    height: 25px;
-                    width: 25px;
+                    height: 24px;
+                    width: 24px;
                     border: 1px solid @gray-check;
-                    border-radius: 50%;
+                    border-radius: 5px;
                     background-color: @white;
-                    transition: all .13s;
+                    transition: all .3s;
 
                     &:after {
                         content: '';
                         position: absolute;
-                        top: 5px;
-                        left: 5px;
-                        right: 5px;
-                        bottom: 5px;
-                        background: @green;
-                        border-radius: 50%;
-                        transform: scale(0);
-                        transition: all .13s;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='14' viewBox='0 0 15 14' fill='none'%3E%3Cpath d='M1.1875 7.71357L5.39904 11.7501L13.1875 1.94434' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center no-repeat, @green;
+                        opacity: 0;
+                        transition: all .2s;
                     }
                 }
             }
@@ -627,6 +639,42 @@ body {
                             left: 0;
                             visibility: hidden;
                             opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ui-table {
+            width: 100%;
+
+            table {
+                width: 100%;
+
+                thead {
+                    background: @gray-bg;
+                }
+
+                tr {
+                    border-bottom: 1px solid @gray-br-2;
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    th {
+                        padding: 14px 27px;
+                        font: 300 18px/42px @font;
+                        color: @gray-txt-3;
+                    }
+
+                    td {
+                        padding: 23px 27px;
+                        font: 22px/34px @font;
+                        color: @black;
+
+                        &:first-child {
+                            font-weight: 700;
                         }
                     }
                 }
@@ -816,7 +864,7 @@ body {
                 }
 
                 .bot {
-                    padding: 20px 0;
+                    padding: 15px 0;
                     display: flex;
                     align-items: center;
 
@@ -878,6 +926,21 @@ body {
                     &-img {
                         padding-right: 260px;
                     }
+
+                    &-info {
+                        h1 {
+                            max-width: 690px;
+                        }
+
+                        &-txt {
+                            max-width: 750px;
+                        }
+
+                        .ui-btn {
+                            margin-top: 60px;
+                            width: 150px;
+                        }
+                    }
                 }
             }
 
@@ -898,6 +961,35 @@ body {
                         .ui-btn {
                             margin-top: 60px;
                             width: 150px;
+                        }
+                    }
+                }
+            }
+
+            &.deposites-inner-page {
+                .promo-static {
+                    background: @gray-bg;
+
+                    &-info {
+                        padding-bottom: 50px;
+                        padding-top: 69px;
+
+                        h1 {
+                            line-height: 74px;
+                        }
+
+                        &-txt {
+                            margin: 5px 0 0 0;
+                            line-height: 26px;
+                        }
+
+                        .ui-btn {
+                            margin-top: 40px;
+
+                            a {
+                                max-width: 225px;
+                                font-weight: normal;
+                            }
                         }
                     }
                 }
@@ -944,13 +1036,16 @@ body {
 
             &-static {
                 position: relative;
-                border-radius: 10px;
                 overflow: hidden;
+                min-height: 430px;
+                border-radius: 10px;
+                background: @gray-bg-2;
 
                 &-img {
-                    display: flex;
-                    justify-content: flex-end;
-                    background: @gray-bg-2;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
 
                     img {
                         max-width: 100%;
@@ -959,20 +1054,51 @@ body {
                 }
 
                 &-info {
-                    position: absolute;
-                    top: 80px;
-                    left: 145px;
-
-                    h1 {
-                        max-width: 490px;
-                    }
+                    padding: 80px 0 60px 145px;
 
                     &-txt {
                         margin-top: 30px;
                         margin-bottom: 15px;
-                        max-width: 600px;
                         font: 22px/30px @font;
                         color: @black;
+                    }
+
+                    &-block {
+                        margin-top: 50px;
+                        display: flex;
+                        align-items: flex-start;
+
+                        &-item {
+                            margin-left: 80px;
+
+                            &:first-child {
+                                margin-left: 0;
+                            }
+
+                            &:last-child {
+                                span {
+                                    margin-left: 8px;
+                                }
+                            }
+
+                            &-val {
+                                display: flex;
+                                align-items: baseline;
+                                font: 34px/1 @font;
+                                color: @black;
+
+                                span {
+                                    margin-right: 10px;
+                                    font-size: 22px;
+                                }
+                            }
+
+                            &-desc {
+                                margin-top: 3px;
+                                font: 15px/1.3 @font;
+                                color: @gray-txt
+                            }
+                        }
                     }
 
                     .ui-btn {
@@ -1021,7 +1147,10 @@ body {
                 margin: 0 auto;
                 padding: 25px 0;
                 max-width: 1480px;
-                // border: none;
+
+                &.detail {
+                    padding: 15px 0;
+                }
 
                 .offers {
                     padding: 25px 0 80px 0;
@@ -1056,11 +1185,7 @@ body {
                                     color: @black;
 
                                     span {
-                                        color: @green;
-                                        background: linear-gradient(270deg, #6CC47B 0%, #038C73 100%);
-                                        background-clip: none;
-                                        -webkit-background-clip: text;
-                                        -webkit-text-fill-color: transparent;
+                                        .green-grad-txt;
                                     }
                                 }
 
@@ -1646,6 +1771,47 @@ body {
                 .tabs {
                     padding: 60px 0;
 
+                    &.deposites-inner-page {
+                        padding: 10px 0 75px 0;
+
+                        .tabs-headings-list {
+                            position: relative;
+
+                            &:before,
+                            &:after {
+                                content: '';
+                                position: absolute;
+                                bottom: -1px;
+                                width: 145px;
+                                height: 1px;
+                                background: @gray-br-2;
+                            }
+
+                            &:before {
+                                left: -145px;
+                            }
+
+                            &:after {
+                                right: -145px;
+                            }
+                        }
+
+                        .tabs-content-list {
+                            margin-top: 40px;
+
+                            .slick-list {
+                                margin: 0 -25px;
+                                padding: 0 25px;
+                            }
+
+                            &-item {
+                                .ui-table {
+                                    margin-top: 25px;
+                                }
+                            }
+                        }
+                    }
+
                     &-headings-list {
                         display: flex;
                         border-bottom: 1px solid @gray-br-2;
@@ -1696,6 +1862,140 @@ body {
                         &-item {
                             padding: 20px 0;
 
+                            .points {
+                                &-point {
+                                    padding: 15px;
+                                    display: flex;
+                                    align-items: baseline;
+                                    border-top: 1px solid @gray-br-2;
+
+                                    &:first-child {
+                                        border-color: transparent;
+                                    }
+
+                                    &-prop {
+                                        width: 30%;
+                                        font: 700 18px/1.3 @font;
+                                        color: @black;
+                                    }
+
+                                    &-val {
+                                        width: 70%;
+                                        padding: 0 20px;
+                                        font: 18px/34px @font;
+                                        color: @black;
+
+                                        span {
+                                            font: 700 24px/34px @font;
+                                            color: @red;
+                                        }
+
+                                        ul {
+                                            margin-top: 5px;
+
+                                            &.list {
+                                                li {
+                                                    margin-top: 5px;
+                                                    font-size: 18px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .deposit-calc {
+                                padding-top: 20px;
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: space-between;
+
+                                &-controls {
+                                    padding-top: 35px;
+                                    width: 41%;
+
+                                    .ui-range {
+                                        margin-top: 55px;
+                                    }
+
+                                    .ui-checkbox {
+                                        margin-top: 45px;
+                                    }
+                                }
+
+                                &-result {
+                                    position: relative;
+                                    padding: 47px 95px 45px 60px;
+                                    width: 47%;
+                                    box-shadow: 0px 10px 30px rgba(204, 208, 214, 0.5) !important;
+                                    border-radius: 10px;
+
+                                    &-list {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        flex-wrap: wrap;
+
+                                        &-item {
+                                            margin-top: 20px;
+                                            width: ~"calc((100% - 20px)/2)";
+
+                                            &:nth-child(-n+2) {
+                                                margin-top: 0;
+                                            }
+
+                                            &-prop {
+                                                font: 300 16px/28px @font;
+                                                color: @gray-txt-2
+                                            }
+
+                                            &-val {
+                                                margin-top: 7px;
+
+                                                span {
+                                                    color: @black;
+
+                                                    &.num {
+                                                        font: 700 36px/45px @font;
+                                                    }
+
+                                                    &.subnum {
+                                                        margin-top: 10px;
+                                                        font: 33px/40px @font;
+                                                    }
+
+                                                    &.perc {
+                                                        margin-top: 15px;
+                                                        font: 22px/30px @font;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &-controls {
+                                        margin-top: 35px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+
+                                        .ui-btn {
+                                            width: ~"calc((100% - 20px)/2)";
+
+                                            a {
+                                                padding: 0 50px;
+                                                display: inline-block;
+                                                font-weight: normal;
+                                            }
+                                        }
+
+                                        &-desc {
+                                            width: ~"calc((100% - 20px)/2)";
+                                            font: 300 13px/18px @font;
+                                            color: @gray-txt-2;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -2053,6 +2353,503 @@ body {
                         .ui-app-list {
                             margin-top: 65px;
                             padding-left: 65px;
+                        }
+                    }
+                }
+
+                .deposits-list {
+                    margin-top: 40px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    &-item {
+                        position: relative;
+                        margin-top: 35px;
+                        padding: 25px 60px;
+                        width: ~"calc((100% - 40px)/2)";
+                        background: @gray-bg;
+                        border-radius: 10px;
+
+                        &:first-child {
+                            margin-top: 0;
+                        }
+
+                        &.big {
+                            width: 100%;
+                            padding: 20px 60px 30px 80px;
+
+                            .deposits-list-item-content {
+                                max-width: 600px;
+
+                                &-name {
+                                    margin-top: 12px;
+                                    font-size: 34px;
+                                    line-height: 42px;
+                                }
+
+                                &-block {
+                                    margin-top: 20px;
+
+                                    &-item {
+                                        margin-left: 80px;
+
+                                        &:first-child {
+                                            margin-left: 0;
+                                        }
+
+                                        &:last-child {
+                                            .deposits-list-item-content-block-item-val {
+                                                span {
+                                                    margin: 0 0 0 7px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &-actions {
+                                    margin-top: 15px;
+                                    padding-top: 25px;
+
+                                    .ui-btn {
+                                        margin-right: 25px;
+
+                                        a {
+                                            padding: 0 40px;
+                                            font-weight: normal;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &-img {
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                        }
+
+                        &-content {
+                            max-width: 360px;
+
+                            .tags {
+                                &-block {
+                                    &-item {
+                                        a {
+                                            border-width: 1px;
+                                            border-color: @gray-br-1;
+                                            color: @gray-dots;
+
+                                            &:hover {
+                                                border-color: transparent;
+                                                color: @white;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &-name {
+                                margin-top: 18px;
+                                font: 700 26px/32px @font;
+                                color: @black;
+                            }
+
+                            &-block {
+                                margin-top: 22px;
+                                display: flex;
+                                align-items: flex-start;
+
+                                &-item {
+                                    margin-left: 50px;
+
+                                    &:first-child {
+                                        margin-left: 0;
+                                    }
+
+                                    &-val {
+                                        display: flex;
+                                        align-items: baseline;
+                                        font: 34px/1 @font;
+                                        color: @black;
+
+                                        span {
+                                            margin-right: 10px;
+                                            font-size: 22px;
+                                        }
+                                    }
+
+                                    &-desc {
+                                        margin-top: 3px;
+                                        font: 15px/1.3 @font;
+                                        color: @gray-txt
+                                    }
+                                }
+                            }
+
+                            &-actions {
+                                margin-top: 35px;
+                                padding-top: 15px;
+                                display: flex;
+                                align-items: center;
+                                border-top: 1px solid @gray-br-1;
+
+                                &-more {
+                                    a {
+                                        display: flex;
+                                        align-items: center;
+                                        font: 300 18px/50px @font;
+                                        color: @black;
+                                        transition: .2s;
+
+                                        &:after {
+                                            content: '';
+                                            margin-left: 10px;
+                                            width: 8px;
+                                            height: 14px;
+                                            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='13' viewBox='0 0 8 13' fill='none'%3E%3Cpath d='M1 12.1877L6 6.68774L1 1.18774' stroke='%23F65E64' stroke-width='2'/%3E%3C/svg%3E") center no-repeat;
+                                        }
+
+                                        &:hover {
+                                            color: @red;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .deposits-steps {
+                    padding: 100px 0 75px 0;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-between;
+
+                    &-promo {
+                        max-width: 210px;
+
+                        &-title {
+                            font: 700 50px/58px @font;
+                            color: @black;
+
+                            span {
+                                .green-grad-txt;
+                            }
+                        }
+
+                        &-txt {
+                            margin-top: 45px;
+                            font: 500 20px/24px @font;
+                            color: @gray-txt;
+                        }
+                    }
+
+                    &-block {
+                        display: flex;
+                        align-items: stretch;
+
+                        &-item {
+                            margin-left: 40px;
+                            position: relative;
+                            padding: 205px 25px 50px 25px;
+                            min-width: 320px;
+                            background: @gray-bg;
+                            border-radius: 10px;
+
+                            &:first-child {
+                                margin-left: 0;
+                            }
+
+                            &-img {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                display: flex;
+                                justify-content: flex-end;
+
+                                img {
+                                    max-width: 100%;
+                                }
+                            }
+
+                            &-content {
+                                &-number {
+                                    padding-left: 3px;
+                                    font: 500 28px/34px @font;
+                                    .green-grad-txt;
+                                }
+
+                                &-txt {
+                                    max-width: 270px;
+                                    margin-top: 8px;
+                                    font: 500 22px/32px @font;
+                                    color: @black;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .all-reserved {
+                    margin-top: 35px;
+                    display: flex;
+                    align-items: flex-start;
+                    padding: 25px 70px;
+                    border: 1px solid @gray-promo-bg;
+                    border-radius: 10px;
+
+                    &-img {}
+
+                    &-content {
+                        margin-left: 70px;
+
+                        &-title {
+                            font: 700 24px/30px @font;
+                            color: @black;
+                        }
+
+                        &-txt {
+                            margin-top: 15px;
+                            max-width: 930px;
+                            font: 300 16px/24px @font;
+                            color: @black;
+
+                            a {
+                                position: relative;
+                                color: @red;
+
+                                &:after {
+                                    content: '';
+                                    position: absolute;
+                                    bottom: 1px;
+                                    left: 0;
+                                    right: 0;
+                                    height: 1px;
+                                    background: @red;
+                                    transition: .3s;
+                                }
+
+                                &:hover {
+                                    &:after {
+                                        opacity: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .deposits-advantages {
+                    &-title {}
+
+                    &-block {
+                        margin-top: 55px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        align-items: stretch;
+
+                        &-item {
+                            position: relative;
+                            width: ~"calc((100% - 80px)/3)";
+                            background: @gray-bg;
+                            border-radius: 10px;
+
+                            &.big {
+                                width: 100%;
+                                margin-top: 40px;
+
+                                .deposits-advantages-block-item-content {
+                                    padding: 85px 0 70px 80px;
+
+                                    &-title {
+                                        font-size: 36px;
+                                        line-height: 45px;
+                                    }
+
+                                    &-txt {
+                                        margin-top: 18px;
+                                        max-width: 680px;
+                                        font: 300 18px/26px @font;
+                                        color: @black;
+                                    }
+                                }
+                            }
+
+                            &-img {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                user-select: none;
+                            }
+
+                            &-content {
+                                padding: 120px 0 90px 35px;
+
+                                &-title {
+                                    font: 700 26px/32px @font;
+                                    color: @black;
+                                }
+
+                                &-txt {
+                                    margin-top: 15px;
+                                    max-width: 240px;
+                                    font: 16px/20px @font;
+                                    color: @gray-txt;
+                                }
+
+                                &-list {
+                                    margin-top: 30px;
+                                    display: flex;
+                                    align-items: flex-start;
+
+                                    &-item {
+                                        margin-left: 80px;
+                                        display: flex;
+                                        align-items: center;
+
+                                        &:first-child {
+                                            margin-left: 0;
+                                        }
+
+                                        &-val {
+                                            font: 34px/1 @font;
+                                            color: @black;
+                                        }
+
+                                        &-desc {
+                                            margin-left: 15px;
+                                            max-width: 110px;
+                                            font: 15px/22px @font;
+                                            color: @black;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .steps-easy {
+                    margin-top: 100px;
+
+                    &-title {
+                        h2 {
+                            text-align: center;
+                        }
+                    }
+
+                    &-block {
+                        margin-top: 40px;
+                        padding: 65px 0;
+                        display: flex;
+                        justify-content: space-evenly;
+                        box-shadow: 0px 10px 30px rgba(204, 208, 214, 0.5) !important;
+                        border-radius: 10px;
+
+                        &-item {
+                            width: 270px;
+
+                            &:nth-child(2) {
+                                .deposits-easy-block-item-img {
+                                    position: relative;
+
+                                    &:before,
+                                    &:after {
+                                        content: '';
+                                        position: absolute;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        width: 300px;
+                                        height: 1px;
+                                        background: @gray-br-1;
+                                    }
+
+                                    &:before {
+                                        right: 100%;
+                                    }
+
+                                    &:after {
+                                        left: 100%;
+                                    }
+                                }
+                            }
+
+                            &-img {
+                                position: relative;
+                                z-index: 1;
+                                margin: 0 auto;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 130px;
+                                height: 80px;
+                                background: @white;
+
+                                svg {
+                                    max-width: 80px;
+                                    max-height: 100%;
+                                }
+                            }
+
+                            &-txt {
+                                margin-top: 25px;
+                                font: 500 22px/32px @font;
+                                color: @black;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+
+                .questions-tabs {
+                    padding: 100px 0 60px 0;
+
+                    &-title {
+                        h2 {
+                            text-align: center;
+                        }
+                    }
+
+                    &-list {
+                        margin-top: 35px;
+                        background: @gray-bg-2;
+
+                        &-item {
+                            border-top: 1px solid @gray-br-2;
+
+                            &:first-child {
+                                border-color: transparent;
+                            }
+
+                            &-toggle {
+                                padding: 40px 67px;
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: space-between;
+                                font: 500 22px/1 @font;
+                                color: @black;
+                                user-select: none;
+                                cursor: pointer;
+
+                                &:after {
+                                    content: '';
+                                    width: 18px;
+                                    height: 17px;
+                                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M17.75 9.94434L9.875 17.8193L2 9.94434' stroke='%23262626' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
+                                }
+                            }
+
+                            &-drop {
+                                display: none;
+                                background: @white;
+                                padding: 15px 67px;
+                            }
                         }
                     }
                 }
