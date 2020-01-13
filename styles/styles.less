@@ -156,6 +156,24 @@ body {
             }
         }
 
+        h3 {
+            margin: 0;
+            padding: 0;
+            font: 700 28px/42px @font;
+            color: @black;
+        }
+
+        h6 {
+            margin: 20px 0 0 0;
+            padding: 0;
+            font: 500 18px/26px @font;
+            color: @black;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
         ul {
             &.list {
                 margin: 0;
@@ -179,7 +197,7 @@ body {
                     position: relative;
                     padding-left: 22px;
                     margin-top: 18px;
-                    font: 16px/22px @font;
+                    font: 16px/1.45 @font;
                     color: @black;
 
                     &:first-child {
@@ -921,7 +939,7 @@ body {
         .promo {
             position: relative;
 
-            &.biometric {
+            &.biometric-page {
                 .promo-static {
                     &-img {
                         padding-right: 260px;
@@ -960,19 +978,23 @@ body {
 
                         .ui-btn {
                             margin-top: 60px;
-                            width: 150px;
+
+                            a {
+                                padding: 0 50px;
+                                display: inline-block;
+                            }
                         }
                     }
                 }
             }
 
-            &.deposites-inner-page {
+            &.inner-page {
                 .promo-static {
                     background: @gray-bg;
 
                     &-info {
                         padding-bottom: 50px;
-                        padding-top: 69px;
+                        padding-top: 66px;
 
                         h1 {
                             line-height: 74px;
@@ -987,7 +1009,8 @@ body {
                             margin-top: 40px;
 
                             a {
-                                max-width: 225px;
+                                display: inline-block;
+                                padding: 0 50px;
                                 font-weight: normal;
                             }
                         }
@@ -1075,21 +1098,18 @@ body {
                                 margin-left: 0;
                             }
 
-                            &:last-child {
-                                span {
-                                    margin-left: 8px;
-                                }
-                            }
-
                             &-val {
                                 display: flex;
                                 align-items: baseline;
-                                font: 34px/1 @font;
-                                color: @black;
 
                                 span {
                                     margin-right: 10px;
                                     font-size: 22px;
+
+                                    &.num {
+                                        font: 34px/1 @font;
+                                        color: @black;
+                                    }
                                 }
                             }
 
@@ -1771,8 +1791,8 @@ body {
                 .tabs {
                     padding: 60px 0;
 
-                    &.deposites-inner-page {
-                        padding: 10px 0 75px 0;
+                    &.inner-page {
+                        padding: 10px 0 0 0;
 
                         .tabs-headings-list {
                             position: relative;
@@ -1800,11 +1820,13 @@ body {
                             margin-top: 40px;
 
                             .slick-list {
-                                margin: 0 -25px;
-                                padding: 0 25px;
+                                margin: 0 -30px;
+                                padding: 0 30px;
                             }
 
                             &-item {
+                                padding-bottom: 0;
+
                                 .ui-table {
                                     margin-top: 25px;
                                 }
@@ -1862,6 +1884,11 @@ body {
                         &-item {
                             padding: 20px 0;
 
+                            h3 {
+                                margin-top: 50px;
+                                display: block;
+                            }
+
                             .points {
                                 &-point {
                                     padding: 15px;
@@ -1875,6 +1902,7 @@ body {
 
                                     &-prop {
                                         width: 30%;
+                                        padding-right: 30px;
                                         font: 700 18px/1.3 @font;
                                         color: @black;
                                     }
@@ -1882,8 +1910,16 @@ body {
                                     &-val {
                                         width: 70%;
                                         padding: 0 20px;
-                                        font: 18px/34px @font;
-                                        color: @black;
+
+                                        p {
+                                            margin-top: 20px;
+                                            font: 18px/34px @font;
+                                            color: @black;
+
+                                            &:first-child {
+                                                margin-top: 0;
+                                            }
+                                        }
 
                                         span {
                                             font: 700 24px/34px @font;
@@ -1891,9 +1927,13 @@ body {
                                         }
 
                                         ul {
-                                            margin-top: 5px;
-
                                             &.list {
+                                                margin-top: 10px;
+
+                                                &:first-child {
+                                                    margin-top: 0;
+                                                }
+
                                                 li {
                                                     margin-top: 5px;
                                                     font-size: 18px;
@@ -1901,21 +1941,80 @@ body {
                                             }
                                         }
                                     }
+
+                                    &-info {
+                                        padding-top: 25px;
+                                        font: 16px/24px @font;
+                                        color: @gray-txt-2;
+                                    }
+                                }
+                            }
+
+                            .conditions {
+                                padding: 0 60px;
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: space-between;
+
+                                &-condition {
+                                    &-img {
+                                        height: 60px;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+
+                                        svg {
+                                            max-width: 60px;
+                                        }
+                                    }
+
+                                    &-txt {
+                                        margin-top: 20px;
+                                        max-width: 360px;
+                                        font: 19px/23px @font;
+                                        color: @black;
+                                        text-align: center;
+                                    }
                                 }
                             }
 
                             .deposit-calc {
                                 padding-top: 20px;
+                                padding-bottom: 35px;
                                 display: flex;
                                 align-items: flex-start;
                                 justify-content: space-between;
+
+                                &.mortgage {
+                                    margin-top: 100px;
+                                    padding-top: 0;
+
+                                    .deposit-calc-controls {
+                                        padding-top: 0;
+                                    }
+
+                                    .deposit-calc-result {
+                                        margin-top: 65px;
+                                        padding: 50px 35px 45px 80px;
+
+                                        &-list {
+                                            &-item {
+                                                margin-top: 25px;
+
+                                                &:nth-child(-n+2) {
+                                                    margin-top: 0;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
 
                                 &-controls {
                                     padding-top: 35px;
                                     width: 41%;
 
                                     .ui-range {
-                                        margin-top: 55px;
+                                        margin-top: 50px;
                                     }
 
                                     .ui-checkbox {
@@ -1968,6 +2067,45 @@ body {
                                                         font: 22px/30px @font;
                                                     }
                                                 }
+
+                                                &-counter {
+                                                    display: flex;
+                                                    align-items: center;
+
+                                                    button {
+                                                        width: 28px;
+                                                        height: 28px;
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                        border: 1px solid @green;
+                                                        border-radius: 50%;
+                                                        transition: .2s;
+
+                                                        &:hover {
+                                                            background-color: @green;
+
+                                                            svg {
+
+                                                                path,
+                                                                rect {
+                                                                    fill: @white;
+                                                                }
+                                                            }
+                                                        }
+
+                                                        svg {
+                                                            width: 12px;
+                                                            height: 12px;
+                                                        }
+                                                    }
+
+                                                    span {
+                                                        &.num {
+                                                            margin: 0 15px;
+                                                        }
+                                                    }
+                                                }
                                             }
                                         }
                                     }
@@ -1992,6 +2130,72 @@ body {
                                             width: ~"calc((100% - 20px)/2)";
                                             font: 300 13px/18px @font;
                                             color: @gray-txt-2;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .docs {
+                                margin-top: 30px;
+                                display: flex;
+                                flex-wrap: wrap;
+                                justify-content: space-between;
+
+                                &-item {
+                                    margin-top: 40px;
+                                    display: flex;
+                                    align-items: center;
+
+                                    &:nth-child(-n+4) {
+                                        margin-top: 0;
+                                    }
+
+                                    &:nth-child(4n-3) {
+                                        .docs-item-txt {
+                                            max-width: 150px;
+                                        }
+                                    }
+
+                                    &:nth-child(4n-2),
+                                    &:nth-child(4n-1) {
+                                        .docs-item-txt {
+                                            max-width: 240px;
+                                        }
+                                    }
+
+                                    &:nth-child(4n) {
+                                        .docs-item-txt {
+                                            max-width: 330px;
+                                        }
+                                    }
+
+                                    &-img {
+                                        padding: 15px;
+                                        width: 80px;
+                                        min-width: 80px;
+                                        height: 80px;
+                                        border-radius: 10px;
+                                        background: @gray-bg;
+
+                                        svg {
+                                            max-width: 100%;
+                                            max-height: 100%;
+                                        }
+                                    }
+
+                                    &-txt {
+                                        margin-left: 20px;
+                                        font: 300 18px/21px @font;
+                                        color: @black;
+
+                                        a {
+                                            color: @green;
+                                            border-bottom: 1px solid transparent;
+                                            transition: .2s;
+
+                                            &:hover {
+                                                border-color: @green;
+                                            }
                                         }
                                     }
                                 }
@@ -2644,6 +2848,8 @@ body {
                 }
 
                 .deposits-advantages {
+                    margin-top: 55px;
+
                     &-title {}
 
                     &-block {
@@ -2736,7 +2942,7 @@ body {
                 }
 
                 .steps-easy {
-                    margin-top: 100px;
+                    margin-top: 65px;
 
                     &-title {
                         h2 {
@@ -2756,7 +2962,7 @@ body {
                             width: 270px;
 
                             &:nth-child(2) {
-                                .deposits-easy-block-item-img {
+                                .steps-easy-block-item-img {
                                     position: relative;
 
                                     &:before,
@@ -2849,6 +3055,91 @@ body {
                                 display: none;
                                 background: @white;
                                 padding: 15px 67px;
+                            }
+                        }
+                    }
+                }
+
+                .good-ways {
+                    margin-top: 100px;
+
+                    &-title {
+                        h2 {
+                            text-align: center;
+                        }
+                    }
+
+                    &-block {
+                        margin-top: 40px;
+                        padding: 0 195px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        align-items: stretch;
+
+                        &-item {
+                            margin-top: 30px;
+                            padding: 10px 40px;
+                            width: ~"calc((100% - 50px)/2)";
+                            height: 120px;
+                            display: flex;
+                            align-items: center;
+                            border: 1px solid @gray-br-2;
+                            border-radius: 10px;
+
+                            &:nth-child(-n+2) {
+                                margin-top: 0;
+                            }
+
+                            &-img {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                min-width: 60px;
+                                width: 60px;
+                                height: 60px;
+
+                                svg {
+                                    max-width: 100%;
+                                    max-height: 100%;
+                                }
+                            }
+
+                            &-content {
+                                margin-left: 30px;
+                                padding-top: 5px;
+
+                                &-txt {
+                                    font: 19px/23px @font;
+                                    color: @black;
+                                }
+
+                                &-link {
+                                    margin-top: 15px;
+
+                                    a {
+                                        display: flex;
+                                        align-items: center;
+                                        font: 16px/1.3 @font;
+                                        color: @red;
+
+                                        &:hover {
+                                            &:after {
+                                                transform: translateX(4px);
+                                            }
+                                        }
+
+                                        &:after {
+                                            content: '';
+                                            margin-left: 10px;
+                                            width: 8px;
+                                            height: 14px;
+                                            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='14' viewBox='0 0 8 14' fill='none'%3E%3Cpath d='M1 12.5L6 7L1 1.5' stroke='%23F65E64' stroke-width='2'/%3E%3C/svg%3E") center no-repeat;
+                                            background-size: 100%;
+                                            transition: .2s;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
