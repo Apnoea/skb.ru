@@ -10,4 +10,31 @@ body .wrapper .promo.safe-page .promo-static-info h1 {
 }
 body .wrapper .promo.safe-page .promo-static-info-txt {
   max-width: 595px;
+  margin-top: 45px;
+}
+body .wrapper main .m-inner .storage {
+  padding: 75px 0 60px 0;
+}
+body .wrapper main .m-inner .storage-block {
+  margin-top: 40px;
+  padding: 60px 165px 60px 130px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 10px 30px rgba(204, 208, 214, 0.5) !important;
+}
+body .wrapper main .m-inner .storage-block-item {
+  width: calc((100% - 315px)/3);
+}
+body .wrapper main .m-inner .storage-block-item-img {
+  width: 56px;
+  height: 56px;
+}
+body .wrapper main .m-inner .storage-block-item-img svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+body .wrapper main .m-inner .storage-block-item-txt {
+  margin-top: 16px;
+  font: 300 18px/21px Gilroy;
+  color: #262626;
 }
