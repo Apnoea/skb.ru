@@ -1,0 +1,13 @@
+body .wrapper .promo {
+  position: relative;
+}
+body .wrapper .promo.safe-page .promo-static-img {
+  padding-right: 115px;
+  padding-top: 20px;
+}
+body .wrapper .promo.safe-page .promo-static-info h1 {
+  max-width: 465px;
+}
+body .wrapper .promo.safe-page .promo-static-info-txt {
+  max-width: 595px;
+}
