@@ -38,3 +38,19 @@ body .wrapper main .m-inner .storage-block-item-txt {
   font: 300 18px/21px Gilroy;
   color: #262626;
 }
+body .wrapper main .m-inner .steps-storage {
+  padding: 60px 0 40px 0;
+  display: flex;
+  align-items: flex-start;
+}
+body .wrapper main .m-inner .steps-storage-img {
+  width: 50%;
+}
+body .wrapper main .m-inner .steps-storage-content {
+  width: 50%;
+  padding-left: 60px;
+}
+body .wrapper main .m-inner .steps-storage-content h2 {
+  margin-bottom: 32px;
+  max-width: 490px;
+}
