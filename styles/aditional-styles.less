@@ -23,8 +23,6 @@ body {
 
         //UI
         .promo {
-            position: relative;
-
             &.safe-page {
                 .promo-static {
                     &-img {
@@ -45,74 +43,45 @@ body {
                 }
             }
         }
+
         main {
             .m-inner {
                 .advantages {
-                    padding: 75px 0 60px 0;
-
-                    &-title {}
-
                     &-block {
-                        margin-top: 40px;
                         padding: 60px 165px 60px 130px;
-                        display: flex;
-                        justify-content: space-between;
-                        box-shadow: 0px 10px 30px rgba(204, 208, 214, 0.5) !important;
 
                         &-item {
                             width: ~"calc((100% - 255px)/3)";
-
-                            &-img {
-                                width: 56px;
-                                height: 56px;
-
-                                svg {
-                                    max-width: 100%;
-                                    max-height: 100%;
-                                }
-                            }
-                            &-txt {
-                                margin-top: 16px;
-                                font: 300 18px/21px @font;
-                                color: @black;
-                            }
                         }
                     }
                 }
 
                 .steps-advantages {
-                    padding: 60px 0 40px 0;
-                    display: flex;
-                    align-items: flex-start;
-
                     &-img {
                         width: 50%;
+
                         img {
                             width: 100%;
                         }
                     }
 
                     &-content {
-                        width: 50%;
                         padding-left: 0;
                         padding-right: 100px;
-
-                        h2 {
-                            margin-bottom: 32px;
-                            max-width: 490px;
-                        }
 
                         span {
                             margin-top: 50px;
                             display: block;
-                            font: 300 18px/26px Gilroy;
-                            color: #262626;
+                            font: 300 18px/26px @font;
+                            color: @black;
                         }
-                        &-block{
+
+                        &-block {
                             margin-top: 20px;
+
                             &-iteam {
-                                font: 300 18px/26px Gilroy;
-                                color: #262626;
+                                font: 300 18px/26px @font;
+                                color: @black;
                             }
                         }
                     }
