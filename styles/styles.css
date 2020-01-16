@@ -1,4 +1,3 @@
-@import url(aditional-styles.css);
 @font-face {
   font-family: 'Gilroy';
   src: url('fonts/Gilroy-Light.woff') format('woff'), url('fonts/Gilroy-Light.ttf') format('truetype'), url('fonts/Gilroy-Light.eot') format('eot');
@@ -2272,7 +2271,7 @@ body .wrapper main .m-inner .deposits-advantages-block-item-content-list-item-de
   color: #262626;
 }
 body .wrapper main .m-inner .steps-easy {
-  margin-top: 65px;
+  margin-top: 100px;
 }
 body .wrapper main .m-inner .steps-easy-title h2 {
   text-align: center;
