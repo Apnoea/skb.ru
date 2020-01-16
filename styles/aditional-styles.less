@@ -47,41 +47,45 @@ body {
         main {
             .m-inner {
                 .advantages {
-                    &-block {
-                        padding: 60px 165px 60px 130px;
-
-                        &-item {
-                            width: ~"calc((100% - 255px)/3)";
+                    &.storage {
+                        .advantages-block {
+                            padding: 60px 165px 60px 130px;
+    
+                            &-item {
+                                width: ~"calc((100% - 255px)/3)";
+                            }
                         }
                     }
                 }
 
                 .steps-advantages {
-                    &-img {
-                        width: 50%;
 
-                        img {
-                            width: 100%;
-                        }
-                    }
-
-                    &-content {
-                        padding-left: 0;
-                        padding-right: 100px;
-
-                        span {
-                            margin-top: 50px;
-                            display: block;
-                            font: 300 18px/26px @font;
-                            color: @black;
-                        }
-
-                        &-block {
-                            margin-top: 20px;
-
-                            &-iteam {
+                    &.rent {
+                        .steps-advantages-content {
+                            padding-left: 0;
+                            padding-right: 100px;
+    
+                            span {
+                                margin-top: 50px;
+                                display: block;
                                 font: 300 18px/26px @font;
                                 color: @black;
+                            }
+    
+                            &-block {
+                                margin-top: 20px;
+    
+                                &-item {
+                                    font: 300 18px/26px @font;
+                                    color: @black;
+                                }
+                            }
+                        }
+                        .steps-advantages-img {
+                            width: 50%;
+    
+                            img {
+                                width: 100%;
                             }
                         }
                     }
@@ -93,11 +97,17 @@ body {
                     .tariffs-content-list {
                         margin-top: 40px;
                     }
+
+                    h2 {
+                        font: 700 28px/42px @font;
+                    }
                 }
 
                 .helping-contacts {
-                    &-txt {
-                        max-width: 905px;
+                    &.rent {
+                        .helping-contacts-txt {
+                            max-width: 905px;
+                        }
                     }
                 }
             }

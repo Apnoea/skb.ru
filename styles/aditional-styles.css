@@ -9,34 +9,34 @@ body .wrapper .promo.safe-page .promo-static-info-txt {
   max-width: 595px;
   margin-top: 45px;
 }
-body .wrapper main .m-inner .advantages-block {
+body .wrapper main .m-inner .advantages.storage .advantages-block {
   padding: 60px 165px 60px 130px;
 }
-body .wrapper main .m-inner .advantages-block-item {
+body .wrapper main .m-inner .advantages.storage .advantages-block-item {
   width: calc((100% - 255px)/3);
 }
-body .wrapper main .m-inner .steps-advantages-img {
-  width: 50%;
-}
-body .wrapper main .m-inner .steps-advantages-img img {
-  width: 100%;
-}
-body .wrapper main .m-inner .steps-advantages-content {
+body .wrapper main .m-inner .steps-advantages.rent .steps-advantages-content {
   padding-left: 0;
   padding-right: 100px;
 }
-body .wrapper main .m-inner .steps-advantages-content span {
+body .wrapper main .m-inner .steps-advantages.rent .steps-advantages-content span {
   margin-top: 50px;
   display: block;
   font: 300 18px/26px Gilroy;
   color: #262626;
 }
-body .wrapper main .m-inner .steps-advantages-content-block {
+body .wrapper main .m-inner .steps-advantages.rent .steps-advantages-content-block {
   margin-top: 20px;
 }
-body .wrapper main .m-inner .steps-advantages-content-block-iteam {
+body .wrapper main .m-inner .steps-advantages.rent .steps-advantages-content-block-item {
   font: 300 18px/26px Gilroy;
   color: #262626;
+}
+body .wrapper main .m-inner .steps-advantages.rent .steps-advantages-img {
+  width: 50%;
+}
+body .wrapper main .m-inner .steps-advantages.rent .steps-advantages-img img {
+  width: 100%;
 }
 body .wrapper main .m-inner .tariffs {
   padding: 60px 0;
@@ -44,6 +44,9 @@ body .wrapper main .m-inner .tariffs {
 body .wrapper main .m-inner .tariffs .tariffs-content-list {
   margin-top: 40px;
 }
-body .wrapper main .m-inner .helping-contacts-txt {
+body .wrapper main .m-inner .tariffs h2 {
+  font: 700 28px/42px Gilroy;
+}
+body .wrapper main .m-inner .helping-contacts.rent .helping-contacts-txt {
   max-width: 905px;
 }
