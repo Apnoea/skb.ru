@@ -47,7 +47,7 @@ body {
         }
         main {
             .m-inner {
-                .storage {
+                .advantages {
                     padding: 75px 0 60px 0;
 
                     &-title {}
@@ -79,23 +79,56 @@ body {
                         }
                     }
                 }
-                .steps-storage {
+
+                .steps-advantages {
                     padding: 60px 0 40px 0;
                     display: flex;
                     align-items: flex-start;
 
                     &-img {
                         width: 50%;
+                        img {
+                            width: 100%;
+                        }
                     }
 
                     &-content {
                         width: 50%;
-                        padding-left: 60px;
+                        padding-left: 0;
+                        padding-right: 100px;
 
                         h2 {
                             margin-bottom: 32px;
                             max-width: 490px;
                         }
+
+                        span {
+                            margin-top: 50px;
+                            display: block;
+                            font: 300 18px/26px Gilroy;
+                            color: #262626;
+                        }
+                        &-block{
+                            margin-top: 20px;
+                            &-iteam {
+                                font: 300 18px/26px Gilroy;
+                                color: #262626;
+                            }
+                        }
+                    }
+                }
+
+                .tariffs {
+                    padding: 60px 0;
+
+                    .tariffs-content-list {
+                        margin-top: 40px;
+                    }
+                }
+
+                .helping-contacts {
+                    &-txt {
+                        max-width: 905px;
                     }
                 }
             }

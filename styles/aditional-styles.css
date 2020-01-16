@@ -12,45 +12,71 @@ body .wrapper .promo.safe-page .promo-static-info-txt {
   max-width: 595px;
   margin-top: 45px;
 }
-body .wrapper main .m-inner .storage {
+body .wrapper main .m-inner .advantages {
   padding: 75px 0 60px 0;
 }
-body .wrapper main .m-inner .storage-block {
+body .wrapper main .m-inner .advantages-block {
   margin-top: 40px;
   padding: 60px 165px 60px 130px;
   display: flex;
   justify-content: space-between;
   box-shadow: 0px 10px 30px rgba(204, 208, 214, 0.5) !important;
 }
-body .wrapper main .m-inner .storage-block-item {
+body .wrapper main .m-inner .advantages-block-item {
   width: calc((100% - 255px)/3);
 }
-body .wrapper main .m-inner .storage-block-item-img {
+body .wrapper main .m-inner .advantages-block-item-img {
   width: 56px;
   height: 56px;
 }
-body .wrapper main .m-inner .storage-block-item-img svg {
+body .wrapper main .m-inner .advantages-block-item-img svg {
   max-width: 100%;
   max-height: 100%;
 }
-body .wrapper main .m-inner .storage-block-item-txt {
+body .wrapper main .m-inner .advantages-block-item-txt {
   margin-top: 16px;
   font: 300 18px/21px Gilroy;
   color: #262626;
 }
-body .wrapper main .m-inner .steps-storage {
+body .wrapper main .m-inner .steps-advantages {
   padding: 60px 0 40px 0;
   display: flex;
   align-items: flex-start;
 }
-body .wrapper main .m-inner .steps-storage-img {
+body .wrapper main .m-inner .steps-advantages-img {
   width: 50%;
 }
-body .wrapper main .m-inner .steps-storage-content {
-  width: 50%;
-  padding-left: 60px;
+body .wrapper main .m-inner .steps-advantages-img img {
+  width: 100%;
 }
-body .wrapper main .m-inner .steps-storage-content h2 {
+body .wrapper main .m-inner .steps-advantages-content {
+  width: 50%;
+  padding-left: 0;
+  padding-right: 100px;
+}
+body .wrapper main .m-inner .steps-advantages-content h2 {
   margin-bottom: 32px;
   max-width: 490px;
+}
+body .wrapper main .m-inner .steps-advantages-content span {
+  margin-top: 50px;
+  display: block;
+  font: 300 18px/26px Gilroy;
+  color: #262626;
+}
+body .wrapper main .m-inner .steps-advantages-content-block {
+  margin-top: 20px;
+}
+body .wrapper main .m-inner .steps-advantages-content-block-iteam {
+  font: 300 18px/26px Gilroy;
+  color: #262626;
+}
+body .wrapper main .m-inner .tariffs {
+  padding: 60px 0;
+}
+body .wrapper main .m-inner .tariffs .tariffs-content-list {
+  margin-top: 40px;
+}
+body .wrapper main .m-inner .helping-contacts-txt {
+  max-width: 905px;
 }
