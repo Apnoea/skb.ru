@@ -292,7 +292,8 @@ body .wrapper .ui-btn-hollow a:hover {
   background-color: #F65E64;
 }
 body .wrapper .ui-btn a {
-  display: block;
+  padding: 0 50px;
+  display: inline-block;
   font: 500 18px/56px Gilroy;
   color: #ffffff;
   text-align: center;
@@ -358,6 +359,105 @@ body .wrapper .ui-range-ranges {
 body .wrapper .ui-range-ranges-range {
   font: 14px/20px Gilroy;
   color: #858F9A;
+}
+body .wrapper .ui-pointer-title {
+  font: 300 16px/28px Gilroy;
+  color: #262626;
+}
+body .wrapper .ui-pointer-list {
+  position: relative;
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+body .wrapper .ui-pointer-list:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 35px;
+  height: 5px;
+  background: #D0D0D0;
+}
+body .wrapper .ui-pointer-list-item {
+  position: relative;
+  z-index: 1;
+  max-width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+body .wrapper .ui-pointer-list-item:first-child {
+  align-items: flex-start;
+}
+body .wrapper .ui-pointer-list-item:first-child .ui-pointer-list-item-num {
+  text-align: left;
+}
+body .wrapper .ui-pointer-list-item:first-child .ui-pointer-list-item-desc {
+  text-align: left;
+}
+body .wrapper .ui-pointer-list-item:last-child {
+  align-items: flex-end;
+}
+body .wrapper .ui-pointer-list-item:last-child .ui-pointer-list-item-num {
+  text-align: right;
+}
+body .wrapper .ui-pointer-list-item:last-child .ui-pointer-list-item-desc {
+  text-align: right;
+}
+body .wrapper .ui-pointer-list-item.active .ui-pointer-list-item-num {
+  color: #262626;
+}
+body .wrapper .ui-pointer-list-item.active .ui-pointer-list-item-indicator:after {
+  opacity: 1;
+  transform: scale(1.25);
+}
+body .wrapper .ui-pointer-list-item.active .ui-pointer-list-item-desc {
+  color: #262626;
+}
+body .wrapper .ui-pointer-list-item:hover .ui-pointer-list-item-indicator:after {
+  opacity: 1;
+}
+body .wrapper .ui-pointer-list-item-num {
+  font: 33px/40px Gilroy;
+  color: #858F9A;
+  text-align: center;
+  transition: 0.3s;
+}
+body .wrapper .ui-pointer-list-item-indicator {
+  position: relative;
+  margin-top: 7px;
+  width: 16px;
+  height: 16px;
+  background: #D0D0D0;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+body .wrapper .ui-pointer-list-item-indicator:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #038C73;
+  border-radius: 50%;
+  transition: 0.2s;
+  opacity: 0;
+}
+body .wrapper .ui-pointer-list-item-desc {
+  margin-top: 10px;
+  max-width: 100%;
+  height: 20px;
+  font: 14px/20px Gilroy;
+  color: #858F9A;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: 0.3s;
 }
 body .wrapper .ui-checkbox label {
   margin: 0;
@@ -716,7 +816,6 @@ body .wrapper .promo.biometric-page .promo-static-info-txt {
 }
 body .wrapper .promo.biometric-page .promo-static-info .ui-btn {
   margin-top: 60px;
-  width: 150px;
 }
 body .wrapper .promo.online-page .promo-static-info h1 {
   font-size: 54px;
@@ -729,10 +828,6 @@ body .wrapper .promo.online-page .promo-static-info-txt {
 }
 body .wrapper .promo.online-page .promo-static-info .ui-btn {
   margin-top: 60px;
-}
-body .wrapper .promo.online-page .promo-static-info .ui-btn a {
-  padding: 0 50px;
-  display: inline-block;
 }
 body .wrapper .promo.inner-page .promo-static {
   background: #F2F2F2;
@@ -752,8 +847,6 @@ body .wrapper .promo.inner-page .promo-static-info .ui-btn {
   margin-top: 40px;
 }
 body .wrapper .promo.inner-page .promo-static-info .ui-btn a {
-  display: inline-block;
-  padding: 0 50px;
   font-weight: normal;
 }
 body .wrapper .promo-slider-block-item {
@@ -780,9 +873,6 @@ body .wrapper .promo-slider-block-item-txt-desc {
 }
 body .wrapper .promo-slider-block-item-txt .ui-btn {
   margin-top: 50px;
-}
-body .wrapper .promo-slider-block-item-txt .ui-btn a {
-  width: 260px;
 }
 body .wrapper .promo-static {
   position: relative;
@@ -1066,8 +1156,14 @@ body .wrapper main .m-inner .credit-body-calc .ui-range {
 body .wrapper main .m-inner .credit-body-calc .ui-range:first-child {
   margin-top: 0;
 }
+body .wrapper main .m-inner .credit-body-calc .ui-pointer {
+  margin-top: 35px;
+}
+body .wrapper main .m-inner .credit-body-calc .ui-pointer:first-child {
+  margin-top: 0;
+}
 body .wrapper main .m-inner .credit-body-calc .ui-checkbox {
-  margin-top: 45px;
+  margin-top: 40px;
 }
 body .wrapper main .m-inner .credit-body-result {
   padding: 65px 50px 35px 65px;
@@ -1305,6 +1401,9 @@ body .wrapper main .m-inner .banners-list-item-content .ui-btn-hollow {
 }
 body .wrapper main .m-inner .help {
   padding: 40px 0 55px 0;
+}
+body .wrapper main .m-inner .help.mortgage-page {
+  margin-top: 60px;
 }
 body .wrapper main .m-inner .help .tags {
   margin-top: 25px;
@@ -1637,8 +1736,6 @@ body .wrapper main .m-inner .tabs-content-list-item .deposit-calc-result-control
   width: calc((100% - 20px)/2);
 }
 body .wrapper main .m-inner .tabs-content-list-item .deposit-calc-result-controls .ui-btn a {
-  padding: 0 50px;
-  display: inline-block;
   font-weight: normal;
 }
 body .wrapper main .m-inner .tabs-content-list-item .deposit-calc-result-controls-desc {
@@ -1808,7 +1905,6 @@ body .wrapper main .m-inner .online-advantages-content .ui-btn {
   margin-top: 55px;
 }
 body .wrapper main .m-inner .online-advantages-content .ui-btn a {
-  width: 130px;
   line-height: 46px;
 }
 body .wrapper main .m-inner .functions {
@@ -2014,7 +2110,6 @@ body .wrapper main .m-inner .deposits-list-item.big .deposits-list-item-content-
   margin-right: 25px;
 }
 body .wrapper main .m-inner .deposits-list-item.big .deposits-list-item-content-actions .ui-btn a {
-  padding: 0 40px;
   font-weight: normal;
 }
 body .wrapper main .m-inner .deposits-list-item-img {
@@ -2431,6 +2526,86 @@ body .wrapper main .m-inner .good-ways-block-item-content-link a:after {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='14' viewBox='0 0 8 14' fill='none'%3E%3Cpath d='M1 12.5L6 7L1 1.5' stroke='%23F65E64' stroke-width='2'/%3E%3C/svg%3E") center no-repeat;
   background-size: 100%;
   transition: 0.2s;
+}
+body .wrapper main .m-inner .mortgage-list {
+  margin-top: 40px;
+}
+body .wrapper main .m-inner .mortgage-list-item {
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+  background: #F2F2F2;
+  border-radius: 10px;
+}
+body .wrapper main .m-inner .mortgage-list-item:first-child {
+  margin-top: 0;
+}
+body .wrapper main .m-inner .mortgage-list-item.shrinked {
+  justify-content: flex-start;
+}
+body .wrapper main .m-inner .mortgage-list-item-content {
+  padding: 40px 80px;
+}
+body .wrapper main .m-inner .mortgage-list-item-content-title {
+  font: 700 34px/42px Gilroy;
+  color: #262626;
+}
+body .wrapper main .m-inner .mortgage-list-item-content-block {
+  margin-top: 28px;
+  padding-bottom: 13px;
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid #D9D9D9;
+}
+body .wrapper main .m-inner .mortgage-list-item-content-block-item {
+  margin-left: 70px;
+}
+body .wrapper main .m-inner .mortgage-list-item-content-block-item:first-child {
+  margin-left: 0;
+}
+body .wrapper main .m-inner .mortgage-list-item-content-block-item-value {
+  display: flex;
+  align-items: baseline;
+}
+body .wrapper main .m-inner .mortgage-list-item-content-block-item-value span {
+  font: 22px/30px Gilroy;
+  color: #262626;
+}
+body .wrapper main .m-inner .mortgage-list-item-content-block-item-value span.num {
+  margin: 0 10px;
+  font-size: 34px;
+}
+body .wrapper main .m-inner .mortgage-list-item-content-block-item-desc {
+  font: 15px/30px Gilroy;
+  color: #262626;
+}
+body .wrapper main .m-inner .mortgage-list-item-content-actions {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+body .wrapper main .m-inner .mortgage-list-item-content-actions .ui-btn a {
+  font-weight: normal;
+}
+body .wrapper main .m-inner .mortgage-list-item-content-actions-more {
+  margin-left: 25px;
+}
+body .wrapper main .m-inner .mortgage-list-item-content-actions-more a {
+  display: flex;
+  align-items: center;
+  font: 300 18px/21px Gilroy;
+  color: #262626;
+  transition: 0.2s;
+}
+body .wrapper main .m-inner .mortgage-list-item-content-actions-more a:after {
+  content: '';
+  margin-left: 10px;
+  width: 8px;
+  height: 14px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='14' viewBox='0 0 6 14' fill='none'%3E%3Cpath d='M1 12.5L6 7L1 1.5' stroke='%23F65E64' stroke-width='2'/%3E%3C/svg%3E") center no-repeat;
+}
+body .wrapper main .m-inner .mortgage-list-item-content-actions-more a:hover {
+  color: #F65E64;
 }
 body .wrapper footer .f-inner {
   max-width: 1480px;

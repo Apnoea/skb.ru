@@ -54,6 +54,8 @@
 @green: #038C73;
 @gray-bg: #F2F2F2;
 @gray-bg-2: #F9F9F9;
+@gray-bg-3: #D0D0D0;
+@gray-blue: #858F9A;
 @gray-dots: #C1C1C1;
 @gray-promo-bg: #EAEBEE;
 @gray-br-1: #D9D9D9;
@@ -412,7 +414,8 @@ body {
 
         .ui-btn {
             a {
-                display: block;
+                padding: 0 50px;
+                display: inline-block;
                 font: 500 18px/56px @font;
                 color: @white;
                 text-align: center;
@@ -492,6 +495,133 @@ body {
                 &-range {
                     font: 14px/20px @font;
                     color: @gray-txt;
+                }
+            }
+        }
+
+        .ui-pointer {
+            &-title {
+                font: 300 16px/28px @font;
+                color: @black;
+            }
+
+            &-list {
+                position: relative;
+                margin-top: 12px;
+                display: flex;
+                justify-content: space-between;
+                align-items: stretch;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 35px;
+                    height: 5px;
+                    background: @gray-bg-3;
+                }
+
+                &-item {
+                    position: relative;
+                    z-index: 1;
+                    max-width: 60px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    cursor: pointer;
+
+                    &:first-child {
+                        align-items: flex-start;
+
+                        .ui-pointer-list-item-num {
+                            text-align: left;
+                        }
+
+                        .ui-pointer-list-item-desc {
+                            text-align: left;
+                        }
+                    }
+
+                    &:last-child {
+                        align-items: flex-end;
+
+                        .ui-pointer-list-item-num {
+                            text-align: right;
+                        }
+
+                        .ui-pointer-list-item-desc {
+                            text-align: right;
+                        }
+                    }
+
+                    &.active {
+                        .ui-pointer-list-item-num {
+                            color: @black;
+                        }
+
+                        .ui-pointer-list-item-indicator {
+                            &:after {
+                                opacity: 1;
+                                transform: scale(1.25);
+                            }
+                        }
+
+                        .ui-pointer-list-item-desc {
+                            color: @black;
+                        }
+                    }
+
+                    &:hover {
+                        .ui-pointer-list-item-indicator {
+                            &:after {
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                    &-num {
+                        font: 33px/40px @font;
+                        color: @gray-blue;
+                        text-align: center;
+                        transition: .3s;
+                    }
+
+                    &-indicator {
+                        position: relative;
+                        margin-top: 7px;
+                        width: 16px;
+                        height: 16px;
+                        background: @gray-bg-3;
+                        border-radius: 50%;
+                        transition: .3s;
+
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background: @green;
+                            border-radius: 50%;
+                            transition: .2s;
+                            opacity: 0;
+                        }
+                    }
+
+                    &-desc {
+                        margin-top: 10px;
+                        max-width: 100%;
+                        height: 20px;
+                        font: 14px/20px @font;
+                        color: @gray-blue;
+                        text-align: center;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        transition: .3s;
+                    }
                 }
             }
         }
@@ -954,7 +1084,6 @@ body {
 
                         .ui-btn {
                             margin-top: 60px;
-                            width: 150px;
                         }
                     }
                 }
@@ -976,11 +1105,6 @@ body {
 
                         .ui-btn {
                             margin-top: 60px;
-
-                            a {
-                                padding: 0 50px;
-                                display: inline-block;
-                            }
                         }
                     }
                 }
@@ -1007,8 +1131,6 @@ body {
                             margin-top: 40px;
 
                             a {
-                                display: inline-block;
-                                padding: 0 50px;
                                 font-weight: normal;
                             }
                         }
@@ -1045,10 +1167,6 @@ body {
 
                             .ui-btn {
                                 margin-top: 50px;
-
-                                a {
-                                    width: 260px;
-                                }
                             }
                         }
                     }
@@ -1377,8 +1495,16 @@ body {
                                 }
                             }
 
+                            .ui-pointer {
+                                margin-top: 35px;
+
+                                &:first-child {
+                                    margin-top: 0;
+                                }
+                            }
+
                             .ui-checkbox {
-                                margin-top: 45px;
+                                margin-top: 40px;
                             }
                         }
 
@@ -1693,6 +1819,10 @@ body {
 
                 .help {
                     padding: 40px 0 55px 0;
+
+                    &.mortgage-page {
+                        margin-top: 60px;
+                    }
 
                     &-title {}
 
@@ -2118,8 +2248,6 @@ body {
                                             width: ~"calc((100% - 20px)/2)";
 
                                             a {
-                                                padding: 0 50px;
-                                                display: inline-block;
                                                 font-weight: normal;
                                             }
                                         }
@@ -2342,7 +2470,6 @@ body {
                             margin-top: 55px;
 
                             a {
-                                width: 130px;
                                 line-height: 46px;
                             }
                         }
@@ -2618,7 +2745,6 @@ body {
                                         margin-right: 25px;
 
                                         a {
-                                            padding: 0 40px;
                                             font-weight: normal;
                                         }
                                     }
@@ -3135,6 +3261,109 @@ body {
                                             background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='14' viewBox='0 0 8 14' fill='none'%3E%3Cpath d='M1 12.5L6 7L1 1.5' stroke='%23F65E64' stroke-width='2'/%3E%3C/svg%3E") center no-repeat;
                                             background-size: 100%;
                                             transition: .2s;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .mortgage-list {
+                    margin-top: 40px;
+
+                    &-item {
+                        margin-top: 45px;
+                        display: flex;
+                        justify-content: space-between;
+                        background: @gray-bg;
+                        border-radius: 10px;
+
+                        &:first-child {
+                            margin-top: 0;
+                        }
+
+                        &.shrinked {
+                            justify-content: flex-start;
+                        }
+
+                        &-img {}
+
+                        &-content {
+                            padding: 40px 80px;
+
+                            &-title {
+                                font: 700 34px/42px @font;
+                                color: @black;
+                            }
+
+                            &-block {
+                                margin-top: 28px;
+                                padding-bottom: 13px;
+                                display: flex;
+                                align-items: flex-start;
+                                border-bottom: 1px solid @gray-br-1;
+
+                                &-item {
+                                    margin-left: 70px;
+
+                                    &:first-child {
+                                        margin-left: 0;
+                                    }
+
+                                    &-value {
+                                        display: flex;
+                                        align-items: baseline;
+
+                                        span {
+                                            font: 22px/30px @font;
+                                            color: @black;
+
+                                            &.num {
+                                                margin: 0 10px;
+                                                font-size: 34px;
+                                            }
+                                        }
+                                    }
+
+                                    &-desc {
+                                        font: 15px/30px @font;
+                                        color: @black;
+                                    }
+                                }
+                            }
+
+                            &-actions {
+                                margin-top: 30px;
+                                display: flex;
+                                align-items: center;
+
+                                .ui-btn {
+                                    a {
+                                        font-weight: normal;
+                                    }
+                                }
+
+                                &-more {
+                                    margin-left: 25px;
+
+                                    a {
+                                        display: flex;
+                                        align-items: center;
+                                        font: 300 18px/21px @font;
+                                        color: @black;
+                                        transition: .2s;
+
+                                        &:after {
+                                            content: '';
+                                            margin-left: 10px;
+                                            width: 8px;
+                                            height: 14px;
+                                            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='14' viewBox='0 0 6 14' fill='none'%3E%3Cpath d='M1 12.5L6 7L1 1.5' stroke='%23F65E64' stroke-width='2'/%3E%3C/svg%3E") center no-repeat;
+                                        }
+
+                                        &:hover {
+                                            color: @red;
                                         }
                                     }
                                 }
