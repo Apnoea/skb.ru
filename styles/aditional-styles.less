@@ -52,14 +52,72 @@ body {
                     &.payment-page {
                         .advantages-block {
                             box-shadow: none;
-                            padding: 60px 165px 60px 130px;
+                            margin-top: 0;
                             
-    
                             &-item {
-                                width: ~"calc((100% - 255px)/3)";
+                                width: ~"calc(100%/4)";
+
+                                &-img {
+                                    margin: 0 auto;
+                                }
+
+                                &-txt {
+                                    text-align: center;
+                                }
                             }
                         }
                     }
+                }
+
+                .banners {
+                    &.payment-page {
+                        padding: 100px 0 40px 0;
+
+                        .banners-list {
+                            margin-top: 40px;
+
+                            .banners-list-item-content {
+
+                                &-title {
+                                    font: 500 30px/36px @font;
+                                }
+    
+                                &-txt {
+                                    margin: 25px 0 45px 0;
+                                    max-width: 295px;
+                                    font: 300 18px/21px @font;
+                                }
+
+                                &-actions {
+                                    display: flex;
+                                    align-items: center;
+    
+                                    &-more {
+                                        margin-left: 30px;
+                                        a {
+                                            display: flex;
+                                            align-items: center;
+                                            font: 300 18px/50px @font;
+                                            color: @black;
+                                            transition: .2s;
+    
+                                            &:after {
+                                                content: '';
+                                                margin-left: 10px;
+                                                width: 8px;
+                                                height: 14px;
+                                                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='13' viewBox='0 0 8 13' fill='none'%3E%3Cpath d='M1 12.1877L6 6.68774L1 1.18774' stroke='%23F65E64' stroke-width='2'/%3E%3C/svg%3E") center no-repeat;
+                                            }
+    
+                                            &:hover {
+                                                color: @red;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }    
                 }
 
                 .steps-advantages {
@@ -111,6 +169,12 @@ body {
                     &.rent {
                         .helping-contacts-txt {
                             max-width: 905px;
+                        }
+                    }
+
+                    &.payment-page {
+                        .helping-contacts-txt {
+                            max-width: 750px;
                         }
                     }
                 }
