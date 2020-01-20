@@ -1,18 +1,25 @@
-body .wrapper .promo.safe-page .promo-static-img {
-  padding-right: 115px;
-  padding-top: 20px;
+body .wrapper .promo.payment-page .promo-static-img {
+  padding-right: 0;
+  padding-top: 0;
 }
-body .wrapper .promo.safe-page .promo-static-info h1 {
+body .wrapper .promo.payment-page .promo-static-info {
+  padding: 120px 0 60px 145px;
+}
+body .wrapper .promo.payment-page .promo-static-info h1 {
   max-width: 465px;
 }
-body .wrapper .promo.safe-page .promo-static-info-txt {
-  max-width: 595px;
+body .wrapper .promo.payment-page .promo-static-info-txt {
+  max-width: 655px;
   margin-top: 45px;
 }
-body .wrapper main .m-inner .advantages.storage .advantages-block {
+body .wrapper main .m-inner .advantages {
+  padding: 0;
+}
+body .wrapper main .m-inner .advantages.payment-page .advantages-block {
+  box-shadow: none;
   padding: 60px 165px 60px 130px;
 }
-body .wrapper main .m-inner .advantages.storage .advantages-block-item {
+body .wrapper main .m-inner .advantages.payment-page .advantages-block-item {
   width: calc((100% - 255px)/3);
 }
 body .wrapper main .m-inner .steps-advantages.rent .steps-advantages-content {

@@ -23,20 +23,21 @@ body {
 
         //UI
         .promo {
-            &.safe-page {
+            &.payment-page {
                 .promo-static {
                     &-img {
-                        padding-right: 115px;
-                        padding-top: 20px;
+                        padding-right: 0;
+                        padding-top: 0;
                     }
 
                     &-info {
+                        padding: 120px 0 60px 145px;
                         h1 {
                             max-width: 465px;
                         }
 
                         &-txt {
-                            max-width: 595px;
+                            max-width: 655px;
                             margin-top: 45px;
                         }
                     }
@@ -47,9 +48,12 @@ body {
         main {
             .m-inner {
                 .advantages {
-                    &.storage {
+                    padding: 0;
+                    &.payment-page {
                         .advantages-block {
+                            box-shadow: none;
                             padding: 60px 165px 60px 130px;
+                            
     
                             &-item {
                                 width: ~"calc((100% - 255px)/3)";
