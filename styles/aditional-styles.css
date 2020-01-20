@@ -12,11 +12,11 @@ body .wrapper .promo.payment-page .promo-static-info-txt {
   max-width: 655px;
   margin-top: 45px;
 }
-body .wrapper main .m-inner .advantages {
+body .wrapper main .m-inner .advantages.payment-page {
   padding: 0;
 }
 body .wrapper main .m-inner .advantages.payment-page .advantages-block {
-  box-shadow: none;
+  box-shadow: none !important;
   margin-top: 0;
 }
 body .wrapper main .m-inner .advantages.payment-page .advantages-block-item {
