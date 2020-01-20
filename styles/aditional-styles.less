@@ -43,6 +43,28 @@ body {
                     }
                 }
             }
+
+            &.safe-page {
+
+                .promo-static {
+                    &-img {
+                        padding-right: 115px;
+                        padding-top: 0;
+                    }
+
+                    &-info {
+                        padding: 90px 0 60px 145px;
+                        h1 {
+                            max-width: 465px;
+                        }
+
+                        &-txt {
+                            max-width: 595px;
+                            margin-top: 45px;
+                        }
+                    }
+                }
+            }
         }
 
         main {
@@ -64,6 +86,18 @@ body {
                                 &-txt {
                                     text-align: center;
                                 }
+                            }
+                        }
+                    }
+
+                    &.safe-page {
+                        padding: 75px 0 60px 0;
+
+                        .advantages-block {
+                            padding: 50px 160px 55px 130px;
+
+                            &-item {
+                            width: ~"calc((100% - 255px)/3)";
                             }
                         }
                     }

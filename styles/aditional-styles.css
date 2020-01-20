@@ -12,6 +12,20 @@ body .wrapper .promo.payment-page .promo-static-info-txt {
   max-width: 655px;
   margin-top: 45px;
 }
+body .wrapper .promo.safe-page .promo-static-img {
+  padding-right: 115px;
+  padding-top: 0;
+}
+body .wrapper .promo.safe-page .promo-static-info {
+  padding: 90px 0 60px 145px;
+}
+body .wrapper .promo.safe-page .promo-static-info h1 {
+  max-width: 465px;
+}
+body .wrapper .promo.safe-page .promo-static-info-txt {
+  max-width: 595px;
+  margin-top: 45px;
+}
 body .wrapper main .m-inner .advantages.payment-page {
   padding: 0;
 }
@@ -27,6 +41,15 @@ body .wrapper main .m-inner .advantages.payment-page .advantages-block-item-img 
 }
 body .wrapper main .m-inner .advantages.payment-page .advantages-block-item-txt {
   text-align: center;
+}
+body .wrapper main .m-inner .advantages.safe-page {
+  padding: 75px 0 60px 0;
+}
+body .wrapper main .m-inner .advantages.safe-page .advantages-block {
+  padding: 50px 160px 55px 130px;
+}
+body .wrapper main .m-inner .advantages.safe-page .advantages-block-item {
+  width: calc((100% - 255px)/3);
 }
 body .wrapper main .m-inner .banners.payment-page {
   padding: 100px 0 40px 0;
