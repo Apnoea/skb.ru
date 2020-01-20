@@ -26,6 +26,16 @@ body .wrapper .promo.safe-page .promo-static-info-txt {
   max-width: 595px;
   margin-top: 45px;
 }
+body .wrapper .promo.remittance-page .promo-static-info {
+  padding: 120px 0 60px 150px;
+}
+body .wrapper .promo.remittance-page .promo-static-info h1 {
+  max-width: 605px;
+}
+body .wrapper .promo.remittance-page .promo-static-info-txt {
+  max-width: 705px;
+  margin-top: 35px;
+}
 body .wrapper main .m-inner .advantages.payment-page {
   padding: 0;
 }
