@@ -62,7 +62,7 @@ body .wrapper main .m-inner .advantages.safe-page .advantages-block-item {
   width: calc((100% - 255px)/3);
 }
 body .wrapper main .m-inner .banners.payment-page {
-  padding: 100px 0 40px 0;
+  padding: 50px 0 40px 0;
 }
 body .wrapper main .m-inner .banners.payment-page .banners-list {
   margin-top: 40px;
@@ -135,5 +135,8 @@ body .wrapper main .m-inner .helping-contacts.rent .helping-contacts-txt {
   max-width: 905px;
 }
 body .wrapper main .m-inner .helping-contacts.payment-page .helping-contacts-txt {
+  max-width: 750px;
+}
+body .wrapper main .m-inner .helping-contacts.remittance-page .helping-contacts-txt {
   max-width: 750px;
 }
