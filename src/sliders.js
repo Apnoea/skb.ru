@@ -13,9 +13,9 @@ $(() => {
         shareSliderDots = $('.share-slider .slick-controls-dots'),
 
         cardsSlider = $('.cards-slider-block'),
-        cardsSliderArrows = $('.cards-slider .slick-controls-arrows');
+        cardsSliderArrows = $('.cards-slider .slick-controls-arrows'),
 
-    tabs = $('.tabs'),
+        tabs = $('.tabs'),
 
         functionsComponents = $('.functions');
 
