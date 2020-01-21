@@ -1,6 +1,23 @@
+body .wrapper .promo.payment-page .promo-static-img {
+  padding-right: 0;
+  padding-top: 0;
+}
+body .wrapper .promo.payment-page .promo-static-info {
+  padding: 120px 0 60px 145px;
+}
+body .wrapper .promo.payment-page .promo-static-info h1 {
+  max-width: 465px;
+}
+body .wrapper .promo.payment-page .promo-static-info-txt {
+  max-width: 655px;
+  margin-top: 45px;
+}
 body .wrapper .promo.safe-page .promo-static-img {
   padding-right: 115px;
-  padding-top: 20px;
+  padding-top: 0;
+}
+body .wrapper .promo.safe-page .promo-static-info {
+  padding: 90px 0 60px 145px;
 }
 body .wrapper .promo.safe-page .promo-static-info h1 {
   max-width: 465px;
@@ -9,11 +26,78 @@ body .wrapper .promo.safe-page .promo-static-info-txt {
   max-width: 595px;
   margin-top: 45px;
 }
-body .wrapper main .m-inner .advantages.storage .advantages-block {
-  padding: 60px 165px 60px 130px;
+body .wrapper .promo.remittance-page .promo-static-info {
+  padding: 120px 0 60px 150px;
 }
-body .wrapper main .m-inner .advantages.storage .advantages-block-item {
+body .wrapper .promo.remittance-page .promo-static-info h1 {
+  max-width: 605px;
+}
+body .wrapper .promo.remittance-page .promo-static-info-txt {
+  max-width: 705px;
+  margin-top: 35px;
+}
+body .wrapper main .m-inner .advantages.payment-page {
+  padding: 0;
+}
+body .wrapper main .m-inner .advantages.payment-page .advantages-block {
+  box-shadow: none !important;
+  margin-top: 0;
+}
+body .wrapper main .m-inner .advantages.payment-page .advantages-block-item {
+  width: calc(100%/4);
+}
+body .wrapper main .m-inner .advantages.payment-page .advantages-block-item-img {
+  margin: 0 auto;
+}
+body .wrapper main .m-inner .advantages.payment-page .advantages-block-item-txt {
+  text-align: center;
+}
+body .wrapper main .m-inner .advantages.safe-page {
+  padding: 75px 0 60px 0;
+}
+body .wrapper main .m-inner .advantages.safe-page .advantages-block {
+  padding: 50px 160px 55px 130px;
+}
+body .wrapper main .m-inner .advantages.safe-page .advantages-block-item {
   width: calc((100% - 255px)/3);
+}
+body .wrapper main .m-inner .banners.payment-page {
+  padding: 100px 0 40px 0;
+}
+body .wrapper main .m-inner .banners.payment-page .banners-list {
+  margin-top: 40px;
+}
+body .wrapper main .m-inner .banners.payment-page .banners-list .banners-list-item-content-title {
+  font: 500 30px/36px Gilroy;
+}
+body .wrapper main .m-inner .banners.payment-page .banners-list .banners-list-item-content-txt {
+  margin: 25px 0 45px 0;
+  max-width: 295px;
+  font: 300 18px/21px Gilroy;
+}
+body .wrapper main .m-inner .banners.payment-page .banners-list .banners-list-item-content-actions {
+  display: flex;
+  align-items: center;
+}
+body .wrapper main .m-inner .banners.payment-page .banners-list .banners-list-item-content-actions-more {
+  margin-left: 30px;
+}
+body .wrapper main .m-inner .banners.payment-page .banners-list .banners-list-item-content-actions-more a {
+  display: flex;
+  align-items: center;
+  font: 300 18px/50px Gilroy;
+  color: #262626;
+  transition: 0.2s;
+}
+body .wrapper main .m-inner .banners.payment-page .banners-list .banners-list-item-content-actions-more a:after {
+  content: '';
+  margin-left: 10px;
+  width: 8px;
+  height: 14px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='13' viewBox='0 0 8 13' fill='none'%3E%3Cpath d='M1 12.1877L6 6.68774L1 1.18774' stroke='%23F65E64' stroke-width='2'/%3E%3C/svg%3E") center no-repeat;
+}
+body .wrapper main .m-inner .banners.payment-page .banners-list .banners-list-item-content-actions-more a:hover {
+  color: #F65E64;
 }
 body .wrapper main .m-inner .steps-advantages.rent .steps-advantages-content {
   padding-left: 0;
@@ -49,4 +133,7 @@ body .wrapper main .m-inner .tariffs h2 {
 }
 body .wrapper main .m-inner .helping-contacts.rent .helping-contacts-txt {
   max-width: 905px;
+}
+body .wrapper main .m-inner .helping-contacts.payment-page .helping-contacts-txt {
+  max-width: 750px;
 }
