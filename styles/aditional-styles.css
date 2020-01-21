@@ -143,46 +143,61 @@ body .wrapper main .m-inner .helping-contacts.remittance-page .helping-contacts-
 body .wrapper main .m-inner .systems {
   padding: 75px 0 60px 0;
 }
-body .wrapper main .m-inner .systems-block {
+body .wrapper main .m-inner .systems-content {
+  margin-top: 25px;
+}
+body .wrapper main .m-inner .systems-content-heading {
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .wrapper main .m-inner .systems-content-heading-item {
+  width: 180px;
+  font: 300 14px/20px Gilroy;
+  color: #858F9A;
+  text-transform: uppercase;
+}
+body .wrapper main .m-inner .systems-content-heading-item:nth-child(2) {
+  margin-left: 70px;
+}
+body .wrapper main .m-inner .systems-content-heading-item:nth-child(3) {
+  margin-left: 50px;
+}
+body .wrapper main .m-inner .systems-content-heading-item:nth-child(5) {
+  margin-left: 100px;
+}
+body .wrapper main .m-inner .systems-content-heading-item:nth-child(6) {
+  margin-left: 60px;
+}
+body .wrapper main .m-inner .systems-content-block-item {
   margin-top: 20px;
-  padding: 20px 60px 20px 60px;
+  padding: 24px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 10px 30px rgba(204, 208, 214, 0.5) !important;
-  border-radius: 10px;
 }
-body .wrapper main .m-inner .systems-block:nth-child(3) {
+body .wrapper main .m-inner .systems-content-block-item:first-child {
   margin-top: 0;
 }
-body .wrapper main .m-inner .systems-block-heading {
-  margin-top: 40px;
-  padding: 20px 60px 20px 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: none !important;
-  text-transform: uppercase;
-}
-body .wrapper main .m-inner .systems-block-item {
-  width: calc((100% - 295px)/6);
-}
-body .wrapper main .m-inner .systems-block-item-point-img {
-  width: 178px;
-  height: 50px;
-}
-body .wrapper main .m-inner .systems-block-item-point-img svg {
-  max-width: 100%;
-  max-height: 100%;
-}
-body .wrapper main .m-inner .systems-block-item-point-txt {
+body .wrapper main .m-inner .systems-content-block-item-point {
+  width: 180px;
   font: 300 18px/21px Gilroy;
   color: #262626;
 }
-body .wrapper main .m-inner .systems-block-item-point-txt a {
-  color: #F65E64;
+body .wrapper main .m-inner .systems-content-block-item-point:nth-child(2) {
+  margin-left: 70px;
 }
-body .wrapper main .m-inner .systems-block-item-point-txt-heading {
-  font: 300 14px/20px Gilroy;
-  color: #858F9A;
+body .wrapper main .m-inner .systems-content-block-item-point:nth-child(3) {
+  margin-left: 50px;
+}
+body .wrapper main .m-inner .systems-content-block-item-point:nth-child(5) {
+  margin-left: 100px;
+}
+body .wrapper main .m-inner .systems-content-block-item-point:nth-child(6) {
+  margin-left: 60px;
+}
+body .wrapper main .m-inner .systems-content-block-item-point a {
+  color: #F65E64;
 }

@@ -46,7 +46,6 @@ body {
             }
 
             &.safe-page {
-
                 .promo-static {
                     &-img {
                         padding-right: 115px;
@@ -70,7 +69,6 @@ body {
 
             &.remittance-page {
                 .promo-static {
-
                     &-info {
                         padding: 120px 0 60px 150px;
 
@@ -132,7 +130,6 @@ body {
                             margin-top: 40px;
 
                             .banners-list-item-content {
-
                                 &-title {
                                     font: 500 30px/36px @font;
                                 }
@@ -245,55 +242,75 @@ body {
                 .systems {
                     padding: 75px 0 60px 0;
 
-                    &-block {
-                        margin-top: 20px;
-                        padding: 20px 60px 20px 60px;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        box-shadow: 0px 10px 30px rgba(204, 208, 214, 0.5) !important;
-                        border-radius: 10px;
-
-                        &:nth-child(3) {
-                            margin-top: 0;
-                        }
+                    &-content {
+                        margin-top: 25px;
 
                         &-heading {
-                            margin-top: 40px;
-                            padding: 20px 60px 20px 60px;
+                            padding: 20px 60px;
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
-                            box-shadow: none !important;
-                            text-transform: uppercase;
-                        }
 
-                        &-item {
-                            width: ~"calc((100% - 295px)/6)";
+                            &-item {
+                                width: 180px;
+                                font: 300 14px/20px @font;
+                                color: @gray-txt;
+                                text-transform: uppercase;
 
-                            &-point {
-
-                                &-img {
-                                    width: 178px;
-                                    height: 50px;
-
-                                    svg {
-                                        max-width: 100%;
-                                        max-height: 100%;
-                                    }
+                                &:nth-child(2) {
+                                    margin-left: 70px;
                                 }
 
-                                &-txt {
+                                &:nth-child(3) {
+                                    margin-left: 50px;
+                                }
+
+                                &:nth-child(5) {
+                                    margin-left: 100px;
+                                }
+
+                                &:nth-child(6) {
+                                    margin-left: 60px;
+                                }
+                            }
+                        }
+
+                        &-block {
+                            &-item {
+                                margin-top: 20px;
+                                padding: 24px 60px;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                box-shadow: 0px 10px 30px rgba(204, 208, 214, 0.5) !important;
+
+                                &:first-child {
+                                    margin-top: 0;
+                                }
+
+                                &-point {
+                                    width: 180px;
                                     font: 300 18px/21px @font;
                                     color: @black;
 
-                                    a {
-                                        color: @red;
+                                    &:nth-child(2) {
+                                        margin-left: 70px;
                                     }
 
-                                    &-heading {
-                                        font: 300 14px/20px @font;
-                                        color: @gray-txt;
+                                    &:nth-child(3) {
+                                        margin-left: 50px;
+                                    }
+
+                                    &:nth-child(5) {
+                                        margin-left: 100px;
+                                    }
+
+                                    &:nth-child(6) {
+                                        margin-left: 60px;
+                                    }
+
+                                    a {
+                                        color: @red;
                                     }
                                 }
                             }
