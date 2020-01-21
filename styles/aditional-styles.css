@@ -123,7 +123,7 @@ body .wrapper main .m-inner .steps-advantages.rent .steps-advantages-img img {
   width: 100%;
 }
 body .wrapper main .m-inner .tariffs {
-  padding: 60px 0;
+  padding: 40px 0;
 }
 body .wrapper main .m-inner .tariffs .tariffs-content-list {
   margin-top: 40px;
@@ -139,4 +139,50 @@ body .wrapper main .m-inner .helping-contacts.payment-page .helping-contacts-txt
 }
 body .wrapper main .m-inner .helping-contacts.remittance-page .helping-contacts-txt {
   max-width: 750px;
+}
+body .wrapper main .m-inner .systems {
+  padding: 75px 0 60px 0;
+}
+body .wrapper main .m-inner .systems-block {
+  margin-top: 20px;
+  padding: 20px 60px 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 10px 30px rgba(204, 208, 214, 0.5) !important;
+  border-radius: 10px;
+}
+body .wrapper main .m-inner .systems-block:nth-child(3) {
+  margin-top: 0;
+}
+body .wrapper main .m-inner .systems-block-heading {
+  margin-top: 40px;
+  padding: 20px 60px 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: none !important;
+  text-transform: uppercase;
+}
+body .wrapper main .m-inner .systems-block-item {
+  width: calc((100% - 295px)/6);
+}
+body .wrapper main .m-inner .systems-block-item-point-img {
+  width: 178px;
+  height: 50px;
+}
+body .wrapper main .m-inner .systems-block-item-point-img svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+body .wrapper main .m-inner .systems-block-item-point-txt {
+  font: 300 18px/21px Gilroy;
+  color: #262626;
+}
+body .wrapper main .m-inner .systems-block-item-point-txt a {
+  color: #F65E64;
+}
+body .wrapper main .m-inner .systems-block-item-point-txt-heading {
+  font: 300 14px/20px Gilroy;
+  color: #858F9A;
 }

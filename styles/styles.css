@@ -110,6 +110,9 @@ body .wrapper h3 {
   font: 700 28px/42px Gilroy;
   color: #262626;
 }
+body .wrapper h3.title {
+  font-size: 34px;
+}
 body .wrapper h6 {
   margin: 20px 0 0 0;
   padding: 0;
@@ -174,6 +177,20 @@ body .wrapper .logo a svg {
 body .wrapper .logo a svg #clip0 rect {
   width: 100%;
   height: 100%;
+}
+body .wrapper .tags.as-tag .tags-block-item.active a,
+body .wrapper .tags.as-tag .tags-block-item:hover a {
+  border-color: #038C73;
+  background: transparent;
+  color: #038C73;
+}
+body .wrapper .tags.as-tag .tags-block-item a {
+  border: 1px solid #D9D9D9;
+  color: #767474;
+}
+body .wrapper .tags.xs .tags-block-item a {
+  padding: 0 20px;
+  line-height: 28px;
 }
 body .wrapper .tags.sm .tags-block-item a {
   padding: 0 20px;
@@ -305,6 +322,25 @@ body .wrapper .ui-btn a {
 body .wrapper .ui-btn a:hover {
   color: #F65E64;
   background: transparent;
+}
+body .wrapper .ui-arrow-link a {
+  display: flex;
+  align-items: center;
+  font: 300 18px/1 Gilroy;
+  color: #262626;
+  transition: 0.2s;
+}
+body .wrapper .ui-arrow-link a:hover {
+  color: #F65E64;
+}
+body .wrapper .ui-arrow-link a:after {
+  content: '';
+  margin-left: 15px;
+  width: 9px;
+  height: 9px;
+  border-bottom: 2px solid #F65E64;
+  border-left: 2px solid #F65E64;
+  transform: rotate(-135deg);
 }
 body .wrapper .ui-range-titles {
   display: flex;
@@ -619,6 +655,33 @@ body .wrapper .ui-table table tr td {
 body .wrapper .ui-table table tr td:first-child {
   font-weight: 700;
 }
+body .wrapper .ui-pill-btn {
+  display: flex;
+  align-items: stretch;
+}
+body .wrapper .ui-pill-btn button {
+  padding: 8px 20px 11px 20px;
+  font: 14px/1 Gilroy;
+  color: #858F9A;
+  border: 1px solid #D9D9D9;
+  transition: 0.3s;
+}
+body .wrapper .ui-pill-btn button:first-child {
+  border-radius: 30px 0px 0px 30px;
+}
+body .wrapper .ui-pill-btn button:last-child {
+  border-left: none;
+  border-radius: 0px 30px 30px 0px;
+}
+body .wrapper .ui-pill-btn button:not(.active):hover {
+  color: #F65E64;
+  border-color: #F65E64;
+}
+body .wrapper .ui-pill-btn button.active {
+  color: #ffffff;
+  background: #F65E64;
+  border-color: #F65E64;
+}
 body .wrapper .docs-list-item {
   margin-top: 25px;
 }
@@ -642,6 +705,42 @@ body .wrapper .docs-list-item a:before {
   height: 30px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='31' viewBox='0 0 22 31' fill='none'%3E%3Crect x='1' y='1' width='20' height='23' rx='2' stroke='%23F65E64' stroke-width='2'/%3E%3Cpath d='M6 7.5H13' stroke='%23F65E64' stroke-width='2'/%3E%3Cpath d='M6 12.5H16' stroke='%23F65E64' stroke-width='2'/%3E%3Cpath d='M6 17.5H16' stroke='%23F65E64' stroke-width='2'/%3E%3Cpath d='M10 30H20' stroke='%23F65E64' stroke-width='2'/%3E%3C/svg%3E") center no-repeat;
   background-size: 100%;
+}
+body .wrapper .heading-toggle.toggled .heading-toggle-actor:after {
+  transform: translateX(20px);
+}
+body .wrapper .heading-toggle.toggled button h1 span:first-child {
+  color: #858F9A;
+}
+body .wrapper .heading-toggle.toggled button h1 span:last-child {
+  color: #262626;
+}
+body .wrapper .heading-toggle-actor {
+  margin: 0 15px;
+  padding: 3px;
+  width: 46px;
+  border: 1px solid #858F9A;
+  border-radius: 15px;
+  transform: translateY(1px);
+}
+body .wrapper .heading-toggle-actor:after {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #262626;
+  transition: 0.3s;
+}
+body .wrapper .heading-toggle button h1 {
+  display: flex;
+  align-items: baseline;
+}
+body .wrapper .heading-toggle button h1 span {
+  transition: 0.3s;
+}
+body .wrapper .heading-toggle button h1 span:last-child {
+  color: #858F9A;
 }
 body .wrapper header .h-inner {
   padding: 0 50px;
@@ -1264,25 +1363,6 @@ body .wrapper main .m-inner .news-title {
   align-items: baseline;
   justify-content: space-between;
 }
-body .wrapper main .m-inner .news-title-link a {
-  display: flex;
-  align-items: center;
-  font: 300 18px/1 Gilroy;
-  color: #262626;
-  transition: 0.2s;
-}
-body .wrapper main .m-inner .news-title-link a:hover {
-  color: #F65E64;
-}
-body .wrapper main .m-inner .news-title-link a:after {
-  content: '';
-  margin-left: 15px;
-  width: 9px;
-  height: 9px;
-  border-bottom: 2px solid #F65E64;
-  border-left: 2px solid #F65E64;
-  transform: rotate(-135deg);
-}
 body .wrapper main .m-inner .news-block {
   margin-top: 40px;
   display: flex;
@@ -1830,14 +1910,6 @@ body .wrapper main .m-inner .sub-banners-list-item-content {
   display: flex;
   flex-direction: column;
 }
-body .wrapper main .m-inner .sub-banners-list-item-content .tags-block-item a {
-  color: rgba(0, 0, 0, 0.6);
-  border-color: #D9D9D9;
-}
-body .wrapper main .m-inner .sub-banners-list-item-content .tags-block-item a:hover {
-  border-color: #038C73;
-  color: #ffffff;
-}
 body .wrapper main .m-inner .sub-banners-list-item-content-title {
   margin-top: 25px;
   font: 700 26px/32px Gilroy;
@@ -1849,27 +1921,9 @@ body .wrapper main .m-inner .sub-banners-list-item-content-txt {
   font: 16px/22px Gilroy;
   color: #262626;
 }
-body .wrapper main .m-inner .sub-banners-list-item-content-link {
+body .wrapper main .m-inner .sub-banners-list-item-content .ui-arrow-link {
   margin-top: auto;
-}
-body .wrapper main .m-inner .sub-banners-list-item-content-link a {
-  display: flex;
-  align-items: center;
-  font: 300 18px/50px Gilroy;
-  color: #262626;
-  transition: 0.2s;
-}
-body .wrapper main .m-inner .sub-banners-list-item-content-link a:after {
-  content: '';
-  margin-left: 15px;
-  width: 9px;
-  height: 9px;
-  border-left: 2px solid #F65E64;
-  border-bottom: 2px solid #F65E64;
-  transform: rotate(-135deg);
-}
-body .wrapper main .m-inner .sub-banners-list-item-content-link a:hover {
-  color: #F65E64;
+  padding: 16px 0;
 }
 body .wrapper main .m-inner .online-advantages {
   padding: 50px 0 30px 0;
@@ -2070,10 +2124,11 @@ body .wrapper main .m-inner .deposits-list {
 body .wrapper main .m-inner .deposits-list-item {
   position: relative;
   margin-top: 35px;
-  padding: 25px 60px;
+  padding: 25px 60px 37px 60px;
   width: calc((100% - 40px)/2);
   background: #F2F2F2;
   border-radius: 10px;
+  overflow: hidden;
 }
 body .wrapper main .m-inner .deposits-list-item:first-child {
   margin-top: 0;
@@ -2121,15 +2176,6 @@ body .wrapper main .m-inner .deposits-list-item-img {
 body .wrapper main .m-inner .deposits-list-item-content {
   max-width: 360px;
 }
-body .wrapper main .m-inner .deposits-list-item-content .tags-block-item a {
-  border-width: 1px;
-  border-color: #D9D9D9;
-  color: #C1C1C1;
-}
-body .wrapper main .m-inner .deposits-list-item-content .tags-block-item a:hover {
-  border-color: transparent;
-  color: #ffffff;
-}
 body .wrapper main .m-inner .deposits-list-item-content-name {
   margin-top: 18px;
   font: 700 26px/32px Gilroy;
@@ -2163,27 +2209,10 @@ body .wrapper main .m-inner .deposits-list-item-content-block-item-desc {
 }
 body .wrapper main .m-inner .deposits-list-item-content-actions {
   margin-top: 35px;
-  padding-top: 15px;
+  padding-top: 35px;
   display: flex;
   align-items: center;
   border-top: 1px solid #D9D9D9;
-}
-body .wrapper main .m-inner .deposits-list-item-content-actions-more a {
-  display: flex;
-  align-items: center;
-  font: 300 18px/50px Gilroy;
-  color: #262626;
-  transition: 0.2s;
-}
-body .wrapper main .m-inner .deposits-list-item-content-actions-more a:after {
-  content: '';
-  margin-left: 10px;
-  width: 8px;
-  height: 14px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='13' viewBox='0 0 8 13' fill='none'%3E%3Cpath d='M1 12.1877L6 6.68774L1 1.18774' stroke='%23F65E64' stroke-width='2'/%3E%3C/svg%3E") center no-repeat;
-}
-body .wrapper main .m-inner .deposits-list-item-content-actions-more a:hover {
-  color: #F65E64;
 }
 body .wrapper main .m-inner .deposits-steps {
   padding: 100px 0 75px 0;
@@ -2587,25 +2616,242 @@ body .wrapper main .m-inner .mortgage-list-item-content-actions {
 body .wrapper main .m-inner .mortgage-list-item-content-actions .ui-btn a {
   font-weight: normal;
 }
-body .wrapper main .m-inner .mortgage-list-item-content-actions-more {
+body .wrapper main .m-inner .mortgage-list-item-content-actions .ui-arrow-link {
   margin-left: 25px;
 }
-body .wrapper main .m-inner .mortgage-list-item-content-actions-more a {
+body .wrapper main .m-inner .atms-location {
+  margin-top: 30px;
+  display: flex;
+}
+body .wrapper main .m-inner .atms-location-city button {
+  display: flex;
+  align-items: baseline;
+}
+body .wrapper main .m-inner .atms-location-city button:hover svg path {
+  fill: #F65E64;
+}
+body .wrapper main .m-inner .atms-location-city button svg {
+  width: 13px;
+  height: 13px;
+}
+body .wrapper main .m-inner .atms-location-city button svg path {
+  transition: 0.3s;
+}
+body .wrapper main .m-inner .atms-location-city button span {
+  margin-left: 4px;
+  padding: 4px 0;
+  font: 300 18px/26px Gilroy;
+  color: #038C73;
+  border-bottom: 1px dashed #038C73;
+}
+body .wrapper main .m-inner .atms-location-sub {
+  margin-left: 30px;
+  padding: 4px 0;
+  width: 100%;
+  max-width: 570px;
+  border-bottom: 1px solid #E6E8E0;
+}
+body .wrapper main .m-inner .atms-location-sub input {
+  padding: 0;
+  width: 100%;
+  font: 300 18px/26px Gilroy;
+  color: #767474;
+  border: none;
+}
+body .wrapper main .m-inner .atms-location-sub input::placeholder {
+  font: 300 18px/26px Gilroy;
+  color: #767474;
+}
+body .wrapper main .m-inner .atms-actors {
+  margin-top: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+body .wrapper main .m-inner .atms-map {
+  margin-top: 40px;
+  padding-bottom: 85px;
+  height: 580px;
+}
+body .wrapper main .m-inner .under-control {
+  position: relative;
+  margin: 60px 0;
+}
+body .wrapper main .m-inner .under-control-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+body .wrapper main .m-inner .under-control-content {
+  padding: 65px 0 52px 80px;
+  background: #F2F2F2;
+  border-radius: 10px;
+}
+body .wrapper main .m-inner .under-control-content ul.list {
+  margin-top: 25px;
+}
+body .wrapper main .m-inner .under-control-content ul.list li {
+  margin-top: 11px;
+}
+body .wrapper main .m-inner .under-control-content-actions {
+  margin-top: 45px;
   display: flex;
   align-items: center;
-  font: 300 18px/21px Gilroy;
-  color: #262626;
-  transition: 0.2s;
 }
-body .wrapper main .m-inner .mortgage-list-item-content-actions-more a:after {
+body .wrapper main .m-inner .under-control-content-actions .ui-btn {
+  margin-right: 25px;
+}
+body .wrapper main .m-inner .under-control-content-actions .ui-btn a {
+  line-height: 46px;
+}
+body .wrapper main .m-inner .cards-slider {
+  position: relative;
+  padding: 40px 0 50px 0;
+}
+body .wrapper main .m-inner .cards-slider-block {
+  position: relative;
+}
+body .wrapper main .m-inner .cards-slider-block:before {
   content: '';
-  margin-left: 10px;
-  width: 8px;
-  height: 14px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='14' viewBox='0 0 6 14' fill='none'%3E%3Cpath d='M1 12.5L6 7L1 1.5' stroke='%23F65E64' stroke-width='2'/%3E%3C/svg%3E") center no-repeat;
+  position: absolute;
+  z-index: 1;
+  top: -30px;
+  bottom: -30px;
+  right: calc(100% + 30px);
+  width: calc((100vw - 100% - 30px)/2);
+  background: #ffffff;
 }
-body .wrapper main .m-inner .mortgage-list-item-content-actions-more a:hover {
-  color: #F65E64;
+body .wrapper main .m-inner .cards-slider-block-item {
+  position: relative;
+  padding: 70px 60px 45px 60px;
+  width: 570px;
+  background: #F2F2F2;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+body .wrapper main .m-inner .cards-slider-block-item-layout {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+body .wrapper main .m-inner .cards-slider-block-item .tags {
+  position: absolute;
+  top: 11px;
+  left: 13px;
+}
+body .wrapper main .m-inner .cards-slider-block-item-title {
+  text-align: center;
+}
+body .wrapper main .m-inner .cards-slider-block-item-desc {
+  margin-top: 5px;
+  font: 20px/24px Gilroy;
+  color: #262626;
+  text-align: center;
+}
+body .wrapper main .m-inner .cards-slider-block-item-img {
+  position: relative;
+  z-index: 1;
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 250px;
+}
+body .wrapper main .m-inner .cards-slider-block-item-img img {
+  box-shadow: 0px 10px 30px rgba(204, 208, 214, 0.5) !important;
+}
+body .wrapper main .m-inner .cards-slider-block-item-list {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+body .wrapper main .m-inner .cards-slider-block-item-list-item-val {
+  display: flex;
+  align-items: baseline;
+}
+body .wrapper main .m-inner .cards-slider-block-item-list-item-val span {
+  font: 500 20px/30px Gilroy;
+  color: #262626;
+}
+body .wrapper main .m-inner .cards-slider-block-item-list-item-val span.num {
+  margin: 0 5px;
+  font-size: 30px;
+}
+body .wrapper main .m-inner .cards-slider-block-item-list-item-val span.num:first-child {
+  margin-left: 0;
+}
+body .wrapper main .m-inner .cards-slider-block-item-list-item-val span.num:last-child {
+  margin-right: 0;
+}
+body .wrapper main .m-inner .cards-slider-block-item-list-item-desc {
+  margin-top: 5px;
+  font: 14px/17px Gilroy;
+  color: #262626;
+}
+body .wrapper main .m-inner .cards-slider-block-item-actions {
+  margin-top: 20px;
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #D9D9D9;
+}
+body .wrapper main .m-inner .cards-slider-block-item-actions .ui-btn {
+  margin-right: 25px;
+}
+body .wrapper main .m-inner .cards-slider-block-item-actions .ui-btn a {
+  padding: 0 40px;
+  line-height: 46px;
+  font-weight: normal;
+}
+body .wrapper main .m-inner .cards-slider .slick-slider .slick-list {
+  overflow: visible;
+}
+body .wrapper main .m-inner .cards-slider .slick-slider .slick-list .slick-track .slick-slide {
+  margin-left: 60px;
+}
+body .wrapper main .m-inner .cards-slider .slick-slider .slick-list .slick-track .slick-slide:first-child {
+  margin-left: 0;
+}
+body .wrapper main .m-inner .cards-slider .slick-slider .slick-list .slick-track .slick-slide.slick-current .cards-slider-block-item {
+  background: #ffffff;
+  box-shadow: 0px 10px 30px rgba(204, 208, 214, 0.5) !important;
+}
+body .wrapper main .m-inner .cards-slider .slick-controls-arrows {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  right: calc(100% + 35px);
+  display: flex;
+  align-items: center;
+  pointer-events: all;
+}
+body .wrapper main .m-inner .cards-slider .slick-controls-arrows.start .slick-arrow.slick-prev {
+  filter: invert(100%) sepia(0%) saturate(3659%) hue-rotate(137deg) brightness(144%) contrast(70%);
+}
+body .wrapper main .m-inner .cards-slider .slick-controls-arrows.end .slick-arrow.slick-next {
+  filter: invert(100%) sepia(0%) saturate(3659%) hue-rotate(137deg) brightness(144%) contrast(70%);
+}
+body .wrapper main .m-inner .cards-slider .slick-controls-arrows .slick-arrow {
+  width: 14px;
+  height: 23px;
+  margin-left: 40px;
+  font-size: 0;
+  transition: 0.3s;
+}
+body .wrapper main .m-inner .cards-slider .slick-controls-arrows .slick-arrow:first-child {
+  margin-left: 0;
+}
+body .wrapper main .m-inner .cards-slider .slick-controls-arrows .slick-arrow.slick-prev {
+  background: url("data:image/svg+xml,%3Csvg width='14' height='23' viewBox='0 0 14 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2L3 11.5L12 21' stroke='%23262626' stroke-width='3'/%3E%3C/svg%3E%0A") center no-repeat;
+  background-size: 100%;
+}
+body .wrapper main .m-inner .cards-slider .slick-controls-arrows .slick-arrow.slick-next {
+  background: url("data:image/svg+xml,%3Csvg transform='rotate(180)' width='14' height='23' viewBox='0 0 14 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2L3 11.5L12 21' stroke='%23262626' stroke-width='3'/%3E%3C/svg%3E%0A") center no-repeat;
+  background-size: 100%;
 }
 body .wrapper footer .f-inner {
   max-width: 1480px;

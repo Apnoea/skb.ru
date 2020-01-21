@@ -12,6 +12,9 @@ $(() => {
         shareSlider = $('.share-slider-block'),
         shareSliderDots = $('.share-slider .slick-controls-dots'),
 
+        cardsSlider = $('.cards-slider-block'),
+        cardsSliderArrows = $('.cards-slider .slick-controls-arrows'),
+
         tabs = $('.tabs'),
 
         functionsComponents = $('.functions');
@@ -98,5 +101,25 @@ $(() => {
             currTab.addClass('active');
             currSlider.slick('slickGoTo', index);
         });
+    });
+
+    cardsSlider.on('init', function (event, slick, currentSlide, nextSlide) {
+        cardsSliderArrows.addClass('start');
+    });
+
+    cardsSlider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
+        cardsSliderArrows.removeClass('start end');
+        if (currentSlide == 0) cardsSliderArrows.addClass('start');
+        if (currentSlide == slick.slideCount - 1) cardsSliderArrows.addClass('end');
+    });
+
+    cardsSlider.slick({
+        arrows: true,
+        dots: false,
+        zIndex: 5,
+        infinite: false,
+        focusOnSelect: true,
+        variableWidth: true,
+        appendArrows: cardsSliderArrows
     });
 });
