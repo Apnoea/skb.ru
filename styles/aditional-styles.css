@@ -253,3 +253,6 @@ body .wrapper main .m-inner .pagination-block-item a {
 body .wrapper main .m-inner .pagination-block-item a:hover {
   background-color: #F2F2F2;
 }
+body .wrapper main .m-inner .pagination-control {
+  margin-left: 25px;
+}
