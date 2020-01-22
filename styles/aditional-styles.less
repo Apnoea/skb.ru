@@ -144,9 +144,11 @@ body {
                                     display: flex;
                                     align-items: center;
 
-                                    &-more {
-                                        margin-left: 30px;
+                                    .ui-btn-hollow {
+                                        margin-right: 35px;
+                                    }
 
+                                    &-ui-arrow-link {
                                         a {
                                             display: flex;
                                             align-items: center;
@@ -312,6 +314,71 @@ body {
                                     a {
                                         color: @red;
                                     }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .news {
+                    .tags {
+                        margin-top: 45px;
+                    }
+
+                    &-block {
+                        flex-wrap: wrap;
+
+                        &-item {
+                            width: calc((100% - 190px)/2);
+                            margin-top: 80px;
+
+                            &:nth-child(1) {
+                                margin-top: 0;
+                            }
+                            &:nth-child(2) {
+                                margin-top: 0;
+                            }
+
+                            a {
+                                display: block;
+                                width: 550px;
+                            }
+                            
+                            &-title {
+                                margin-top: 15px;
+                                font: 500 18px/26px @font;
+                                color: @black;
+                            }
+
+                            &-txt {
+                                font: 300 16px/24px @font;
+                            }
+                        }
+                    }
+                }
+                .pagination {
+                    padding: 45px 0 100px 0;
+
+                    &-block {
+                        display: flex;
+                        align-items: baseline;
+
+                        &-item {
+                            font: 300 18px/26px @font;
+                            color: @black;
+
+                            a {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                min-width: 26px;
+                                padding: 0 5px;
+                                color: @black;
+                                border-radius: 5px;
+                                transition: .3s;
+
+                                &:hover {
+                                    background-color: @gray-bg;
                                 }
                             }
                         }
