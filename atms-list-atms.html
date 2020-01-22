@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/extensions/bootstrap.css">
     <link rel="stylesheet" href="styles/extensions/slick.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <title>SKB - Atms</title>
+    <title>SKB - Atms-atms</title>
 </head>
 
 <body>
@@ -114,7 +114,7 @@
         </header>
         <main>
             <div class="m-inner">
-                <div class="heading-toggle">
+                <div class="heading-toggle toggled">
                     <button>
                         <h1 class="detail">
                             <span>Офисы</span>
@@ -149,11 +149,178 @@
                         </div>
                     </div>
                     <div class="ui-pill-btn">
-                        <button class="active">на карте</button>
-                        <button>списком</button>
+                        <button>на карте</button>
+                        <button class="active">списком</button>
                     </div>
                 </div>
-                <div class="map atms-map" id="atms-map"></div>
+                <div class="atms-listing atms">
+                    <div class="atms-listing-title">
+                        Найдено 3 отделения
+                    </div>
+                    <div class="atms-listing-block">
+                        <div class="atms-listing-block-item">
+                            <div class="atms-listing-block-item-point">
+                                <div class="atms-listing-block-item-point-title">
+                                    <a href="#">
+                                        <span>
+                                            <svg width="19" height="20" viewBox="0 0 20 21" fill="none">
+                                                <path
+                                                    d="M13.6197 7.96026L6.44855 0L4.05664 2.15409L11.4534 10.3648L13.6197 7.96026Z"
+                                                    fill="#038C73" />
+                                                <path
+                                                    d="M13.6199 7.96033L4 18.6382L6.3919 20.7923L15.7841 10.3628L13.6199 7.96033Z"
+                                                    fill="#F65E64" />
+                                            </svg>
+                                        </span>
+                                        Банкомат №393451 СКБ-банка
+                                    </a>
+                                </div>
+                                <div class="atms-listing-block-item-point-txt">
+                                    г. Москва, пр-д Завода Серп и Молот, д. 10, БЦ «Интеграл»
+                                </div>
+                                <div class="atms-listing-block-item-point-list">
+                                    <div class="atms-listing-block-item-point-list-item">
+                                        <div class="atms-listing-block-item-point-list-item-img">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                <path
+                                                    d="M8.29214 1.70063H8.19101L6.05056 5.94367L3.82584 1.66669L0.792135 9.37205H0V10H4.31461V9.37205H3.45506L4.31461 6.962L6.05056 10L7.7191 6.962L8.57865 9.37205H7.7191V10H12V9.37205H11.2584L8.29214 1.70063Z"
+                                                    fill="#CD0506" />
+                                            </svg>
+                                        </div>
+                                        <div class="atms-listing-block-item-point-list-item-txt">
+                                            Библиотека им. Ленина
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="atms-listing-block-item-point">
+                                <div class="atms-listing-block-item-point-txt">
+                                    <span class="ttl">Типы операций</span>
+                                </div>
+                                <div class="atms-listing-block-item-point-txt">
+                                    – принимает рубли, доллары, евро
+                                </div>
+                                <div class="atms-listing-block-item-point-txt">
+                                    – выдает рубли
+                                </div>
+                            </div>
+                            <div class="atms-listing-block-item-point">
+                                <div class="atms-listing-block-item-point-txt">
+                                    <span class="ttl">Режим работы</span>
+                                </div>
+                                <div class="atms-listing-block-item-point-txt">
+                                    <span class="dk">пн-пт:</span class="lt"> 09.00-20.00
+                                </div>
+                                <div class="atms-listing-block-item-point-txt">
+                                    <span class="dk">сб:</span> 10.00-17.00
+                                </div>
+                                <div class="atms-listing-block-item-point-txt">
+                                    <span class="dk">вс:</span class="lt"> 10.00-16.00
+                                </div>
+                            </div>
+                        </div>
+                        <div class="atms-listing-block-item">
+                            <div class="atms-listing-block-item-point">
+                                <div class="atms-listing-block-item-point-title">
+                                    <a href="#">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M16.8218 10.4236C16.8218 12.8388 15.5506 14.9998 13.5167 16.1015L13.0507 16.3133C12.8812 16.3981 12.7117 16.4404 12.5422 16.4404C12.2032 16.4404 11.9913 16.3133 11.8219 16.0591C11.6947 15.8472 11.6524 15.6354 11.6947 15.3811C11.7795 15.0421 12.0337 14.8727 12.1185 14.8303C13.3049 14.2794 14.11 13.0507 14.11 11.7371V8.22022C14.11 6.8643 13.3473 5.63551 12.1608 5.12704C12.1608 5.12704 11.8219 4.95755 11.7371 4.53383C11.6947 4.2796 11.7371 4.06774 11.8642 3.85588C12.0337 3.60164 12.288 3.47452 12.5846 3.47452C12.754 3.47452 12.9235 3.5169 13.0507 3.60164C13.0507 3.60164 13.4744 3.8135 13.5167 3.8135C15.5506 4.87281 16.8218 7.07617 16.8218 9.49138V10.4236ZM7.92361 14.7879C8.00836 14.8303 8.26259 14.9998 8.34733 15.3388C8.38971 15.593 8.34733 15.8048 8.26259 16.0167C8.0931 16.2709 7.83887 16.3981 7.54226 16.3981C7.37277 16.3981 7.20328 16.3557 7.03379 16.2709L6.52533 16.1015C4.49146 15.0421 3.22029 12.8388 3.22029 10.4236V9.40664C3.22029 6.99142 4.49146 4.83044 6.52533 3.72876L6.99142 3.5169C7.16091 3.43215 7.3304 3.38978 7.49989 3.38978C7.83887 3.38978 8.0931 3.5169 8.22022 3.77113C8.34733 3.98299 8.38971 4.19485 8.30496 4.44909C8.22022 4.83044 7.88124 4.99993 7.88124 5.0423C6.69482 5.59314 5.93212 6.77956 5.93212 8.13547V11.6524C5.93212 13.0507 6.69482 14.2794 7.92361 14.7879ZM9.99985 0C4.49146 0 0 4.44909 0 9.91511C0 15.3811 4.49146 19.8302 9.99985 19.8302C15.5506 19.8302 19.9997 15.3811 19.9997 9.91511C20.0421 4.44909 15.5506 0 9.99985 0Z"
+                                                    fill="#00B4E3" />
+                                            </svg>
+                                        </span>
+                                        Банкомат №376709 банка Открытие
+                                    </a>
+                                </div>
+                                <div class="atms-listing-block-item-point-txt">
+                                    г. Москва, ул. Крауля, дом 44
+                                </div>
+                                <div class="atms-listing-block-item-point-list">
+                                    <div class="atms-listing-block-item-point-list-item">
+                                        <div class="atms-listing-block-item-point-list-item-img">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                <path
+                                                    d="M8.29214 1.70063H8.19101L6.05056 5.94367L3.82584 1.66669L0.792135 9.37205H0V10H4.31461V9.37205H3.45506L4.31461 6.962L6.05056 10L7.7191 6.962L8.57865 9.37205H7.7191V10H12V9.37205H11.2584L8.29214 1.70063Z"
+                                                    fill="#FF7F00" />
+                                            </svg>
+                                        </div>
+                                        <div class="atms-listing-block-item-point-list-item-txt">
+                                            Третьяковская
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="atms-listing-block-item-point">
+                                <div class="atms-listing-block-item-point-txt">
+                                    <span class="ttl">Типы операций</span>
+                                </div>
+                                <div class="atms-listing-block-item-point-txt">
+                                    – выдает рубли
+                                </div>
+                            </div>
+                            <div class="atms-listing-block-item-point">
+                                <div class="atms-listing-block-item-point-txt">
+                                    <span class="ttl">Режим работы</span>
+                                </div>
+                                <div class="atms-listing-block-item-point-txt">
+                                    <span class="dk">пн-пт:</span class="lt"> 10.00-19.00
+                                </div>
+                                <div class="atms-listing-block-item-point-txt">
+                                    <span class="dk">сб-вс:</span> выходные дни
+                                </div>
+                            </div>
+                        </div>
+                        <div class="atms-listing-block-item">
+                            <div class="atms-listing-block-item-point">
+                                <div class="atms-listing-block-item-point-title">
+                                    <a href="#">
+                                        <span>
+                                            <svg width="19" height="20" viewBox="0 0 20 21" fill="none">
+                                                <path
+                                                    d="M13.6197 7.96026L6.44855 0L4.05664 2.15409L11.4534 10.3648L13.6197 7.96026Z"
+                                                    fill="#038C73" />
+                                                <path
+                                                    d="M13.6199 7.96033L4 18.6382L6.3919 20.7923L15.7841 10.3628L13.6199 7.96033Z"
+                                                    fill="#F65E64" />
+                                            </svg>
+                                        </span>
+                                        Банкомат №388461 банка Газэнергобанк
+                                    </a>
+                                </div>
+                                <div class="atms-listing-block-item-point-txt">
+                                    г. Москва, ул. Краснолесья, 133
+                                </div>
+                            </div>
+                            <div class="atms-listing-block-item-point">
+                                <div class="atms-listing-block-item-point-txt">
+                                    <span class="ttl">Типы операций</span>
+                                </div>
+                                <div class="atms-listing-block-item-point-txt">
+                                    – принимает рубли
+                                </div>
+                                <div class="atms-listing-block-item-point-txt">
+                                    – выдает рубли
+                                </div>
+                            </div>
+                            <div class="atms-listing-block-item-point">
+                                <div class="atms-listing-block-item-point-txt">
+                                    <span class="ttl">Режим работы</span>
+                                </div>
+                                <div class="atms-listing-block-item-point-txt">
+                                    <span class="dk">пн-пт:</span class="lt"> 09.00-20.00
+                                </div>
+                                <div class="atms-listing-block-item-point-txt">
+                                    <span class="dk">сб:</span> 10.00-17.00
+                                </div>
+                                <div class="atms-listing-block-item-point-txt">
+                                    <span class="dk">сб:</span> 10.00-16.00
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
         <footer>
