@@ -144,6 +144,12 @@ body {
                 font-size: 48px;
                 line-height: 60px;
             }
+
+            &.sm {
+                font-size: 36px;
+                line-height: 43px;
+                font-weight: normal;
+            }
         }
 
         h2 {
@@ -3468,18 +3474,22 @@ body {
                     justify-content: space-between;
                 }
 
-                .atms-map {
-                    margin-top: 40px;
-                    padding-bottom: 85px;
-                    height: 580px;
+                .map {
+                    background: @gray-bg;
 
-                    // .ymaps-2-1-75-inner-panes {
-                    //     filter: grayscale(1);
-                    //     -ms-filter: grayscale(1);
-                    //     -webkit-filter: grayscale(1);
-                    //     -moz-filter: grayscale(1);
-                    //     -o-filter: grayscale(1);
-                    // }
+                    &.atms-detail-map {
+                        margin: 65px 0 85px 0;
+                        height: 440px;
+                    }
+
+                    &.atms-map {
+                        margin: 40px 0 85px 0;
+                        height: 580px;
+                    }
+
+                    [class*="ymaps-2"][class*="-ground-pane"] {
+                        filter: grayscale(85%);
+                    }
                 }
 
                 .under-control {
@@ -3715,6 +3725,208 @@ body {
                                 &.slick-next {
                                     background: url("data:image/svg+xml,%3Csvg transform='rotate(180)' width='14' height='23' viewBox='0 0 14 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2L3 11.5L12 21' stroke='%23262626' stroke-width='3'/%3E%3C/svg%3E%0A") center no-repeat;
                                     background-size: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .atms-listing {
+                    margin-top: 40px;
+                    padding-bottom: 85px;
+
+                    &.offices {
+                        .atms-listing-block {
+                            &-item {
+                                &-point {
+                                    &:first-child {
+                                        width: 40%;
+                                    }
+
+                                    &:not(:first-child) {
+                                        width: 20%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.atms {
+                        .atms-listing-block {
+                            &-item {
+                                &-point {
+                                    &:first-child {
+                                        width: 40%;
+                                        padding-left: 60px;
+                                    }
+
+                                    &:not(:first-child) {
+                                        width: 21%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.detail {
+                        margin-top: 20px;
+                        padding-bottom: 0;
+
+                        .atms-listing-block {
+                            margin-top: 0;
+                            padding-left: 0;
+
+                            &-item {
+                                padding: 0;
+                                flex-wrap: wrap;
+                                justify-content: flex-start;
+
+                                &:after {
+                                    display: none;
+                                }
+
+                                &-point {
+                                    &:first-child {
+                                        width: 100%;
+                                    }
+
+                                    &:not(:first-child) {
+                                        margin-top: 40px;
+                                        min-width: 230px;
+                                        padding-right: 20px;
+                                    }
+
+                                    &-txt {
+                                        &:first-child {
+                                            margin-top: 0;
+                                        }
+
+                                        font-size: 18px;
+
+                                        span {
+                                            &.ttl {
+                                                font-size: 15px;
+                                            }
+                                        }
+                                    }
+
+                                    &-list {
+                                        margin-top: 20px;
+                                        display: flex;
+
+                                        &-item {
+                                            margin: 0 0 0 25px;
+
+                                            &:first-child {
+                                                margin-left: 0;
+                                            }
+
+                                            &-txt {
+                                                font-size: 14px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &-title {
+                        font: 300 18px/26px @font;
+                        color: @gray-txt-2;
+                    }
+
+                    &-block {
+                        margin-top: 8px;
+                        padding-left: 40px;
+
+                        &-item {
+                            position: relative;
+                            padding: 20px 20px 20px 0;
+                            display: flex;
+                            justify-content: space-between;
+
+                            &:after {
+                                content: '';
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                height: 1px;
+                                background: @gray-br-3;
+                                border-radius: 20px;
+                            }
+
+                            &-point {
+                                &-title {
+                                    a {
+                                        position: relative;
+                                        font: 18px/24px @font;
+                                        color: @green;
+                                        transition: .2s;
+
+                                        &:hover {
+                                            color: @red;
+                                        }
+
+                                        span {
+                                            position: absolute;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            left: -60px;
+                                            display: block;
+                                            width: 20px;
+                                            height: 20px;
+                                            display: flex;
+                                            align-items: center;
+                                        }
+                                    }
+                                }
+
+                                &-txt {
+                                    margin-top: 6px;
+                                    font: 300 15px/22px @font;
+                                    color: @black;
+
+                                    span {
+                                        &.ttl {
+                                            margin-top: 0;
+                                            color: @gray-blue;
+                                            line-height: 24px;
+                                        }
+
+                                        &.dk {
+                                            font-weight: 500;
+                                        }
+                                    }
+                                }
+
+                                &-list {
+                                    margin-top: 15px;
+
+                                    &-item {
+                                        margin-top: 8px;
+                                        display: flex;
+                                        align-items: center;
+
+                                        &:first-child {
+                                            margin-top: 0;
+                                        }
+
+                                        &-img {
+                                            max-width: 14px;
+                                            max-height: 14px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                        }
+
+                                        &-txt {
+                                            margin-left: 8px;
+                                            font: 300 13px/16px @font;
+                                            color: @black;
+                                        }
+                                    }
                                 }
                             }
                         }

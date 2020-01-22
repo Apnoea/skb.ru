@@ -91,6 +91,11 @@ body .wrapper h1.detail {
   font-size: 48px;
   line-height: 60px;
 }
+body .wrapper h1.sm {
+  font-size: 36px;
+  line-height: 43px;
+  font-weight: normal;
+}
 body .wrapper h2 {
   margin: 0;
   padding: 0;
@@ -2668,10 +2673,19 @@ body .wrapper main .m-inner .atms-actors {
   align-items: flex-start;
   justify-content: space-between;
 }
-body .wrapper main .m-inner .atms-map {
-  margin-top: 40px;
-  padding-bottom: 85px;
+body .wrapper main .m-inner .map {
+  background: #F2F2F2;
+}
+body .wrapper main .m-inner .map.atms-detail-map {
+  margin: 65px 0 85px 0;
+  height: 440px;
+}
+body .wrapper main .m-inner .map.atms-map {
+  margin: 40px 0 85px 0;
   height: 580px;
+}
+body .wrapper main .m-inner .map [class*="ymaps-2"][class*="-ground-pane"] {
+  filter: grayscale(85%);
 }
 body .wrapper main .m-inner .under-control {
   position: relative;
@@ -2852,6 +2866,149 @@ body .wrapper main .m-inner .cards-slider .slick-controls-arrows .slick-arrow.sl
 body .wrapper main .m-inner .cards-slider .slick-controls-arrows .slick-arrow.slick-next {
   background: url("data:image/svg+xml,%3Csvg transform='rotate(180)' width='14' height='23' viewBox='0 0 14 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2L3 11.5L12 21' stroke='%23262626' stroke-width='3'/%3E%3C/svg%3E%0A") center no-repeat;
   background-size: 100%;
+}
+body .wrapper main .m-inner .atms-listing {
+  margin-top: 40px;
+  padding-bottom: 85px;
+}
+body .wrapper main .m-inner .atms-listing.offices .atms-listing-block-item-point:first-child {
+  width: 40%;
+}
+body .wrapper main .m-inner .atms-listing.offices .atms-listing-block-item-point:not(:first-child) {
+  width: 20%;
+}
+body .wrapper main .m-inner .atms-listing.atms .atms-listing-block-item-point:first-child {
+  width: 40%;
+  padding-left: 60px;
+}
+body .wrapper main .m-inner .atms-listing.atms .atms-listing-block-item-point:not(:first-child) {
+  width: 21%;
+}
+body .wrapper main .m-inner .atms-listing.detail {
+  margin-top: 20px;
+  padding-bottom: 0;
+}
+body .wrapper main .m-inner .atms-listing.detail .atms-listing-block {
+  margin-top: 0;
+  padding-left: 0;
+}
+body .wrapper main .m-inner .atms-listing.detail .atms-listing-block-item {
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+body .wrapper main .m-inner .atms-listing.detail .atms-listing-block-item:after {
+  display: none;
+}
+body .wrapper main .m-inner .atms-listing.detail .atms-listing-block-item-point:first-child {
+  width: 100%;
+}
+body .wrapper main .m-inner .atms-listing.detail .atms-listing-block-item-point:not(:first-child) {
+  margin-top: 40px;
+  min-width: 230px;
+  padding-right: 20px;
+}
+body .wrapper main .m-inner .atms-listing.detail .atms-listing-block-item-point-txt {
+  font-size: 18px;
+}
+body .wrapper main .m-inner .atms-listing.detail .atms-listing-block-item-point-txt:first-child {
+  margin-top: 0;
+}
+body .wrapper main .m-inner .atms-listing.detail .atms-listing-block-item-point-txt span.ttl {
+  font-size: 15px;
+}
+body .wrapper main .m-inner .atms-listing.detail .atms-listing-block-item-point-list {
+  margin-top: 20px;
+  display: flex;
+}
+body .wrapper main .m-inner .atms-listing.detail .atms-listing-block-item-point-list-item {
+  margin: 0 0 0 25px;
+}
+body .wrapper main .m-inner .atms-listing.detail .atms-listing-block-item-point-list-item:first-child {
+  margin-left: 0;
+}
+body .wrapper main .m-inner .atms-listing.detail .atms-listing-block-item-point-list-item-txt {
+  font-size: 14px;
+}
+body .wrapper main .m-inner .atms-listing-title {
+  font: 300 18px/26px Gilroy;
+  color: #767474;
+}
+body .wrapper main .m-inner .atms-listing-block {
+  margin-top: 8px;
+  padding-left: 40px;
+}
+body .wrapper main .m-inner .atms-listing-block-item {
+  position: relative;
+  padding: 20px 20px 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+body .wrapper main .m-inner .atms-listing-block-item:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #E6E8E0;
+  border-radius: 20px;
+}
+body .wrapper main .m-inner .atms-listing-block-item-point-title a {
+  position: relative;
+  font: 18px/24px Gilroy;
+  color: #038C73;
+  transition: 0.2s;
+}
+body .wrapper main .m-inner .atms-listing-block-item-point-title a:hover {
+  color: #F65E64;
+}
+body .wrapper main .m-inner .atms-listing-block-item-point-title a span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -60px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+body .wrapper main .m-inner .atms-listing-block-item-point-txt {
+  margin-top: 6px;
+  font: 300 15px/22px Gilroy;
+  color: #262626;
+}
+body .wrapper main .m-inner .atms-listing-block-item-point-txt span.ttl {
+  margin-top: 0;
+  color: #858F9A;
+  line-height: 24px;
+}
+body .wrapper main .m-inner .atms-listing-block-item-point-txt span.dk {
+  font-weight: 500;
+}
+body .wrapper main .m-inner .atms-listing-block-item-point-list {
+  margin-top: 15px;
+}
+body .wrapper main .m-inner .atms-listing-block-item-point-list-item {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+}
+body .wrapper main .m-inner .atms-listing-block-item-point-list-item:first-child {
+  margin-top: 0;
+}
+body .wrapper main .m-inner .atms-listing-block-item-point-list-item-img {
+  max-width: 14px;
+  max-height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .wrapper main .m-inner .atms-listing-block-item-point-list-item-txt {
+  margin-left: 8px;
+  font: 300 13px/16px Gilroy;
+  color: #262626;
 }
 body .wrapper footer .f-inner {
   max-width: 1480px;
