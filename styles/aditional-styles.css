@@ -219,7 +219,7 @@ body .wrapper main .m-inner .news-block-item:nth-child(2) {
 }
 body .wrapper main .m-inner .news-block-item a {
   display: block;
-  width: 550px;
+  max-width: 550px;
 }
 body .wrapper main .m-inner .news-block-item-title {
   margin-top: 15px;
@@ -230,11 +230,11 @@ body .wrapper main .m-inner .news-block-item-txt {
   font: 300 16px/24px Gilroy;
 }
 body .wrapper main .m-inner .pagination {
-  padding: 45px 0 100px 0;
+  padding: 40px 0 90px 0;
 }
 body .wrapper main .m-inner .pagination-block {
   display: flex;
-  align-items: baseline;
+  align-items: center;
 }
 body .wrapper main .m-inner .pagination-block-item {
   font: 300 18px/26px Gilroy;
@@ -257,15 +257,23 @@ body .wrapper main .m-inner .pagination-control {
   margin-left: 20px;
 }
 body .wrapper main .m-inner .pagination-control a {
+  display: block;
   border: 1px solid #737C87;
   font: 300 14px/17px Gilroy;
   color: #262626;
   border-radius: 30px;
-  padding: 10px 20px;
+  padding: 9px 20px 11px 20px;
+  transition: 0.3s;
 }
 body .wrapper main .m-inner .pagination-control a:hover {
   border-color: #038C73;
+  background-color: #038C73;
+  color: #ffffff;
+}
+body .wrapper main .m-inner .pagination-control a:hover svg path {
+  stroke: #ffffff;
 }
 body .wrapper main .m-inner .pagination-control a svg {
   margin-left: 10px;
+  transform: translateY(-1px);
 }

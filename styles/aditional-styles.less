@@ -335,15 +335,16 @@ body {
                             &:nth-child(1) {
                                 margin-top: 0;
                             }
+
                             &:nth-child(2) {
                                 margin-top: 0;
                             }
 
                             a {
                                 display: block;
-                                width: 550px;
+                                max-width: 550px;
                             }
-                            
+
                             &-title {
                                 margin-top: 15px;
                                 font: 500 18px/26px @font;
@@ -356,12 +357,13 @@ body {
                         }
                     }
                 }
+
                 .pagination {
-                    padding: 45px 0 100px 0;
+                    padding: 40px 0 90px 0;
 
                     &-block {
                         display: flex;
-                        align-items: baseline;
+                        align-items: center;
 
                         &-item {
                             font: 300 18px/26px @font;
@@ -383,25 +385,37 @@ body {
                             }
                         }
                     }
+
                     &-control {
                         margin-left: 20px;
 
                         a {
+                            display: block;
                             border: 1px solid @gray-check;
                             font: 300 14px/17px @font;
                             color: @black;
                             border-radius: 30px;
-                            padding: 10px 20px;
+                            padding: 9px 20px 11px 20px;
+                            transition: .3s;
 
                             &:hover {
                                 border-color: @green;
+                                background-color: @green;
+                                color: @white;
+
+                                svg {
+                                    path {
+                                        stroke: @white;
+                                    }
+                                }
                             }
 
                             svg {
                                 margin-left: 10px;
+                                transform: translateY(-1px);
                             }
                         }
-                    
+
                     }
                 }
             }
