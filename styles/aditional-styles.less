@@ -384,7 +384,23 @@ body {
                         }
                     }
                     &-control {
-                        margin-left: 25px;
+                        margin-left: 20px;
+
+                        a {
+                            border: 1px solid @gray-check;
+                            font: 300 14px/17px @font;
+                            color: @black;
+                            border-radius: 30px;
+                            padding: 10px 20px;
+
+                            &:hover {
+                                border-color: @green;
+                            }
+
+                            svg {
+                                margin-left: 10px;
+                            }
+                        }
                     
                     }
                 }

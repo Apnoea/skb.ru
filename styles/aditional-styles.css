@@ -254,5 +254,18 @@ body .wrapper main .m-inner .pagination-block-item a:hover {
   background-color: #F2F2F2;
 }
 body .wrapper main .m-inner .pagination-control {
-  margin-left: 25px;
+  margin-left: 20px;
+}
+body .wrapper main .m-inner .pagination-control a {
+  border: 1px solid #737C87;
+  font: 300 14px/17px Gilroy;
+  color: #262626;
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+body .wrapper main .m-inner .pagination-control a:hover {
+  border-color: #038C73;
+}
+body .wrapper main .m-inner .pagination-control a svg {
+  margin-left: 10px;
 }
