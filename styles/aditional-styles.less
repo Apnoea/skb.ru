@@ -83,6 +83,22 @@ body {
                     }
                 }
             }
+
+            &.collection-page {
+                .promo-static {
+                    &-info {
+
+                        h1 {
+                            max-width: 625px;
+                        }
+
+                        &-txt {
+                            max-width: 575px;
+                            margin-top: 30px;
+                        }
+                    }
+                }
+            }
         }
 
         main {
@@ -118,6 +134,22 @@ body {
                             &-item {
                                 width: ~"calc((100% - 255px)/3)";
                             }
+                        }
+                    }
+
+                    &.collection-page {
+                        .advantages-block {
+                            padding: 40px 80px 60px 0;
+                            box-shadow: none !important;
+                            margin-top: 0;
+                            
+                            .list {
+                                max-width: 625px;
+                                &.big {
+                                    
+                                }
+                            }
+                           
                         }
                     }
                 }
@@ -204,6 +236,24 @@ body {
 
                             img {
                                 width: 100%;
+                            }
+                        }
+                    }
+
+                    &.collection-page {
+                        background-color: @gray-bg;
+                        border-radius: 10px;
+                        .steps-advantages-content {
+
+                            h2 {
+                                margin: 75px 0 20px 0;
+                                max-width: 555px;
+                            }
+
+                            p {
+                                max-width: 553px;
+                                font: 300 18px/26px @font;
+                                color: @black;
                             }
                         }
                     }
