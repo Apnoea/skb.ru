@@ -19,7 +19,31 @@
 
 body {
     .wrapper {
+
         //UI
+        .social-shares-block {
+            &-item {
+                a {
+                    display: block;
+                    width: 25px;
+                    height: 25px;
+
+                    svg {
+                        max-width: 100%;
+                        max-height: 100%;
+
+                        path {
+                            transition: .3s;
+
+                            &:hover {
+                                fill: @green;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
         //UI
         .promo {
@@ -142,14 +166,13 @@ body {
                             padding: 40px 80px 60px 0;
                             box-shadow: none !important;
                             margin-top: 0;
-                            
+
                             .list {
                                 max-width: 625px;
-                                &.big {
-                                    
-                                }
+
+                                &.big {}
                             }
-                           
+
                         }
                     }
                 }
@@ -272,7 +295,7 @@ body {
                                     }
                                 }
                             }
-                            
+
                         }
                     }
                 }
@@ -286,6 +309,10 @@ body {
 
                     h2 {
                         font: 700 28px/42px @font;
+                    }
+
+                    &.collection-page {
+                        padding: 90px 0 40px 0;
                     }
                 }
 
@@ -395,42 +422,101 @@ body {
                 }
 
                 .news {
-                    .tags {
-                        margin-top: 45px;
+
+                    &.news-page {
+
+                        .tags {
+                            margin-top: 45px;
+                        }
+
+                        .news-block {
+                            margin-top: 60px;
+                            flex-wrap: wrap;
+
+                            &-item {
+                                width: calc((100% - 190px)/2);
+                                margin-top: 80px;
+
+                                &:nth-child(1) {
+                                    margin-top: 0;
+                                }
+
+                                &:nth-child(2) {
+                                    margin-top: 0;
+                                }
+
+                                a {
+                                    display: block;
+                                    max-width: 550px;
+                                }
+
+                                &-title {
+                                    margin-top: 15px;
+                                    font: 500 18px/26px @font;
+                                    color: @black;
+                                }
+
+                                &-txt {
+                                    font: 300 16px/24px @font;
+                                }
+                            }
+                        }
                     }
 
-                    &-block {
-                        flex-wrap: wrap;
+                    &-inner {
+                        margin-top: 35px;
+                        display: flex;
+                        justify-content: space-between;
 
-                        &-item {
-                            width: calc((100% - 190px)/2);
-                            margin-top: 80px;
+                        &-txt {
+                            max-width: 820px;
 
-                            &:nth-child(1) {
-                                margin-top: 0;
-                            }
-
-                            &:nth-child(2) {
-                                margin-top: 0;
-                            }
-
-                            a {
-                                display: block;
-                                max-width: 550px;
-                            }
-
-                            &-title {
-                                margin-top: 15px;
-                                font: 500 18px/26px @font;
+                            p {
+                                margin-bottom: 35px;
+                                font: 300 20px/30px @font;
                                 color: @black;
+
+                                &:last-child {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+
+                        &-block {
+                            margin-left: 330px;
+                            width: 350px;
+                        }
+
+                        .news-inner-block-item {
+                            padding: 30px 0 30px 0;
+                            border-bottom: 1px solid @gray-bg;
+
+                            &:first-child {
+                                padding: 0 0 30px 0;
                             }
 
-                            &-txt {
-                                font: 300 16px/24px @font;
+                            &:last-child {
+                                padding: 30px 0 0 0;
+                                border-bottom: none;
                             }
                         }
                     }
                 }
+
+                .news-heading {
+                    max-width: 825px;
+
+                    h1 {
+                        font: 700 36px/45px @font;
+                    }
+
+                    &-date {
+                        margin-top: 12px;
+                        font: 300 16px/20px @font;
+                        color: @gray-txt;
+                    }
+                }
+
 
                 .pagination {
                     padding: 40px 0 90px 0;
@@ -491,6 +577,49 @@ body {
                         }
 
                     }
+                }
+
+                .social-shares {
+                    padding: 40px 0 100px 0;
+
+                    &-txt {
+                        font: 300 16px/24px @font;
+                        color: @gray-txt;
+                    }
+
+                    .sosial-shares-block {
+                        margin-top: 10px;
+                        display: flex;
+
+                        &-item {
+                            margin-right: 25px;
+
+                            &:last-child {
+                                margin-right: 0;
+                            }
+
+                            a {
+                                display: block;
+                                width: 25px;
+                                height: 25px;
+
+                                svg {
+                                    max-width: 100%;
+                                    max-height: 100%;
+
+                                    path {
+                                        transition: .3s;
+
+                                        &:hover {
+                                            fill: @green;
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                 }
             }
         }
