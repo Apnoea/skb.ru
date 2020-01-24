@@ -138,17 +138,32 @@ body .wrapper main .m-inner .steps-advantages.rent .steps-advantages-img img {
   width: 100%;
 }
 body .wrapper main .m-inner .steps-advantages.collection-page {
+  padding: 0;
+  min-height: 500px;
   background-color: #F2F2F2;
   border-radius: 10px;
+  overflow: hidden;
 }
-body .wrapper main .m-inner .steps-advantages.collection-page .steps-advantages-content h2 {
-  margin: 75px 0 20px 0;
+body .wrapper main .m-inner .steps-advantages.collection-page .steps-advantages-img {
+  max-width: 635px;
+}
+body .wrapper main .m-inner .steps-advantages.collection-page .steps-advantages-info {
+  padding: 73px 155px 75px 135px;
+}
+body .wrapper main .m-inner .steps-advantages.collection-page .steps-advantages-info h2 {
   max-width: 555px;
 }
-body .wrapper main .m-inner .steps-advantages.collection-page .steps-advantages-content p {
+body .wrapper main .m-inner .steps-advantages.collection-page .steps-advantages-info-txt {
+  margin-top: 20px;
   max-width: 553px;
+}
+body .wrapper main .m-inner .steps-advantages.collection-page .steps-advantages-info-txt p {
+  margin-bottom: 30px;
   font: 300 18px/26px Gilroy;
   color: #262626;
+}
+body .wrapper main .m-inner .steps-advantages.collection-page .steps-advantages-info-txt p:last-child {
+  margin-bottom: 0;
 }
 body .wrapper main .m-inner .tariffs {
   padding: 40px 0;
@@ -167,6 +182,9 @@ body .wrapper main .m-inner .helping-contacts.payment-page .helping-contacts-txt
 }
 body .wrapper main .m-inner .helping-contacts.remittance-page .helping-contacts-txt {
   max-width: 750px;
+}
+body .wrapper main .m-inner .helping-contacts.collection-page .helping-contacts-txt {
+  max-width: 935px;
 }
 body .wrapper main .m-inner .systems {
   padding: 75px 0 60px 0;

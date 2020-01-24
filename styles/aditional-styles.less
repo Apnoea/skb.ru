@@ -241,20 +241,38 @@ body {
                     }
 
                     &.collection-page {
+                        padding: 0;
+                        min-height: 500px;
                         background-color: @gray-bg;
                         border-radius: 10px;
-                        .steps-advantages-content {
+                        overflow: hidden;
+
+                        .steps-advantages-img {
+                            max-width: 635px;
+                        }
+
+                        .steps-advantages-info {
+                            padding: 73px 155px 75px 135px;
 
                             h2 {
-                                margin: 75px 0 20px 0;
                                 max-width: 555px;
                             }
 
-                            p {
+                            &-txt {
+                                margin-top: 20px;
                                 max-width: 553px;
-                                font: 300 18px/26px @font;
-                                color: @black;
+
+                                p {
+                                    margin-bottom: 30px;
+                                    font: 300 18px/26px @font;
+                                    color: @black;
+
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+                                }
                             }
+                            
                         }
                     }
                 }
@@ -287,6 +305,12 @@ body {
                     &.remittance-page {
                         .helping-contacts-txt {
                             max-width: 750px;
+                        }
+                    }
+
+                    &.collection-page {
+                        .helping-contacts-txt {
+                            max-width: 935px;
                         }
                     }
                 }
