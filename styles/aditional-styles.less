@@ -20,6 +20,29 @@
 @gray-lt: #EDEDED;
 @red: #F65E64;
 
+.bg-outside {
+    position: relative;
+
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        background: inherit;
+        position: absolute;
+        bottom: 0px;
+        top: 0px;
+    }
+
+    &:before {
+        right: 100%;
+    }
+
+    &:after {
+        left: 100%;
+    }
+}
+
 .green-grad-txt {
     color: @green;
     background: linear-gradient(270deg, #6CC47B 0%, #038C73 100%);
@@ -93,6 +116,72 @@ body {
                                     fill: @green;
                                 }
                             }
+                        }
+                    }
+                }
+            }
+        }
+
+        ul {
+            &.list {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+
+                &.big {
+                    li {
+                        margin-top: 22px;
+                        font-size: 18px;
+                        line-height: 26px;
+                        font-weight: 300;
+
+                        &:before {
+                            top: 10px;
+                        }
+                    }
+                }
+
+                li {
+                    position: relative;
+                    padding-left: 22px;
+                    margin-top: 18px;
+                    font: 16px/1.45 @font;
+                    color: @black;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 8px;
+                        width: 6px;
+                        height: 6px;
+                        background: @red;
+                        border-radius: 50%;
+                    }
+
+                    a {
+                        color: @green;
+                        border-bottom: 1px solid @green;
+                        white-space: nowrap;
+                        transition: .2s;
+
+                        &:hover {
+                            border-color: transparent;
+                        }
+                    }
+                }
+
+                &.black {
+                    li {
+                        margin-top: 0;
+                        font: 500 18px/30px @font;
+
+                        &:before {
+                            background: @black;
                         }
                     }
                 }
@@ -266,7 +355,6 @@ body {
 
                                 &.big {}
                             }
-
                         }
                     }
                 }
@@ -278,7 +366,7 @@ body {
                         .banners-list {
                             margin-top: 40px;
 
-                            .banners-list-item-content {
+                            &-item-content {
                                 &-title {
                                     font: 500 30px/36px @font;
                                 }
@@ -388,7 +476,6 @@ body {
                                     }
                                 }
                             }
-
                         }
                     }
                 }
@@ -660,6 +747,7 @@ body {
                 .deposits-list {
                     &.credits-page {
                         .deposits-list-item {
+                            padding: 55px 60px 37px 60px;
                             &.big {
                                 padding: 50px 60px 30px 80px;
 
@@ -693,39 +781,93 @@ body {
                                             }
                                         }
                                     }
+
+                                    &-actions {
+                                        margin-top: 25px;
+                                        padding-top: 35px;
+
+                                        .ui-btn {
+
+                                            a {
+                                                padding: 0 40px;
+                                            }
+                                        }
+                                    }
                                 }
                             }
 
-                            .deposits-list-item-content {
-                                &-name {
-                                    margin-top: 0;
-                                    max-width: 300px;
-                                }
+                            .deposits-list-item{
+                                &-content {
+                                    &-name {
+                                        margin-top: 0;
+                                        max-width: 300px;
+                                    }
+    
+                                    &-block {
+                                        align-items: flex-end;
+    
+                                        &-item {
+                                            margin-left: 49px;
+    
+                                            &:first-child {
+                                                margin-left: 0;
+                                            }
+    
+                                            &-val {
+                                                font: 22px/1 @font;
+                                                color: @black;
+    
+                                                span {
+                                                    margin-left: 7px;
+                                                    margin-right: 7px;
+                                                    font-size: 34px;
+                                                }
+                                            }
 
-                                &-block {
-                                    align-items: flex-end;
-
-                                    &-item {
-                                        margin-left: 49px;
-
-                                        &:first-child {
-                                            margin-left: 0;
-                                        }
-
-                                        &-val {
-                                            font: 22px/1 @font;
-                                            color: @black;
-
-                                            span {
-                                                margin-left: 7px;
-                                                margin-right: 7px;
-                                                font-size: 34px;
+                                            &-desc {
+                                                color: @black;
                                             }
                                         }
+                                    }
+                                }
+                            }
+                        }
+                    }
 
-                                        &-desc {
-                                            color: @black;
-                                        }
+                    &.credits-inner-page{
+                        padding: 60px 80px 100px 80px;
+                        margin-top: 0;
+                        background-color: @gray-bg;
+
+                        .deposits-list-item {
+                            background-color: @white;
+                            margin-top: 40px;
+
+                            &:nth-child(1) {
+                                margin-top: 0;
+                            }
+
+                            &:nth-child(2) {
+                                margin-top: 0;
+                            }
+
+                            &-content {
+                                &-name {
+                                    font: 700 24px/30px @font;
+                                    margin-top: 25px;
+                                }
+
+                                &-list {
+                                    width: 305px;
+                                   
+                                }
+
+                                &-actions {
+                                    border-top: none;
+                                    padding-top: 0;
+                                    a {
+                                        font: 300 16px/19px @font;
+                                        color: @red;
                                     }
                                 }
                             }
@@ -737,17 +879,24 @@ body {
                     &.credits-page {
                         padding: 120px 0 60px 0;
 
-                        .deposits-steps-block-item-content-desc {
-                            max-width: 228px;
-                            margin-top: 12px;
-                            font: 500 17px/21px @font;
-                            color: @gray-blue;
+                        .deposits-steps-block {
+                            &-item {
+                                padding: 205px 25px 30px 25px;
+                                &-content {
+                                    &-desc {
+                                        max-width: 228px;
+                                        margin-top: 12px;
+                                        font: 500 17px/21px @font;
+                                        color: @gray-blue;
 
-                            a {
-                                color: @green;
+                                        a {
+                                            color: @green;
 
-                                &:hover {
-                                    text-decoration: underline;
+                                            &:hover {
+                                                text-decoration: underline;
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -756,33 +905,132 @@ body {
 
                 .deposits-advantages {
                     &.credits-inner-page {
-                        .deposits-advantages-block-item-content {
-                            padding: 75px 0 78px 40px;
+                        .deposits-advantages-block {
+                            margin-top: 80px;
+                            &-item {
+                                &-content {
+                                    padding: 75px 0 78px 40px;
+                                }
+                            }
                         }
                     }
                 }
 
                 .steps-easy {
                     &.credits-inner-page {
-                        .steps-easy-block-item {
-                            width: 300px;
+                        .steps-easy-block {
+                            &-item {
+                                width: 300px;
 
-                            &-desc {
-                                margin-top: 12px;
-                                text-align: center;
-                                font: 500 17px/21px @font;
-                                color: @gray-blue;
-
-                                a {
-                                    color: @green;
-
-                                    &:hover {
-                                        text-decoration: underline;
+                                &-desc {
+                                    margin-top: 12px;
+                                    text-align: center;
+                                    font: 500 17px/21px @font;
+                                    color: @gray-blue;
+    
+                                    a {
+                                        color: @green;
+    
+                                        &:hover {
+                                            text-decoration: underline;
+                                        }
                                     }
                                 }
                             }
                         }
                     }
+                }
+
+                .deposit-calc {
+                    &.credits-inner-page {
+                        margin-top: 0;
+
+                        .deposit-calc-controls {
+                            padding-top: 10px;
+                        }
+
+                        .ui-range {
+                            margin-top: 35px;
+                        }
+
+                        .ui-pointer {
+                            margin-top: 50px;
+                        }
+
+                        .deposit-calc-result {
+                            margin-top: 80px;
+                            padding: 55px 60px;
+
+                            &-controls {
+                                margin-top: 40px;
+                            }
+                            &-list {
+                                &-item {
+                                    &-val {
+                                        .subnum {
+                                            font: 700 33px/40px @font;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .tabs {
+                    &.credits-inner-page {
+                        .tabs{
+                            &-content-list {
+                                &-item {
+                                    .list {
+                                        &.big {
+                                            margin-top: 25px;
+                                        }
+                                    }
+                        
+                                    .points {
+                                        &.credits-inner-page {
+                                            display: flex;
+                                            justify-content: space-between;
+                                            border-bottom: 1px solid @gray-br-2;
+
+                                        .points-point {
+                                            border-top: none;
+                                            display: block;
+                                            padding-bottom: 50px;
+
+                                            &-prop {
+                                                width: 205px;
+                                                padding-right: 0;
+                                                font: 500 16px/19px @font;
+                                                color: @gray-txt-2;
+                                            }
+                                            &-val {
+                                                margin-top: 12px;
+                                                padding: 0;
+                                                width: 100%;
+                                            }
+                                        }
+                                        }
+                                    }
+
+                                    .docs {
+                                        margin-bottom: 45px;
+                                        max-width: 70%;
+                                        &-item {
+                                            &-txt {
+                                                max-width: 170px;
+                                            }
+                                            .ui-tip {
+                                                margin-top: 22px;
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                            }
+                        }
+                    } 
                 }
             }
         }

@@ -1,3 +1,22 @@
+.bg-outside {
+  position: relative;
+}
+.bg-outside:before,
+.bg-outside:after {
+  content: '';
+  display: block;
+  width: 100%;
+  background: inherit;
+  position: absolute;
+  bottom: 0px;
+  top: 0px;
+}
+.bg-outside:before {
+  right: 100%;
+}
+.bg-outside:after {
+  left: 100%;
+}
 .green-grad-txt {
   color: #038C73;
   background: linear-gradient(270deg, #6CC47B 0%, #038C73 100%);
@@ -50,6 +69,56 @@ body .wrapper .social-shares-block-item a svg path {
 }
 body .wrapper .social-shares-block-item a:hover svg path {
   fill: #038C73;
+}
+body .wrapper ul.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body .wrapper ul.list.big li {
+  margin-top: 22px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 300;
+}
+body .wrapper ul.list.big li:before {
+  top: 10px;
+}
+body .wrapper ul.list li {
+  position: relative;
+  padding-left: 22px;
+  margin-top: 18px;
+  font: 16px/1.45 Gilroy;
+  color: #262626;
+}
+body .wrapper ul.list li:first-child {
+  margin-top: 0;
+}
+body .wrapper ul.list li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background: #F65E64;
+  border-radius: 50%;
+}
+body .wrapper ul.list li a {
+  color: #038C73;
+  border-bottom: 1px solid #038C73;
+  white-space: nowrap;
+  transition: 0.2s;
+}
+body .wrapper ul.list li a:hover {
+  border-color: transparent;
+}
+body .wrapper ul.list.black li {
+  margin-top: 0;
+  font: 500 18px/30px Gilroy;
+}
+body .wrapper ul.list.black li:before {
+  background: #262626;
 }
 body .wrapper .promo.payment-page .promo-static-img {
   padding-right: 0;
@@ -163,36 +232,36 @@ body .wrapper main .m-inner .banners.payment-page {
 body .wrapper main .m-inner .banners.payment-page .banners-list {
   margin-top: 40px;
 }
-body .wrapper main .m-inner .banners.payment-page .banners-list .banners-list-item-content-title {
+body .wrapper main .m-inner .banners.payment-page .banners-list-item-content-title {
   font: 500 30px/36px Gilroy;
 }
-body .wrapper main .m-inner .banners.payment-page .banners-list .banners-list-item-content-txt {
+body .wrapper main .m-inner .banners.payment-page .banners-list-item-content-txt {
   margin: 25px 0 45px 0;
   max-width: 295px;
   font: 300 18px/21px Gilroy;
 }
-body .wrapper main .m-inner .banners.payment-page .banners-list .banners-list-item-content-actions {
+body .wrapper main .m-inner .banners.payment-page .banners-list-item-content-actions {
   display: flex;
   align-items: center;
 }
-body .wrapper main .m-inner .banners.payment-page .banners-list .banners-list-item-content-actions .ui-btn-hollow {
+body .wrapper main .m-inner .banners.payment-page .banners-list-item-content-actions .ui-btn-hollow {
   margin-right: 35px;
 }
-body .wrapper main .m-inner .banners.payment-page .banners-list .banners-list-item-content-actions-ui-arrow-link a {
+body .wrapper main .m-inner .banners.payment-page .banners-list-item-content-actions-ui-arrow-link a {
   display: flex;
   align-items: center;
   font: 300 18px/50px Gilroy;
   color: #262626;
   transition: 0.2s;
 }
-body .wrapper main .m-inner .banners.payment-page .banners-list .banners-list-item-content-actions-ui-arrow-link a:after {
+body .wrapper main .m-inner .banners.payment-page .banners-list-item-content-actions-ui-arrow-link a:after {
   content: '';
   margin-left: 10px;
   width: 8px;
   height: 14px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='13' viewBox='0 0 8 13' fill='none'%3E%3Cpath d='M1 12.1877L6 6.68774L1 1.18774' stroke='%23F65E64' stroke-width='2'/%3E%3C/svg%3E") center no-repeat;
 }
-body .wrapper main .m-inner .banners.payment-page .banners-list .banners-list-item-content-actions-ui-arrow-link a:hover {
+body .wrapper main .m-inner .banners.payment-page .banners-list-item-content-actions-ui-arrow-link a:hover {
   color: #F65E64;
 }
 body .wrapper main .m-inner .steps-advantages.rent .steps-advantages-content {
@@ -437,6 +506,9 @@ body .wrapper main .m-inner .pagination-control a svg {
   margin-left: 10px;
   transform: translateY(-1px);
 }
+body .wrapper main .m-inner .deposits-list.credits-page .deposits-list-item {
+  padding: 55px 60px 37px 60px;
+}
 body .wrapper main .m-inner .deposits-list.credits-page .deposits-list-item.big {
   padding: 50px 60px 30px 80px;
 }
@@ -454,6 +526,13 @@ body .wrapper main .m-inner .deposits-list.credits-page .deposits-list-item.big 
 }
 body .wrapper main .m-inner .deposits-list.credits-page .deposits-list-item.big .deposits-list-item-content-block-item:last-child .deposits-list-item-content-block-item-val span {
   margin-right: 7px;
+}
+body .wrapper main .m-inner .deposits-list.credits-page .deposits-list-item.big .deposits-list-item-content-actions {
+  margin-top: 25px;
+  padding-top: 35px;
+}
+body .wrapper main .m-inner .deposits-list.credits-page .deposits-list-item.big .deposits-list-item-content-actions .ui-btn a {
+  padding: 0 40px;
 }
 body .wrapper main .m-inner .deposits-list.credits-page .deposits-list-item .deposits-list-item-content-name {
   margin-top: 0;
@@ -480,8 +559,41 @@ body .wrapper main .m-inner .deposits-list.credits-page .deposits-list-item .dep
 body .wrapper main .m-inner .deposits-list.credits-page .deposits-list-item .deposits-list-item-content-block-item-desc {
   color: #262626;
 }
+body .wrapper main .m-inner .deposits-list.credits-inner-page {
+  padding: 60px 80px 100px 80px;
+  margin-top: 0;
+  background-color: #F2F2F2;
+}
+body .wrapper main .m-inner .deposits-list.credits-inner-page .deposits-list-item {
+  background-color: #ffffff;
+  margin-top: 40px;
+}
+body .wrapper main .m-inner .deposits-list.credits-inner-page .deposits-list-item:nth-child(1) {
+  margin-top: 0;
+}
+body .wrapper main .m-inner .deposits-list.credits-inner-page .deposits-list-item:nth-child(2) {
+  margin-top: 0;
+}
+body .wrapper main .m-inner .deposits-list.credits-inner-page .deposits-list-item-content-name {
+  font: 700 24px/30px Gilroy;
+  margin-top: 25px;
+}
+body .wrapper main .m-inner .deposits-list.credits-inner-page .deposits-list-item-content-list {
+  width: 305px;
+}
+body .wrapper main .m-inner .deposits-list.credits-inner-page .deposits-list-item-content-actions {
+  border-top: none;
+  padding-top: 0;
+}
+body .wrapper main .m-inner .deposits-list.credits-inner-page .deposits-list-item-content-actions a {
+  font: 300 16px/19px Gilroy;
+  color: #F65E64;
+}
 body .wrapper main .m-inner .deposits-steps.credits-page {
   padding: 120px 0 60px 0;
+}
+body .wrapper main .m-inner .deposits-steps.credits-page .deposits-steps-block-item {
+  padding: 205px 25px 30px 25px;
 }
 body .wrapper main .m-inner .deposits-steps.credits-page .deposits-steps-block-item-content-desc {
   max-width: 228px;
@@ -494,6 +606,9 @@ body .wrapper main .m-inner .deposits-steps.credits-page .deposits-steps-block-i
 }
 body .wrapper main .m-inner .deposits-steps.credits-page .deposits-steps-block-item-content-desc a:hover {
   text-decoration: underline;
+}
+body .wrapper main .m-inner .deposits-advantages.credits-inner-page .deposits-advantages-block {
+  margin-top: 80px;
 }
 body .wrapper main .m-inner .deposits-advantages.credits-inner-page .deposits-advantages-block-item-content {
   padding: 75px 0 78px 40px;
@@ -512,4 +627,60 @@ body .wrapper main .m-inner .steps-easy.credits-inner-page .steps-easy-block-ite
 }
 body .wrapper main .m-inner .steps-easy.credits-inner-page .steps-easy-block-item-desc a:hover {
   text-decoration: underline;
+}
+body .wrapper main .m-inner .deposit-calc.credits-inner-page {
+  margin-top: 0;
+}
+body .wrapper main .m-inner .deposit-calc.credits-inner-page .deposit-calc-controls {
+  padding-top: 10px;
+}
+body .wrapper main .m-inner .deposit-calc.credits-inner-page .ui-range {
+  margin-top: 35px;
+}
+body .wrapper main .m-inner .deposit-calc.credits-inner-page .ui-pointer {
+  margin-top: 50px;
+}
+body .wrapper main .m-inner .deposit-calc.credits-inner-page .deposit-calc-result {
+  margin-top: 80px;
+  padding: 55px 60px;
+}
+body .wrapper main .m-inner .deposit-calc.credits-inner-page .deposit-calc-result-controls {
+  margin-top: 40px;
+}
+body .wrapper main .m-inner .deposit-calc.credits-inner-page .deposit-calc-result-list-item-val .subnum {
+  font: 700 33px/40px Gilroy;
+}
+body .wrapper main .m-inner .tabs.credits-inner-page .tabs-content-list-item .list.big {
+  margin-top: 25px;
+}
+body .wrapper main .m-inner .tabs.credits-inner-page .tabs-content-list-item .points.credits-inner-page {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #E0DFDF;
+}
+body .wrapper main .m-inner .tabs.credits-inner-page .tabs-content-list-item .points.credits-inner-page .points-point {
+  border-top: none;
+  display: block;
+  padding-bottom: 50px;
+}
+body .wrapper main .m-inner .tabs.credits-inner-page .tabs-content-list-item .points.credits-inner-page .points-point-prop {
+  width: 205px;
+  padding-right: 0;
+  font: 500 16px/19px Gilroy;
+  color: #767474;
+}
+body .wrapper main .m-inner .tabs.credits-inner-page .tabs-content-list-item .points.credits-inner-page .points-point-val {
+  margin-top: 12px;
+  padding: 0;
+  width: 100%;
+}
+body .wrapper main .m-inner .tabs.credits-inner-page .tabs-content-list-item .docs {
+  margin-bottom: 45px;
+  max-width: 70%;
+}
+body .wrapper main .m-inner .tabs.credits-inner-page .tabs-content-list-item .docs-item-txt {
+  max-width: 170px;
+}
+body .wrapper main .m-inner .tabs.credits-inner-page .tabs-content-list-item .docs-item .ui-tip {
+  margin-top: 22px;
 }
