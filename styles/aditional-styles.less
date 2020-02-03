@@ -306,6 +306,31 @@ body {
                     }
                 }
             }
+
+            &.card-inner {
+                .promo-static {
+                    &-info {
+                        h1 span {
+                            .green-grad-txt;
+                        }
+
+                        &-block {
+                            &-item {
+                                &-val {
+                                    font: 22px/1 @font;
+
+                                    span {
+                                        margin-left: 7px;
+                                        margin-right: 7px;
+                                        font-size: 34px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
         }
 
         main {
@@ -403,6 +428,43 @@ body {
 
                                             &:hover {
                                                 color: @red;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.card-inner {
+                        padding: 40px 0 60px 0;
+
+                        .banners-title {
+                            text-align: center;
+                        }
+
+                        .banners-list {
+                            margin-top: 40px;
+
+                            &-item {
+                                &-content {
+                                    padding: 50px 60px 50px 60px;
+
+                                    &-title {
+                                        font: 500 30px/36px @font;
+                                    }
+
+                                    &-txt {
+                                        margin-bottom: 0;
+                                        margin-top: 25px;
+                                        font: 300 18px/1.4 @font;
+                                        max-width: 295px;
+
+                                        a {
+                                            color: @green;
+
+                                            &:hover {
+                                                text-decoration: underline;
                                             }
                                         }
                                     }
@@ -682,7 +744,6 @@ body {
                     }
                 }
 
-
                 .pagination {
                     padding: 40px 0 90px 0;
 
@@ -748,6 +809,7 @@ body {
                     &.credits-page {
                         .deposits-list-item {
                             padding: 55px 60px 37px 60px;
+
                             &.big {
                                 padding: 50px 60px 30px 80px;
 
@@ -796,27 +858,27 @@ body {
                                 }
                             }
 
-                            .deposits-list-item{
+                            .deposits-list-item {
                                 &-content {
                                     &-name {
                                         margin-top: 0;
                                         max-width: 300px;
                                     }
-    
+
                                     &-block {
                                         align-items: flex-end;
-    
+
                                         &-item {
                                             margin-left: 49px;
-    
+
                                             &:first-child {
                                                 margin-left: 0;
                                             }
-    
+
                                             &-val {
                                                 font: 22px/1 @font;
                                                 color: @black;
-    
+
                                                 span {
                                                     margin-left: 7px;
                                                     margin-right: 7px;
@@ -834,7 +896,7 @@ body {
                         }
                     }
 
-                    &.credits-inner-page{
+                    &.credits-inner-page {
                         padding: 60px 80px 100px 80px;
                         margin-top: 0;
                         background-color: @gray-bg;
@@ -843,12 +905,8 @@ body {
                             background-color: @white;
                             margin-top: 40px;
 
-                            &:nth-child(1) {
-                                margin-top: 0;
-                            }
-
-                            &:nth-child(2) {
-                                margin-top: 0;
+                            &:nth-child(-n+2) {
+                                margin: 0;
                             }
 
                             &-content {
@@ -859,12 +917,13 @@ body {
 
                                 &-list {
                                     width: 305px;
-                                   
+
                                 }
 
                                 &-actions {
                                     border-top: none;
                                     padding-top: 0;
+
                                     a {
                                         font: 300 16px/19px @font;
                                         color: @red;
@@ -882,6 +941,7 @@ body {
                         .deposits-steps-block {
                             &-item {
                                 padding: 205px 25px 30px 25px;
+
                                 &-content {
                                     &-desc {
                                         max-width: 228px;
@@ -907,6 +967,7 @@ body {
                     &.credits-inner-page {
                         .deposits-advantages-block {
                             margin-top: 80px;
+
                             &-item {
                                 &-content {
                                     padding: 75px 0 78px 40px;
@@ -918,19 +979,26 @@ body {
 
                 .steps-easy {
                     &.credits-inner-page {
+                        margin-top: 80px;
                         .steps-easy-block {
+                            box-shadow: 0px 5px 32px rgba(204, 208, 214, 0.54) !important;
+
                             &-item {
                                 width: 300px;
+
+                                &-txt {
+                                    margin-top: 40px;
+                                }
 
                                 &-desc {
                                     margin-top: 12px;
                                     text-align: center;
                                     font: 500 17px/21px @font;
                                     color: @gray-blue;
-    
+
                                     a {
                                         color: @green;
-    
+
                                         &:hover {
                                             text-decoration: underline;
                                         }
@@ -964,6 +1032,7 @@ body {
                             &-controls {
                                 margin-top: 40px;
                             }
+
                             &-list {
                                 &-item {
                                     &-val {
@@ -979,7 +1048,7 @@ body {
 
                 .tabs {
                     &.credits-inner-page {
-                        .tabs{
+                        .tabs {
                             &-content-list {
                                 &-item {
                                     .list {
@@ -987,50 +1056,162 @@ body {
                                             margin-top: 25px;
                                         }
                                     }
-                        
+
                                     .points {
                                         &.credits-inner-page {
                                             display: flex;
                                             justify-content: space-between;
                                             border-bottom: 1px solid @gray-br-2;
 
-                                        .points-point {
-                                            border-top: none;
-                                            display: block;
-                                            padding-bottom: 50px;
+                                            .points-point {
+                                                border-top: none;
+                                                display: block;
+                                                padding-bottom: 50px;
 
-                                            &-prop {
-                                                width: 205px;
-                                                padding-right: 0;
-                                                font: 500 16px/19px @font;
-                                                color: @gray-txt-2;
+                                                &-prop {
+                                                    width: 205px;
+                                                    padding-right: 0;
+                                                    font: 500 16px/19px @font;
+                                                    color: @gray-txt-2;
+                                                }
+
+                                                &-val {
+                                                    margin-top: 12px;
+                                                    padding: 0;
+                                                    width: 100%;
+                                                }
                                             }
-                                            &-val {
-                                                margin-top: 12px;
-                                                padding: 0;
-                                                width: 100%;
-                                            }
-                                        }
                                         }
                                     }
 
                                     .docs {
                                         margin-bottom: 45px;
                                         max-width: 70%;
+
                                         &-item {
                                             &-txt {
                                                 max-width: 170px;
                                             }
-                                            .ui-tip {
-                                                margin-top: 22px;
+                                        }
+
+                                        .ui-tip {
+                                            margin-top: 22px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.card-inner {
+                        .tabs {
+                            &-content-list {
+                                &-item {
+                                    .conditions-sub {
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                        margin-top: 70px;
+                                        background-color: @gray-bg;
+                                        padding: 40px 0 35px 0;
+                                        text-align: center;
+
+                                        span {
+                                            font: 500 22px/27px @font;
+                                            color: @black;
+                                        }
+
+                                        a {
+                                            margin-top: 3px;
+                                            font: 500 19px/23px @font;
+                                            color: @green;
+                                            border-bottom: 1px dashed @green;
+                                        }
+                                    }
+
+                                    .conditions {
+                                        &.card-inner {
+                                            padding: 0 100px;
+
+                                            .conditions-condition {
+                                                &-txt {
+                                                    max-width: 215px;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .deposits-advantages {
+                                        margin-top: 100px;
+
+                                        &-title {
+                                            text-align: center;
+                                        }
+
+                                        &-block {
+                                            &-item {
+                                                &-content {
+                                                    padding: 75px 0 70px 40px;
+
+                                                    &-title {
+                                                        max-width: 190px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .docs {
+                                        margin-bottom: 45px;
+                                        max-width: 70%;
+
+                                        &-item {
+                                            &-txt {
+                                                max-width: 170px;
+                                            }
+                                        }
+
+                                        .ui-tip {
+                                            margin-top: 22px;
+                                        }
+                                    }
+
+                                    .points {
+                                        &-point {
+                                            &-prop {
+                                                &.card-img {
+                                                    display: flex;
+                                                    justify-content: space-between;
+                                                }
+                                            }
+
+                                            &-val {
+                                                padding: 0 0 0 40px;
+                                                width: auto;
+
+                                                .list {
+                                                    .full-point {
+                                                        margin-top: 10px;
+                                                        display: block;
+                                                        font: 18px/26px @font;
+                                                        color: @black;
+
+                                                        &:nth-child(2n+1) {
+                                                            margin-top: 0;
+                                                        }
+                                                    }
+
+                                                    li {
+                                                        margin-top: 10px;
+                                                    }
+                                                }
                                             }
                                         }
                                     }
                                 }
-                                
                             }
                         }
-                    } 
+                    }
                 }
             }
         }

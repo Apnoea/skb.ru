@@ -193,6 +193,21 @@ body .wrapper .promo.credits-inner-page .promo-static-info-block-item-val span {
 body .wrapper .promo.credits-inner-page .promo-static-info .ui-btn {
   margin-top: 40px;
 }
+body .wrapper .promo.card-inner .promo-static-info h1 span {
+  color: #038C73;
+  background: linear-gradient(270deg, #6CC47B 0%, #038C73 100%);
+  background-clip: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body .wrapper .promo.card-inner .promo-static-info-block-item-val {
+  font: 22px/1 Gilroy;
+}
+body .wrapper .promo.card-inner .promo-static-info-block-item-val span {
+  margin-left: 7px;
+  margin-right: 7px;
+  font-size: 34px;
+}
 body .wrapper main .m-inner .advantages.payment-page {
   padding: 0;
 }
@@ -263,6 +278,33 @@ body .wrapper main .m-inner .banners.payment-page .banners-list-item-content-act
 }
 body .wrapper main .m-inner .banners.payment-page .banners-list-item-content-actions-ui-arrow-link a:hover {
   color: #F65E64;
+}
+body .wrapper main .m-inner .banners.card-inner {
+  padding: 40px 0 60px 0;
+}
+body .wrapper main .m-inner .banners.card-inner .banners-title {
+  text-align: center;
+}
+body .wrapper main .m-inner .banners.card-inner .banners-list {
+  margin-top: 40px;
+}
+body .wrapper main .m-inner .banners.card-inner .banners-list-item-content {
+  padding: 50px 60px 50px 60px;
+}
+body .wrapper main .m-inner .banners.card-inner .banners-list-item-content-title {
+  font: 500 30px/36px Gilroy;
+}
+body .wrapper main .m-inner .banners.card-inner .banners-list-item-content-txt {
+  margin-bottom: 0;
+  margin-top: 25px;
+  font: 300 18px/1.4 Gilroy;
+  max-width: 295px;
+}
+body .wrapper main .m-inner .banners.card-inner .banners-list-item-content-txt a {
+  color: #038C73;
+}
+body .wrapper main .m-inner .banners.card-inner .banners-list-item-content-txt a:hover {
+  text-decoration: underline;
 }
 body .wrapper main .m-inner .steps-advantages.rent .steps-advantages-content {
   padding-left: 0;
@@ -568,11 +610,8 @@ body .wrapper main .m-inner .deposits-list.credits-inner-page .deposits-list-ite
   background-color: #ffffff;
   margin-top: 40px;
 }
-body .wrapper main .m-inner .deposits-list.credits-inner-page .deposits-list-item:nth-child(1) {
-  margin-top: 0;
-}
-body .wrapper main .m-inner .deposits-list.credits-inner-page .deposits-list-item:nth-child(2) {
-  margin-top: 0;
+body .wrapper main .m-inner .deposits-list.credits-inner-page .deposits-list-item:nth-child(-n+2) {
+  margin: 0;
 }
 body .wrapper main .m-inner .deposits-list.credits-inner-page .deposits-list-item-content-name {
   font: 700 24px/30px Gilroy;
@@ -613,8 +652,17 @@ body .wrapper main .m-inner .deposits-advantages.credits-inner-page .deposits-ad
 body .wrapper main .m-inner .deposits-advantages.credits-inner-page .deposits-advantages-block-item-content {
   padding: 75px 0 78px 40px;
 }
+body .wrapper main .m-inner .steps-easy.credits-inner-page {
+  margin-top: 80px;
+}
+body .wrapper main .m-inner .steps-easy.credits-inner-page .steps-easy-block {
+  box-shadow: 0px 5px 32px rgba(204, 208, 214, 0.54) !important;
+}
 body .wrapper main .m-inner .steps-easy.credits-inner-page .steps-easy-block-item {
   width: 300px;
+}
+body .wrapper main .m-inner .steps-easy.credits-inner-page .steps-easy-block-item-txt {
+  margin-top: 40px;
 }
 body .wrapper main .m-inner .steps-easy.credits-inner-page .steps-easy-block-item-desc {
   margin-top: 12px;
@@ -681,6 +729,73 @@ body .wrapper main .m-inner .tabs.credits-inner-page .tabs-content-list-item .do
 body .wrapper main .m-inner .tabs.credits-inner-page .tabs-content-list-item .docs-item-txt {
   max-width: 170px;
 }
-body .wrapper main .m-inner .tabs.credits-inner-page .tabs-content-list-item .docs-item .ui-tip {
+body .wrapper main .m-inner .tabs.credits-inner-page .tabs-content-list-item .docs .ui-tip {
   margin-top: 22px;
+}
+body .wrapper main .m-inner .tabs.card-inner .tabs-content-list-item .conditions-sub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+  background-color: #F2F2F2;
+  padding: 40px 0 35px 0;
+  text-align: center;
+}
+body .wrapper main .m-inner .tabs.card-inner .tabs-content-list-item .conditions-sub span {
+  font: 500 22px/27px Gilroy;
+  color: #262626;
+}
+body .wrapper main .m-inner .tabs.card-inner .tabs-content-list-item .conditions-sub a {
+  margin-top: 3px;
+  font: 500 19px/23px Gilroy;
+  color: #038C73;
+  border-bottom: 1px dashed #038C73;
+}
+body .wrapper main .m-inner .tabs.card-inner .tabs-content-list-item .conditions.card-inner {
+  padding: 0 100px;
+}
+body .wrapper main .m-inner .tabs.card-inner .tabs-content-list-item .conditions.card-inner .conditions-condition-txt {
+  max-width: 215px;
+}
+body .wrapper main .m-inner .tabs.card-inner .tabs-content-list-item .deposits-advantages {
+  margin-top: 100px;
+}
+body .wrapper main .m-inner .tabs.card-inner .tabs-content-list-item .deposits-advantages-title {
+  text-align: center;
+}
+body .wrapper main .m-inner .tabs.card-inner .tabs-content-list-item .deposits-advantages-block-item-content {
+  padding: 75px 0 70px 40px;
+}
+body .wrapper main .m-inner .tabs.card-inner .tabs-content-list-item .deposits-advantages-block-item-content-title {
+  max-width: 190px;
+}
+body .wrapper main .m-inner .tabs.card-inner .tabs-content-list-item .docs {
+  margin-bottom: 45px;
+  max-width: 70%;
+}
+body .wrapper main .m-inner .tabs.card-inner .tabs-content-list-item .docs-item-txt {
+  max-width: 170px;
+}
+body .wrapper main .m-inner .tabs.card-inner .tabs-content-list-item .docs .ui-tip {
+  margin-top: 22px;
+}
+body .wrapper main .m-inner .tabs.card-inner .tabs-content-list-item .points-point-prop.card-img {
+  display: flex;
+  justify-content: space-between;
+}
+body .wrapper main .m-inner .tabs.card-inner .tabs-content-list-item .points-point-val {
+  padding: 0 0 0 40px;
+  width: auto;
+}
+body .wrapper main .m-inner .tabs.card-inner .tabs-content-list-item .points-point-val .list .full-point {
+  margin-top: 10px;
+  display: block;
+  font: 18px/26px Gilroy;
+  color: #262626;
+}
+body .wrapper main .m-inner .tabs.card-inner .tabs-content-list-item .points-point-val .list .full-point:nth-child(2n+1) {
+  margin-top: 0;
+}
+body .wrapper main .m-inner .tabs.card-inner .tabs-content-list-item .points-point-val .list li {
+  margin-top: 10px;
 }
