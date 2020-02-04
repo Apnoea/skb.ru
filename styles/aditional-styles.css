@@ -208,6 +208,12 @@ body .wrapper .promo.card-inner .promo-static-info-block-item-val span {
   margin-right: 7px;
   font-size: 34px;
 }
+body .wrapper .promo.raschety-page .promo-static-info h1 {
+  max-width: 700px;
+}
+body .wrapper .promo.raschety-page .promo-static-info-txt {
+  max-width: 580px;
+}
 body .wrapper main .m-inner .advantages.payment-page {
   padding: 0;
 }
@@ -357,6 +363,24 @@ body .wrapper main .m-inner .steps-advantages.collection-page .steps-advantages-
 body .wrapper main .m-inner .steps-advantages.collection-page .steps-advantages-info-txt p:last-child {
   margin-bottom: 0;
 }
+body .wrapper main .m-inner .steps-advantages.raschety-page {
+  padding: 100px 0 40px 0;
+}
+body .wrapper main .m-inner .steps-advantages.raschety-page .steps-advantages-content {
+  padding-left: 40px;
+}
+body .wrapper main .m-inner .steps-advantages.raschety-page .steps-advantages-content h2 {
+  max-width: 700px;
+}
+body .wrapper main .m-inner .steps-advantages.raschety-page .steps-advantages-content span {
+  margin-bottom: 30px;
+  display: block;
+  font: 300 18px/26px Gilroy;
+  color: #262626;
+}
+body .wrapper main .m-inner .steps-advantages.raschety-page .steps-advantages-content ul li {
+  margin-top: 25px;
+}
 body .wrapper main .m-inner .tariffs {
   padding: 40px 0;
 }
@@ -377,6 +401,10 @@ body .wrapper main .m-inner .helping-contacts.remittance-page .helping-contacts-
 }
 body .wrapper main .m-inner .helping-contacts.collection-page .helping-contacts-txt {
   max-width: 935px;
+}
+body .wrapper main .m-inner .helping-contacts.raschety-page .helping-contacts-txt {
+  max-width: 1095px;
+  font: 300 18px/23px Gilroy;
 }
 body .wrapper main .m-inner .systems {
   padding: 75px 0 60px 0;
@@ -438,6 +466,9 @@ body .wrapper main .m-inner .systems-content-block-item-point:nth-child(6) {
 }
 body .wrapper main .m-inner .systems-content-block-item-point a {
   color: #F65E64;
+}
+body .wrapper main .m-inner .news.news-page {
+  padding: 0 0 45px 0;
 }
 body .wrapper main .m-inner .news.news-page .tags {
   margin-top: 45px;
@@ -798,4 +829,15 @@ body .wrapper main .m-inner .tabs.card-inner .tabs-content-list-item .points-poi
 }
 body .wrapper main .m-inner .tabs.card-inner .tabs-content-list-item .points-point-val .list li {
   margin-top: 10px;
+}
+body .wrapper main .m-inner .docs-list.safety-page {
+  padding-top: 50px;
+  padding-bottom: 0;
+}
+body .wrapper main .m-inner .docs-list.safety-page:last-child {
+  padding-bottom: 100px;
+}
+body .wrapper main .m-inner .docs-list.safety-page .docs-list-title {
+  font: 700 18px/22px Gilroy;
+  color: #262626;
 }
