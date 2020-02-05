@@ -621,7 +621,6 @@ body {
                     &.raschety-page {
                         .helping-contacts-txt {
                             max-width: 1095px;
-                            font: 300 18px/23px @font;
                         }
                     }
                 }
@@ -1262,34 +1261,38 @@ body {
                     }
                 }
 
-                .docs-list {
-                    &.safety-page {
-                        padding-top: 50px;
-                        padding-bottom: 0;
+                .safety-block {
+                    padding-top: 50px;
+                    padding-bottom: 0px;
+                    
+                    &:last-child {
+                        padding-bottom: 100px;
+                    }
 
-                        &:last-child {
-                            padding-bottom: 100px;
-                        }
-
-                        .docs-list-title {
+                    &-item {
+                        &-title {
+                            margin-bottom: 25px;
                             font: 700 18px/22px @font;
                             color: @black;
                         }
                     }
                 }
 
-                .requisites-list {
+                .requisites {
                     padding: 40px 0 85px 0;
 
-                    p {
-                        max-width: 1000px;
-                        font: 300 18px/26px @font;
+                    &-txt {
+                        p {
+                            max-width: 1000px;
+                            font-size: 18px;
+                            line-height: 26px;
+                        }
                     }
 
-                    &-item {
+                    &-list {
                         padding-top: 45px;
 
-                        &-block {
+                        &-item {
                             padding: 18px 0 18px 0;
                             display: flex;
                             align-items: center;
@@ -1314,12 +1317,12 @@ body {
                         }
 
                         &.sm {
-                            .requisites-list-item-title {
+                            .requisites-list-title {
                                 margin-top: 15px;
                                 margin-bottom: 30px;
                             }
 
-                            .requisites-list-item-block {
+                            .requisites-list-item {
                                 max-width: 680px;
 
                                 &-point {
@@ -1334,49 +1337,53 @@ body {
                     }
 
                     .questions-tabs {
-                        padding: 60px 0 40px 0;
+                        &.requisites-page {
+                            padding: 60px 0 40px 0;
 
-                        &-title {
-                            h2 {
-                                text-align: start;
+                            .questions-tabs-title {
+                                h2 {
+                                    text-align: start;
+                                }
+                            }
+
+                            .questions-tabs-list {
+                                background: transparent;
+
+                                &-item {
+                                    &:first-child {
+                                        border-color: @gray-br-2;
+                                    }
+
+                                    &:last-child {
+                                        border-bottom: 1px solid @gray-br-2;
+                                    }
+
+                                    &-toggle {
+                                        padding: 10px 20px 10px 0;
+                                        font: 300 18px/45px @font;
+                                        color: @gray-txt-2;
+                                        align-items: center;
+                                    }
+
+                                    &-drop {
+                                        padding: 15px 0;
+                                    }
+                                }
+                            }
+
+                            .questions-tabs-sub {
+                                margin-top: 40px;
+                                a {
+                                    font: 500 18px/22px @font;
+                                    color: @red;
+        
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
                             }
                         }
 
-                        &-list {
-                            background: transparent;
-
-                            &-item {
-                                &:first-child {
-                                    border-color: @gray-br-2;
-                                }
-
-                                &:last-child {
-                                    border-bottom: 1px solid @gray-br-2;
-                                }
-
-                                &-toggle {
-                                    padding: 10px 20px 10px 0;
-                                    font: 300 18px/45px @font;
-                                    color: @gray-txt-2;
-                                    align-items: center;
-                                }
-
-                                &-drop {
-                                    padding: 15px 0;
-                                }
-                            }
-                        }
-                    }
-
-                    &-sub {
-                        a {
-                            font: 500 18px/22px @font;
-                            color: @red;
-
-                            &:hover {
-                                text-decoration: underline;
-                            }
-                        }
                     }
                 }
             }
