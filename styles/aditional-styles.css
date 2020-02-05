@@ -841,3 +841,77 @@ body .wrapper main .m-inner .docs-list.safety-page .docs-list-title {
   font: 700 18px/22px Gilroy;
   color: #262626;
 }
+body .wrapper main .m-inner .requisites-list {
+  padding: 40px 0 85px 0;
+}
+body .wrapper main .m-inner .requisites-list p {
+  max-width: 1000px;
+  font: 300 18px/26px Gilroy;
+}
+body .wrapper main .m-inner .requisites-list-item {
+  padding-top: 45px;
+}
+body .wrapper main .m-inner .requisites-list-item-block {
+  padding: 18px 0 18px 0;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #E0DFDF;
+}
+body .wrapper main .m-inner .requisites-list-item-block:last-child {
+  border-bottom: 1px solid #E0DFDF;
+}
+body .wrapper main .m-inner .requisites-list-item-block-point {
+  width: 30%;
+  font: 700 18px/26px Gilroy;
+  color: #262626;
+}
+body .wrapper main .m-inner .requisites-list-item-block-val {
+  width: 70%;
+  padding-left: 50px;
+  font: 300 18px/34px Gilroy;
+  color: #262626;
+}
+body .wrapper main .m-inner .requisites-list-item.sm .requisites-list-item-title {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+body .wrapper main .m-inner .requisites-list-item.sm .requisites-list-item-block {
+  max-width: 680px;
+}
+body .wrapper main .m-inner .requisites-list-item.sm .requisites-list-item-block-point {
+  width: 20%;
+}
+body .wrapper main .m-inner .requisites-list-item.sm .requisites-list-item-block-val {
+  width: 80%;
+}
+body .wrapper main .m-inner .requisites-list .questions-tabs {
+  padding: 60px 0 40px 0;
+}
+body .wrapper main .m-inner .requisites-list .questions-tabs-title h2 {
+  text-align: start;
+}
+body .wrapper main .m-inner .requisites-list .questions-tabs-list {
+  background: transparent;
+}
+body .wrapper main .m-inner .requisites-list .questions-tabs-list-item:first-child {
+  border-color: #E0DFDF;
+}
+body .wrapper main .m-inner .requisites-list .questions-tabs-list-item:last-child {
+  border-bottom: 1px solid #E0DFDF;
+}
+body .wrapper main .m-inner .requisites-list .questions-tabs-list-item-toggle {
+  padding: 10px 20px 10px 0;
+  font: 300 18px/45px Gilroy;
+  color: #767474;
+  align-items: center;
+}
+body .wrapper main .m-inner .requisites-list .questions-tabs-list-item-drop {
+  padding: 15px 0;
+}
+body .wrapper main .m-inner .requisites-list-sub a {
+  font: 500 18px/22px Gilroy;
+  color: #F65E64;
+}
+body .wrapper main .m-inner .requisites-list-sub a:hover {
+  text-decoration: underline;
+}
