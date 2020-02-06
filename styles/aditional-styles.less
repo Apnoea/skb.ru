@@ -571,12 +571,6 @@ body {
                                 font: 300 18px/26px @font;
                                 color: @black;
                             }
-
-                            ul {
-                                li {
-                                    margin-top: 25px;
-                                }
-                            }
                         }
                     }
                 }
@@ -1264,7 +1258,7 @@ body {
                 .safety-block {
                     padding-top: 50px;
                     padding-bottom: 0px;
-                    
+
                     &:last-child {
                         padding-bottom: 100px;
                     }
@@ -1279,7 +1273,7 @@ body {
                 }
 
                 .requisites {
-                    padding: 40px 0 85px 0;
+                    padding: 40px 0 45px 0;
 
                     &-txt {
                         p {
@@ -1336,55 +1330,83 @@ body {
                         }
                     }
 
-                    .questions-tabs {
-                        &.requisites-page {
-                            padding: 60px 0 40px 0;
 
-                            .questions-tabs-title {
-                                h2 {
-                                    text-align: start;
-                                }
+                }
+
+                .questions-tabs {
+                    &.requisites-page {
+                        padding: 60px 0 40px 0;
+
+                        .questions-tabs-title {
+                            h2 {
+                                text-align: start;
                             }
+                        }
 
-                            .questions-tabs-list {
-                                background: transparent;
+                        .questions-tabs-list {
+                            background: transparent;
 
-                                &-item {
-                                    &:first-child {
-                                        border-color: @gray-br-2;
-                                    }
-
-                                    &:last-child {
-                                        border-bottom: 1px solid @gray-br-2;
-                                    }
-
-                                    &-toggle {
-                                        padding: 10px 20px 10px 0;
-                                        font: 300 18px/45px @font;
-                                        color: @gray-txt-2;
-                                        align-items: center;
-                                    }
-
-                                    &-drop {
-                                        padding: 15px 0;
-                                    }
+                            &-item {
+                                &:first-child {
+                                    border-color: @gray-br-2;
                                 }
-                            }
 
-                            .questions-tabs-sub {
-                                margin-top: 40px;
-                                a {
-                                    font: 500 18px/22px @font;
-                                    color: @red;
-        
-                                    &:hover {
-                                        text-decoration: underline;
-                                    }
+                                &:last-child {
+                                    border-bottom: 1px solid @gray-br-2;
+                                }
+
+                                &-toggle {
+                                    padding: 10px 20px 10px 0;
+                                    font: 300 18px/45px @font;
+                                    color: @gray-txt-2;
+                                    align-items: center;
+                                }
+
+                                &-drop {
+                                    padding: 15px 0;
                                 }
                             }
                         }
 
+                        .questions-tabs-sub {
+                            margin-top: 40px;
+
+                            a {
+                                font: 500 18px/22px @font;
+                                color: @red;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+
+                            &.raskrytie-info {
+                                padding: 60px 0;
+                                display: flex;
+                                align-items: center;
+
+                                .questions-tabs-sub-img {
+                                    width: 50px;
+                                    height: 50px;
+                                }
+
+                                .questions-tabs-sub-txt {
+                                    max-width: 1180px;
+                                    margin-left: 30px;
+                                    font: 300 18px/21px @font;
+                                    color: @black;
+                                }
+                            }
+                        }
                     }
+
+                    &.raskrytie-info {
+                        .questions-tabs-list {
+                            margin-top: 0;
+                            margin-bottom: 30px;
+                        }
+                    }
+
                 }
             }
         }

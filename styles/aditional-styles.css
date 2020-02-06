@@ -378,9 +378,6 @@ body .wrapper main .m-inner .steps-advantages.raschety-page .steps-advantages-co
   font: 300 18px/26px Gilroy;
   color: #262626;
 }
-body .wrapper main .m-inner .steps-advantages.raschety-page .steps-advantages-content ul li {
-  margin-top: 25px;
-}
 body .wrapper main .m-inner .tariffs {
   padding: 40px 0;
 }
@@ -842,7 +839,7 @@ body .wrapper main .m-inner .safety-block-item-title {
   color: #262626;
 }
 body .wrapper main .m-inner .requisites {
-  padding: 40px 0 85px 0;
+  padding: 40px 0 45px 0;
 }
 body .wrapper main .m-inner .requisites-txt p {
   max-width: 1000px;
@@ -885,37 +882,56 @@ body .wrapper main .m-inner .requisites-list.sm .requisites-list-item-point {
 body .wrapper main .m-inner .requisites-list.sm .requisites-list-item-val {
   width: 80%;
 }
-body .wrapper main .m-inner .requisites .questions-tabs.requisites-page {
+body .wrapper main .m-inner .questions-tabs.requisites-page {
   padding: 60px 0 40px 0;
 }
-body .wrapper main .m-inner .requisites .questions-tabs.requisites-page .questions-tabs-title h2 {
+body .wrapper main .m-inner .questions-tabs.requisites-page .questions-tabs-title h2 {
   text-align: start;
 }
-body .wrapper main .m-inner .requisites .questions-tabs.requisites-page .questions-tabs-list {
+body .wrapper main .m-inner .questions-tabs.requisites-page .questions-tabs-list {
   background: transparent;
 }
-body .wrapper main .m-inner .requisites .questions-tabs.requisites-page .questions-tabs-list-item:first-child {
+body .wrapper main .m-inner .questions-tabs.requisites-page .questions-tabs-list-item:first-child {
   border-color: #E0DFDF;
 }
-body .wrapper main .m-inner .requisites .questions-tabs.requisites-page .questions-tabs-list-item:last-child {
+body .wrapper main .m-inner .questions-tabs.requisites-page .questions-tabs-list-item:last-child {
   border-bottom: 1px solid #E0DFDF;
 }
-body .wrapper main .m-inner .requisites .questions-tabs.requisites-page .questions-tabs-list-item-toggle {
+body .wrapper main .m-inner .questions-tabs.requisites-page .questions-tabs-list-item-toggle {
   padding: 10px 20px 10px 0;
   font: 300 18px/45px Gilroy;
   color: #767474;
   align-items: center;
 }
-body .wrapper main .m-inner .requisites .questions-tabs.requisites-page .questions-tabs-list-item-drop {
+body .wrapper main .m-inner .questions-tabs.requisites-page .questions-tabs-list-item-drop {
   padding: 15px 0;
 }
-body .wrapper main .m-inner .requisites .questions-tabs.requisites-page .questions-tabs-sub {
+body .wrapper main .m-inner .questions-tabs.requisites-page .questions-tabs-sub {
   margin-top: 40px;
 }
-body .wrapper main .m-inner .requisites .questions-tabs.requisites-page .questions-tabs-sub a {
+body .wrapper main .m-inner .questions-tabs.requisites-page .questions-tabs-sub a {
   font: 500 18px/22px Gilroy;
   color: #F65E64;
 }
-body .wrapper main .m-inner .requisites .questions-tabs.requisites-page .questions-tabs-sub a:hover {
+body .wrapper main .m-inner .questions-tabs.requisites-page .questions-tabs-sub a:hover {
   text-decoration: underline;
+}
+body .wrapper main .m-inner .questions-tabs.requisites-page .questions-tabs-sub.raskrytie-info {
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+}
+body .wrapper main .m-inner .questions-tabs.requisites-page .questions-tabs-sub.raskrytie-info .questions-tabs-sub-img {
+  width: 50px;
+  height: 50px;
+}
+body .wrapper main .m-inner .questions-tabs.requisites-page .questions-tabs-sub.raskrytie-info .questions-tabs-sub-txt {
+  max-width: 1180px;
+  margin-left: 30px;
+  font: 300 18px/21px Gilroy;
+  color: #262626;
+}
+body .wrapper main .m-inner .questions-tabs.raskrytie-info .questions-tabs-list {
+  margin-top: 0;
+  margin-bottom: 30px;
 }
