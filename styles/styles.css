@@ -96,11 +96,21 @@ body .wrapper h1.sm {
   line-height: 43px;
   font-weight: normal;
 }
+body .wrapper h1 span.colored {
+  color: #038C73;
+  background: linear-gradient(270deg, #6CC47B 0%, #038C73 100%);
+  background-clip: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 body .wrapper h2 {
   margin: 0;
   padding: 0;
   font: 700 36px/42px Gilroy;
   color: #262626;
+}
+body .wrapper h2.sm {
+  font-size: 28px;
 }
 body .wrapper h2 span {
   color: #038C73;
@@ -127,6 +137,14 @@ body .wrapper h6 {
 body .wrapper h6:first-child {
   margin-top: 0;
 }
+body .wrapper p {
+  margin-bottom: 35px;
+  font: 300 20px/30px Gilroy;
+  color: #262626;
+}
+body .wrapper p:last-child {
+  margin-bottom: 0;
+}
 body .wrapper ul.list {
   margin: 0;
   padding: 0;
@@ -140,6 +158,11 @@ body .wrapper ul.list.big li {
 }
 body .wrapper ul.list.big li:before {
   top: 10px;
+}
+body .wrapper ul.list.imp li:before {
+  top: 10px;
+  width: 8px;
+  height: 8px;
 }
 body .wrapper ul.list li {
   position: relative;
@@ -747,6 +770,38 @@ body .wrapper .heading-toggle button h1 span {
 body .wrapper .heading-toggle button h1 span:last-child {
   color: #858F9A;
 }
+body .wrapper .social-shares {
+  padding: 40px 0 100px 0;
+}
+body .wrapper .social-shares-txt {
+  font: 300 16px/24px Gilroy;
+  color: #858F9A;
+}
+body .wrapper .social-shares-block {
+  margin-top: 10px;
+  display: flex;
+}
+body .wrapper .social-shares-block-item {
+  margin-right: 25px;
+}
+body .wrapper .social-shares-block-item:last-child {
+  margin-right: 0;
+}
+body .wrapper .social-shares-block-item a {
+  display: block;
+  width: 25px;
+  height: 25px;
+}
+body .wrapper .social-shares-block-item a:hover svg path {
+  fill: #038C73;
+}
+body .wrapper .social-shares-block-item a svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+body .wrapper .social-shares-block-item a svg path {
+  transition: 0.3s;
+}
 body .wrapper header .h-inner {
   padding: 0 50px;
 }
@@ -933,6 +988,81 @@ body .wrapper .promo.online-page .promo-static-info-txt {
 body .wrapper .promo.online-page .promo-static-info .ui-btn {
   margin-top: 60px;
 }
+body .wrapper .promo.payment-page .promo-static-info {
+  padding: 120px 0 60px 145px;
+}
+body .wrapper .promo.payment-page .promo-static-info h1 {
+  max-width: 465px;
+}
+body .wrapper .promo.payment-page .promo-static-info-txt {
+  max-width: 655px;
+  margin-top: 45px;
+}
+body .wrapper .promo.safe-page .promo-static-img {
+  padding-right: 115px;
+}
+body .wrapper .promo.safe-page .promo-static-info {
+  padding: 90px 0 60px 145px;
+}
+body .wrapper .promo.safe-page .promo-static-info h1 {
+  max-width: 465px;
+}
+body .wrapper .promo.safe-page .promo-static-info-txt {
+  max-width: 595px;
+  margin-top: 45px;
+}
+body .wrapper .promo.remittance-page .promo-static-info {
+  padding: 120px 0 60px 145px;
+}
+body .wrapper .promo.remittance-page .promo-static-info h1 {
+  max-width: 605px;
+}
+body .wrapper .promo.remittance-page .promo-static-info-txt {
+  max-width: 705px;
+  margin-top: 35px;
+}
+body .wrapper .promo.collection-page .promo-static-info h1 {
+  max-width: 625px;
+}
+body .wrapper .promo.collection-page .promo-static-info-txt {
+  max-width: 575px;
+  margin-top: 30px;
+}
+body .wrapper .promo.credits-inner-page .promo-static {
+  background: #EAEBEE;
+}
+body .wrapper .promo.credits-inner-page .promo-static-info {
+  padding-bottom: 50px;
+  padding-top: 66px;
+}
+body .wrapper .promo.credits-inner-page .promo-static-info-txt {
+  margin: 10px 0 0 0;
+  font: 300 22px/26px Gilroy;
+}
+body .wrapper .promo.credits-inner-page .promo-static-info-block-item {
+  margin-left: 70px;
+}
+body .wrapper .promo.credits-inner-page .promo-static-info-block-item:first-child {
+  margin-left: 0;
+}
+body .wrapper .promo.credits-inner-page .promo-static-info .ui-btn {
+  margin-top: 40px;
+}
+body .wrapper .promo.credits-inner-page .promo-static-info .ui-btn a {
+  font-weight: normal;
+}
+body .wrapper .promo.international-calcs-page .promo-static-info h1 {
+  max-width: 700px;
+}
+body .wrapper .promo.international-calcs-page .promo-static-info-txt {
+  max-width: 580px;
+}
+body .wrapper .promo.pay-page .promo-static-info {
+  padding: 120px 0 110px 145px;
+}
+body .wrapper .promo.pay-page .promo-static-info-txt {
+  max-width: 610px;
+}
 body .wrapper .promo.inner-page .promo-static {
   background: #F2F2F2;
 }
@@ -990,6 +1120,7 @@ body .wrapper .promo-static-img {
   top: 0;
   right: 0;
   bottom: 0;
+  pointer-events: none;
 }
 body .wrapper .promo-static-img img {
   max-width: 100%;
@@ -1021,10 +1152,10 @@ body .wrapper .promo-static-info-block-item-val {
 }
 body .wrapper .promo-static-info-block-item-val span {
   margin-right: 10px;
-  font-size: 22px;
+  font: 22px/1 Gilroy;
 }
 body .wrapper .promo-static-info-block-item-val span.num {
-  font: 34px/1 Gilroy;
+  font-size: 34px;
   color: #262626;
 }
 body .wrapper .promo-static-info-block-item-desc {
@@ -1392,6 +1523,80 @@ body .wrapper main .m-inner .news-block-item-txt {
 body .wrapper main .m-inner .banners {
   padding: 160px 0 40px 0;
 }
+body .wrapper main .m-inner .banners.payment-page {
+  padding: 50px 0 40px 0;
+}
+body .wrapper main .m-inner .banners.payment-page .banners-list {
+  margin-top: 40px;
+}
+body .wrapper main .m-inner .banners.payment-page .banners-list-item-content-title {
+  font: 500 30px/36px Gilroy;
+}
+body .wrapper main .m-inner .banners.payment-page .banners-list-item-content-txt {
+  margin: 25px 0 45px 0;
+  max-width: 295px;
+  font: 300 18px/21px Gilroy;
+}
+body .wrapper main .m-inner .banners.payment-page .banners-list-item-content-actions {
+  display: flex;
+  align-items: center;
+}
+body .wrapper main .m-inner .banners.payment-page .banners-list-item-content-actions .ui-btn-hollow {
+  margin-right: 35px;
+}
+body .wrapper main .m-inner .banners.cards-inner {
+  padding: 40px 0 60px 0;
+}
+body .wrapper main .m-inner .banners.cards-inner .banners-title {
+  text-align: center;
+}
+body .wrapper main .m-inner .banners.cards-inner .banners-list {
+  margin-top: 40px;
+}
+body .wrapper main .m-inner .banners.cards-inner .banners-list-item-content {
+  padding: 50px 60px;
+}
+body .wrapper main .m-inner .banners.cards-inner .banners-list-item-content-title {
+  font: 500 30px/36px Gilroy;
+}
+body .wrapper main .m-inner .banners.cards-inner .banners-list-item-content-txt {
+  margin-bottom: 0;
+  margin-top: 25px;
+  font: 300 18px/1.4 Gilroy;
+  max-width: 295px;
+}
+body .wrapper main .m-inner .banners.cards-inner .banners-list-item-content-txt a {
+  color: #038C73;
+}
+body .wrapper main .m-inner .banners.cards-inner .banners-list-item-content-txt a:hover {
+  text-decoration: underline;
+}
+body .wrapper main .m-inner .banners.pay-page {
+  padding: 60px 0;
+}
+body .wrapper main .m-inner .banners.pay-page .banners-promo {
+  padding-right: 220px;
+  height: auto;
+}
+body .wrapper main .m-inner .banners.pay-page .banners-promo-img {
+  left: 0;
+}
+body .wrapper main .m-inner .banners.pay-page .banners-promo-content {
+  max-width: 500px;
+}
+body .wrapper main .m-inner .banners.pay-page .banners-promo-content-txt ul.list li {
+  margin-top: 9px;
+}
+body .wrapper main .m-inner .banners.pay-page .banners-promo-content-txt ul.list li a {
+  color: #F65E64;
+  border-bottom: 1px solid #F65E64;
+}
+body .wrapper main .m-inner .banners.pay-page .banners-promo-content-txt ul.list li a:hover {
+  border-bottom: none;
+}
+body .wrapper main .m-inner .banners.pay-page .banners-promo-content .ui-btn-hollow {
+  margin-top: 30px;
+}
 body .wrapper main .m-inner .banners-promo {
   position: relative;
   padding: 45px 170px 40px 135px;
@@ -1495,6 +1700,65 @@ body .wrapper main .m-inner .help .tags {
 }
 body .wrapper main .m-inner .advantages {
   padding: 75px 0 60px 0;
+}
+body .wrapper main .m-inner .advantages.payment-page {
+  padding: 0;
+}
+body .wrapper main .m-inner .advantages.payment-page .advantages-block {
+  box-shadow: none !important;
+  margin-top: 0;
+}
+body .wrapper main .m-inner .advantages.payment-page .advantages-block-item {
+  width: calc(100%/4);
+}
+body .wrapper main .m-inner .advantages.payment-page .advantages-block-item-img {
+  margin: 0 auto;
+}
+body .wrapper main .m-inner .advantages.payment-page .advantages-block-item-txt {
+  text-align: center;
+}
+body .wrapper main .m-inner .advantages.safe-page .advantages-block {
+  padding: 50px 160px 55px 130px;
+}
+body .wrapper main .m-inner .advantages.safe-page .advantages-block-item {
+  width: calc((100% - 255px)/3);
+}
+body .wrapper main .m-inner .advantages.collection-page .advantages-block {
+  margin-top: 0;
+  padding: 40px 80px 60px 0;
+  box-shadow: none !important;
+}
+body .wrapper main .m-inner .advantages.collection-page .advantages-block ul.list {
+  max-width: 655px;
+}
+body .wrapper main .m-inner .advantages.pay-page {
+  padding-top: 25px;
+}
+body .wrapper main .m-inner .advantages.pay-page .advantages-block {
+  padding: 40px 80px;
+}
+body .wrapper main .m-inner .advantages.pay-page .advantages-block-item {
+  width: calc((100% - 300px)/3);
+}
+body .wrapper main .m-inner .advantages.pay-page .advantages-block-item-img {
+  width: 104px;
+}
+body .wrapper main .m-inner .advantages.pay-page .advantages-block-item-title {
+  margin-top: 30px;
+  font: 500 20px/24px Gilroy;
+}
+body .wrapper main .m-inner .advantages.pay-page .advantages-block-item-txt {
+  font-size: 16px;
+}
+body .wrapper main .m-inner .advantages.pay-page .advantages-block-item-txt a {
+  display: block;
+  padding-top: 35px;
+  font: 300 16px/22px Gilroy;
+  color: #858F9A;
+  text-decoration: underline;
+}
+body .wrapper main .m-inner .advantages.pay-page .advantages-block-item-txt a:hover {
+  text-decoration: none;
 }
 body .wrapper main .m-inner .advantages-block {
   margin-top: 40px;
