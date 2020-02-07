@@ -214,6 +214,12 @@ body .wrapper .promo.raschety-page .promo-static-info h1 {
 body .wrapper .promo.raschety-page .promo-static-info-txt {
   max-width: 580px;
 }
+body .wrapper .promo.pay .promo-static-info {
+  padding: 120px 0 110px 145px;
+}
+body .wrapper .promo.pay .promo-static-info-txt {
+  max-width: 610px;
+}
 body .wrapper main .m-inner .advantages.payment-page {
   padding: 0;
 }
@@ -246,6 +252,35 @@ body .wrapper main .m-inner .advantages.collection-page .advantages-block {
 }
 body .wrapper main .m-inner .advantages.collection-page .advantages-block .list {
   max-width: 625px;
+}
+body .wrapper main .m-inner .advantages.pay {
+  padding-top: 25px;
+}
+body .wrapper main .m-inner .advantages.pay .advantages-block {
+  padding: 40px 80px;
+}
+body .wrapper main .m-inner .advantages.pay .advantages-block-item {
+  width: calc((100% - 300px)/3);
+}
+body .wrapper main .m-inner .advantages.pay .advantages-block-item-img {
+  width: 104px;
+}
+body .wrapper main .m-inner .advantages.pay .advantages-block-item-title {
+  margin-top: 30px;
+  font: 500 20px/24px Gilroy;
+}
+body .wrapper main .m-inner .advantages.pay .advantages-block-item-txt {
+  font-size: 16px;
+}
+body .wrapper main .m-inner .advantages.pay .advantages-block-item-txt a {
+  display: block;
+  padding-top: 35px;
+  font: 300 16px/22px Gilroy;
+  color: #858F9A;
+  text-decoration: underline;
+}
+body .wrapper main .m-inner .advantages.pay .advantages-block-item-txt a:hover {
+  text-decoration: none;
 }
 body .wrapper main .m-inner .banners.payment-page {
   padding: 50px 0 40px 0;
@@ -311,6 +346,32 @@ body .wrapper main .m-inner .banners.card-inner .banners-list-item-content-txt a
 }
 body .wrapper main .m-inner .banners.card-inner .banners-list-item-content-txt a:hover {
   text-decoration: underline;
+}
+body .wrapper main .m-inner .banners.pay {
+  padding: 60px 0;
+}
+body .wrapper main .m-inner .banners.pay .banners-promo {
+  padding-right: 220px;
+  height: auto;
+}
+body .wrapper main .m-inner .banners.pay .banners-promo-img {
+  left: 0;
+}
+body .wrapper main .m-inner .banners.pay .banners-promo-content {
+  max-width: 500px;
+}
+body .wrapper main .m-inner .banners.pay .banners-promo-content-txt ul li {
+  margin-top: 9px;
+}
+body .wrapper main .m-inner .banners.pay .banners-promo-content-txt ul li a {
+  color: #F65E64;
+  border-bottom: 1px solid #F65E64;
+}
+body .wrapper main .m-inner .banners.pay .banners-promo-content-txt ul li a:hover {
+  border-bottom: none;
+}
+body .wrapper main .m-inner .banners.pay .banners-promo-content .ui-btn-hollow {
+  margin-top: 30px;
 }
 body .wrapper main .m-inner .steps-advantages.rent .steps-advantages-content {
   padding-left: 0;
@@ -673,6 +734,18 @@ body .wrapper main .m-inner .deposits-steps.credits-page .deposits-steps-block-i
 body .wrapper main .m-inner .deposits-steps.credits-page .deposits-steps-block-item-content-desc a:hover {
   text-decoration: underline;
 }
+body .wrapper main .m-inner .deposits-steps.pay .deposits-steps-block-item {
+  padding: 37px 25px 277px 25px;
+}
+body .wrapper main .m-inner .deposits-steps.pay .deposits-steps-block-item-img {
+  top: 145px;
+}
+body .wrapper main .m-inner .deposits-steps.pay .deposits-steps-block-item-content-txt {
+  text-align: center;
+  margin-top: 0;
+  font-size: 18px;
+  line-height: 22px;
+}
 body .wrapper main .m-inner .deposits-advantages.credits-inner-page .deposits-advantages-block {
   margin-top: 80px;
 }
@@ -826,6 +899,16 @@ body .wrapper main .m-inner .tabs.card-inner .tabs-content-list-item .points-poi
 body .wrapper main .m-inner .tabs.card-inner .tabs-content-list-item .points-point-val .list li {
   margin-top: 10px;
 }
+body .wrapper main .m-inner .tabs.pay .tabs-content-list-item .list-points ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+body .wrapper main .m-inner .tabs.pay .tabs-content-list-item .list-points ul li {
+  width: calc((100% - 50px)/3);
+}
+body .wrapper main .m-inner .tabs.pay .tabs-content-list-item .list-points ul li:first-child {
+  margin-top: 18px;
+}
 body .wrapper main .m-inner .safety-block {
   padding-top: 50px;
   padding-bottom: 0px;
@@ -934,4 +1017,21 @@ body .wrapper main .m-inner .questions-tabs.requisites-page .questions-tabs-sub.
 body .wrapper main .m-inner .questions-tabs.raskrytie-info .questions-tabs-list {
   margin-top: 0;
   margin-bottom: 30px;
+}
+body .wrapper main .m-inner .functions.sm {
+  flex-wrap: wrap;
+}
+body .wrapper main .m-inner .functions.sm .functions-title {
+  padding-bottom: 60px;
+  width: 100%;
+  text-align: center;
+}
+body .wrapper main .m-inner .functions.sm .functions-content-block-item-img img {
+  max-height: 560px;
+}
+body .wrapper main .m-inner .functions.sm .functions-steps-tabs-list-item-title-txt {
+  font-size: 26px;
+}
+body .wrapper main .m-inner .functions.sm .functions-steps-tabs-list-item-desc {
+  font-size: 16px;
 }

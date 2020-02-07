@@ -345,6 +345,17 @@ body {
                     }
                 }
             }
+
+            &.pay {
+                .promo-static {
+                    &-info {
+                        padding: 120px 0 110px 145px;
+                        &-txt {
+                            max-width: 610px;
+                        }
+                    }
+                }
+            }
         }
 
         main {
@@ -393,6 +404,39 @@ body {
                                 max-width: 625px;
 
                                 &.big {}
+                            }
+                        }
+                    }
+
+                    &.pay {
+                        padding-top: 25px;
+
+                        .advantages-block {
+                            padding: 40px 80px;
+
+                            &-item {
+                                width: calc((100% - 300px)/3);
+
+                                &-img {
+                                    width: 104px;
+                                }
+                                &-title {
+                                    margin-top: 30px;
+                                    font: 500 20px/24px @font;
+                                }
+                                &-txt {
+                                    font-size: 16px;
+                                    a {
+                                        display: block;
+                                        padding-top: 35px;
+                                        font: 300 16px/22px @font;
+                                        color: @gray-txt;
+                                        text-decoration: underline;
+                                        &:hover {
+                                            text-decoration: none;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -485,6 +529,45 @@ body {
                                 }
                             }
                         }
+                    }
+
+                    &.pay {
+                        padding: 60px 0;
+                        
+                        .banners-promo {
+                            padding-right: 220px;
+                            height: auto;
+
+                            &-img {
+                                left: 0;
+                            }
+
+                            &-content {
+                                max-width: 500px;
+
+                                &-txt {
+                                    ul {
+                                        li {
+                                            margin-top: 9px;
+
+                                            a {
+                                                color: @red;
+                                                border-bottom: 1px solid @red;
+
+                                                &:hover {
+                                                    border-bottom: none;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .ui-btn-hollow {
+                                    margin-top: 30px;
+                                }
+                            }
+                        }
+
                     }
                 }
 
@@ -1001,6 +1084,25 @@ body {
                             }
                         }
                     }
+
+                    &.pay {
+                        .deposits-steps-block {
+                            &-item {
+                                &-img {
+                                    top: 145px; 
+                                }
+                                padding: 37px 25px 277px 25px;
+                                &-content {
+                                    &-txt {
+                                        text-align: center;
+                                        margin-top: 0;
+                                        font-size: 18px;
+                                        line-height: 22px;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
 
                 .deposits-advantages {
@@ -1253,6 +1355,29 @@ body {
                             }
                         }
                     }
+
+                    &.pay {
+                        .tabs-content-list {
+                            &-item {
+                                .list-points {
+                                    ul {
+                                        display: flex;
+                                        flex-wrap: wrap;
+
+                                        li {
+                                            width: calc((100% - 50px)/3);
+
+                                            &:first-child {
+                                                margin-top: 18px;
+                                            }
+                                        }
+                                    }
+                                    
+
+                                }
+                            }
+                        }
+                    }
                 }
 
                 .safety-block {
@@ -1407,6 +1532,48 @@ body {
                         }
                     }
 
+                }
+
+                .functions {
+                    &.sm {
+                        flex-wrap: wrap;
+
+                        .functions-title {
+                            padding-bottom: 60px;
+                            width: 100%;
+                            text-align: center;
+                        }
+
+                        .functions-content {
+                            &-block {
+                                &-item {
+                                    &-img {
+                                        img {
+                                            max-height: 560px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .functions-steps {
+                            &-tabs {
+                                &-list {
+                                    &-item {
+                                        &-title {
+                                            &-txt {
+                                                font-size: 26px;
+                                            }
+                                        }
+
+                                        &-desc {
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
