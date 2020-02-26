@@ -1,0 +1,87 @@
+@font: 'Gilroy', sans-serif;
+
+@white: #ffffff;
+@black: #262626;
+@green: #038c73;
+@gray-bg: #f2f2f2;
+@gray-bg-2: #f9f9f9;
+@gray-bg-3: #d0d0d0;
+@gray-blue: #858f9a;
+@gray-dots: #c1c1c1;
+@gray-promo-bg: #eaebee;
+@gray-br-1: #d9d9d9;
+@gray-br-2: #e0dfdf;
+@gray-br-3: #e6e8e0;
+@gray-counter-bg: #c9c9c9;
+@gray-txt: #858f9a;
+@gray-txt-2: #767474;
+@gray-txt-3: #666666;
+@gray-check: #737c87;
+@gray-tooltip: #cacdc2;
+@gray-lt: #ededed;
+@red: #f65e64;
+
+.bg-outside {
+  position: relative;
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    background: inherit;
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+  }
+  &:before {
+    right: 100%;
+  }
+  &:after {
+    left: 100%;
+  }
+}
+
+@media (max-width: 1499px) {
+  body {
+    .wrapper {
+      main {
+        .m-inner {
+          width: 1220px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1239px) {
+  body {
+    .wrapper {
+      main {
+        .m-inner {
+          width: 980px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 979px) {
+  body {
+    .wrapper {
+      main {
+        .m-inner {
+          width: 740px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 759px) {
+  body {
+    .wrapper {
+      main {
+        .m-inner {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

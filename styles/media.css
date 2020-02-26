@@ -1,0 +1,39 @@
+.bg-outside {
+  position: relative;
+}
+.bg-outside:before,
+.bg-outside:after {
+  content: '';
+  display: block;
+  width: 100%;
+  background: inherit;
+  position: absolute;
+  bottom: 0px;
+  top: 0px;
+}
+.bg-outside:before {
+  right: 100%;
+}
+.bg-outside:after {
+  left: 100%;
+}
+@media (max-width: 1499px) {
+  body .wrapper main .m-inner {
+    width: 1220px;
+  }
+}
+@media (max-width: 1239px) {
+  body .wrapper main .m-inner {
+    width: 980px;
+  }
+}
+@media (max-width: 979px) {
+  body .wrapper main .m-inner {
+    width: 740px;
+  }
+}
+@media (max-width: 759px) {
+  body .wrapper main .m-inner {
+    width: 100%;
+  }
+}
