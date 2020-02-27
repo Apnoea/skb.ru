@@ -318,7 +318,7 @@ body {
             display: block;
             font: 14px @font;
             color: @green;
-            border: 2px solid @green;
+            border: 1px solid @green;
             border-radius: 25px;
             transition: 0.3s;
           }
@@ -1110,6 +1110,7 @@ body {
               font-size: 12px;
               line-height: 41px;
               text-transform: uppercase;
+              color: @red;
             }
           }
         }
@@ -1289,6 +1290,9 @@ body {
         &-block {
           &-item {
             position: relative;
+            overflow: hidden;
+            margin: 0 10px;
+            border-radius: 10px;
             &-img {
               background: @gray-promo-bg;
             }
@@ -1428,14 +1432,17 @@ body {
                 display: flex;
                 flex-direction: column;
                 height: 370px;
+                margin: 0 10px;
                 padding: 55px 105px 50px 60px;
-                background: @gray-bg;
+                background: @gray-bg url(../media/img/offers_slide_bg.svg) 100% 100% no-repeat;
+                background-size: contain;
                 border-radius: 10px;
                 overflow: hidden;
                 &-img {
                   position: absolute;
-                  bottom: 0;
-                  right: 0;
+                  right: 50px;
+                  top: 55%;
+                  transform: translateY(-50%);
                   pointer-events: none;
                 }
                 &-title {

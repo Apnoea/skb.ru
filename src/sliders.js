@@ -24,7 +24,7 @@ $(() => {
         dots: true,
         zIndex: 5,
         adaptiveHeight: true,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 6000,
         appendArrows: promoSliderArrows,
         appendDots: promoSliderDots
@@ -43,7 +43,7 @@ $(() => {
         arrows: true,
         dots: false,
         zIndex: 5,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 8000,
         appendArrows: offersSliderArrows
     });
@@ -52,7 +52,7 @@ $(() => {
         arrows: false,
         dots: true,
         zIndex: 5,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 8000,
         appendDots: shareSliderDots
     });

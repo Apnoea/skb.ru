@@ -259,7 +259,7 @@ body .wrapper .tags-block-item a {
   display: block;
   font: 14px 'Gilroy', sans-serif;
   color: #038c73;
-  border: 2px solid #038c73;
+  border: 1px solid #038c73;
   border-radius: 25px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -1114,6 +1114,7 @@ body .wrapper header .h-inner .bot .ui-btn-hollow a {
   font-size: 12px;
   line-height: 41px;
   text-transform: uppercase;
+  color: #f65e64;
 }
 body .wrapper .promo {
   position: relative;
@@ -1239,6 +1240,9 @@ body .wrapper .promo.inner-page .promo-static-info .ui-btn a {
 }
 body .wrapper .promo-slider-block-item {
   position: relative;
+  overflow: hidden;
+  margin: 0 10px;
+  border-radius: 10px;
 }
 body .wrapper .promo-slider-block-item-img {
   background: #eaebee;
@@ -1399,15 +1403,19 @@ body .wrapper main .m-inner .offers-slider-block-item {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 370px;
+  margin: 0 10px;
   padding: 55px 105px 50px 60px;
-  background: #f2f2f2;
+  background: #f2f2f2 url(../media/img/offers_slide_bg.svg) 100% 100% no-repeat;
+  background-size: contain;
   border-radius: 10px;
   overflow: hidden;
 }
 body .wrapper main .m-inner .offers-slider-block-item-img {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  right: 50px;
+  top: 55%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   pointer-events: none;
 }
 body .wrapper main .m-inner .offers-slider-block-item-title {
