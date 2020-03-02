@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles/extensions/jquery-ui.css">
+  <link rel="stylesheet" href="styles/extensions/bootstrap.css">
+  <link rel="stylesheet" href="styles/extensions/slick.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/aditional-styles.css">
+  <link rel="stylesheet" href="styles/aditional-styles.less">
+  <title>Google Pay</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="h-inner">
+        <div class="top">
+          <div class="logo">
+            <a href="#">
+              <svg viewBox="0 0 179 33">
+                <g clip-path="url(#clip0)">
+                  <path
+                    d="M16.1119 22.3294C14.8843 24.2357 12.7408 25.4285 10.0854 25.4285C5.91603 25.4285 3.17154 22.4069 3.17154 18.2932C3.17154 14.0118 5.90325 11.1579 10.0854 11.1579C12.3093 11.1579 14.226 12.0674 15.5157 13.5453L17.5827 11.4326C15.769 9.45235 13.131 8.24207 10.0854 8.24207C4.19402 8.24207 0 12.2622 0 18.2932C0 24.0878 4.21228 28.3444 10.0854 28.3444C13.5839 28.3444 16.4511 26.8738 18.2228 24.4867L16.1119 22.3294Z"
+                    fill="#038C73" />
+                  <path
+                    d="M174.454 27.942L166.928 19.7339H163.427C163.427 24.361 163.427 27.0969 163.467 27.942H160.248C160.288 26.0107 160.288 22.7919 160.288 18.2854C160.288 13.7789 160.288 10.5599 160.248 8.62854H163.467C163.427 10.2782 163.427 12.974 163.427 16.7562H167.009L174.293 8.62854H178.317L169.906 18.0035L178.961 27.942H174.454Z"
+                    fill="#F65E64" />
+                  <path
+                    d="M35.6319 27.9499L28.1062 19.7418H24.6048C24.6048 24.3689 24.6048 27.1048 24.6451 27.9499H21.426C21.466 26.0186 21.466 22.7996 21.466 18.2933C21.466 13.7869 21.466 10.5678 21.426 8.63647H24.6451C24.6048 10.2862 24.6048 12.9819 24.6048 16.7642H28.1866L35.4709 8.63647H39.4957L31.0845 18.0115L40.1392 27.9499H35.6319Z"
+                    fill="#038C73" />
+                  <path
+                    d="M51.4298 8.98006C48.7899 8.87873 46.3747 9.83481 44.5715 11.4571C44.9118 8.69352 46.8199 6.40489 49.3731 5.56593C52.5398 4.52511 56.6426 6.05545 60.7327 2.31833L58.4138 0C55.4383 2.81399 51.8065 1.6005 48.9557 2.36813C44.6166 3.53674 41.4078 7.5042 41.3632 12.2419H41.3607V18.6585C41.3607 24.0078 45.6982 28.3442 51.049 28.3442C56.5239 28.3442 60.9381 23.8033 60.7292 18.2826C60.5395 13.2635 56.4499 9.17258 51.4298 8.98006ZM51.5814 25.1694C47.5607 25.4898 44.216 22.146 44.5365 18.1259C44.7885 14.9625 47.3518 12.3998 50.516 12.1476C54.5367 11.8276 57.8809 15.1712 57.5609 19.1911C57.3089 22.3546 54.7456 24.9172 51.5814 25.1694Z"
+                    fill="#038C73" />
+                  <path
+                    d="M104.889 8.98006C102.249 8.87873 99.8345 9.83481 98.0308 11.4571C98.3715 8.69352 100.279 6.40489 102.832 5.56593C105.999 4.52511 110.102 6.05545 114.192 2.31833L111.873 0C108.898 2.81399 105.266 1.6005 102.416 2.36813C98.0759 3.53674 94.8671 7.5042 94.8225 12.2419H94.8204V18.6585C94.8204 24.0078 99.1575 28.3442 104.508 28.3442C109.983 28.3442 114.397 23.8033 114.189 18.2826C113.999 13.2635 109.909 9.17258 104.889 8.98006ZM105.041 25.1694C101.02 25.4898 97.6753 22.146 97.9958 18.1259C98.2478 14.9625 100.811 12.3998 103.975 12.1476C107.996 11.8276 111.341 15.1712 111.02 19.1911C110.768 22.3546 108.205 24.9172 105.041 25.1694Z"
+                    fill="#F65E64" />
+                  <path
+                    d="M152.472 27.942V19.5728H142.331V27.942H139.111V8.62854H142.331V16.5955H152.472V8.62854H155.692V27.942H152.472Z"
+                    fill="#F65E64" />
+                  <path
+                    d="M134.873 24.6774C134.482 25.321 133.92 25.6512 133.264 25.4855C132.643 25.3285 132.227 24.74 132.227 24.0991V14.6239C132.227 10.9221 129.047 8.22632 124.741 8.22632C122.077 8.22632 119.858 9.09965 118.499 10.5039L120.652 12.6562C121.358 11.7526 122.758 11.1635 124.5 11.1635C127.115 11.1635 129.007 12.8132 129.007 15.0261V16.4746C126.029 16.7967 123.937 17.0782 122.689 17.3599C118.825 18.1645 116.531 20.2166 116.531 23.3148C116.531 26.3327 118.946 28.3443 122.649 28.3443C125.265 28.3443 127.397 27.7992 129.087 25.8277C129.45 27.5578 131.14 28.3443 133.273 28.3443C134.714 28.3443 135.981 27.7147 136.867 26.6713L134.873 24.6774ZM129.007 22.2598C127.599 24.1908 125.385 25.358 123.011 25.358C121.119 25.358 119.872 24.5219 119.872 22.9528C119.872 21.6651 120.878 20.7085 122.608 20.2257C123.937 19.8637 126.069 19.7117 129.007 19.3497V22.2598Z"
+                    fill="#F65E64" />
+                  <path
+                    d="M81.8663 15.7485L74.6952 7.78821L72.3033 9.9423L79.7001 18.153L81.8663 15.7485Z"
+                    fill="#038C73" />
+                  <path
+                    d="M81.8664 15.7485L72.2466 26.4264L74.6385 28.5805L84.0307 18.151L81.8664 15.7485Z"
+                    fill="#F65E64" />
+                </g>
+                <defs>
+                  <clipPath id="clip0">
+                    <rect fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
+          <div class="top-menu">
+            <div class="top-menu-block">
+              <div class="top-menu-block-item"><a href="#">Кредиты</a></div>
+              <div class="top-menu-block-item"><a href="#">Карты</a></div>
+              <div class="top-menu-block-item"><a href="#">Вклады</a></div>
+              <div class="top-menu-block-item"><a href="#">Ипотека</a></div>
+              <div class="top-menu-block-item"><a href="#">Платежи</a></div>
+              <div class="top-menu-block-item"><a href="#">Услуги и сервисы</a></div>
+            </div>
+          </div>
+          <div class="top-helpers">
+            <div class="top-helpers-phone">
+              <a href="#">8 800 1000 600</a>
+            </div>
+            <div class="top-helpers-terminals">
+              <a href="#">Офисы и банкоматы</a>
+            </div>
+            <div class="top-helpers-geo">
+              <a href="#">Санкт-Петеpбуpг</a>
+            </div>
+            <div class="top-helpers-search">
+              <div class="top-helpers-search-toggle">
+                <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none">
+                    <path
+                      d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                      stroke="#373A36" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M21 21L16.65 16.65" stroke="#373A36" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bot">
+          <div class="breadcrumbs">
+            <div class="breadcrumbs-list">
+              <div class="breadcrumbs-list-item"><a href="#">Частным лицам</a></div>
+              <div class="breadcrumbs-list-item"><a href="#">Samsung Pay</a></div>
+            </div>
+          </div>
+          <div class="bot-type">
+            <div class="bot-type-toggle">
+              <button>Частным клиентам</button>
+            </div>
+          </div>
+          <div class="ui-btn-hollow">
+            <a href="#">Интернет-банк</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="promo pay-page google-pay">
+      <div class="promo-static">
+        <div class="promo-static-img">
+          <img src="media/img/google-promo.png" alt="error">
+        </div>
+        <div class="promo-static-info">
+          <h1>Google Pay</h1>
+          <div class="promo-static-info-txt">
+            Подключите карту СКБ-банка к Google Pay*: сервис доступен для смартфонов на базе Android, оплачивайте покупоки до 1000 рублей без ввода ПИН-кода, доступно для держателей MasterCard.
+          </div>
+        </div>
+      </div>
+    </section>
+    <main>
+      <div class="m-inner">
+        <div class="advantages pay-page google-pay">
+          <div class="advantages-title">
+            <h2>Где пользоваться?</h2>
+          </div>
+          <div class="advantages-block">
+            <div class="advantages-block-item">
+              <div class="advantages-block-item-img">
+                <svg width="88" height="56" viewBox="0 0 88 56" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path d="M85.3551 12.206C83.1778 7.34992 79.1405 3.56512 74.1314 1.68418" stroke="#F65E64" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect y="4.99994" width="87" height="51" fill="url(#pattern0)"/>
+                  <defs>
+                  <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                  <use xlink:href="#image0" transform="scale(0.0114943 0.0196078)"/>
+                  </pattern>
+                  <image id="image0" width="87" height="51" xlink:href="data:image/png;base64,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"/>
+                  </defs>
+                </svg>
+              </div>
+              <div class="advantages-block-item-txt">
+                На любых терминалах <br>с поддержкой бесконтактных оплат
+              </div>
+            </div>
+            <div class="advantages-block-item">
+              <div class="advantages-block-item-img">
+                <svg width="70" height="56" viewBox="0 0 70 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M50 55.75H64C67.375 55.75 70 53 70 49.75V47.5C70 46.875 69.5 46.5 69 46.5H65.375V9.25C65.375 6.875 63.5 5 61.125 5H8.625C6.25 5 4.375 6.875 4.375 9.25V46.375H1C0.375 46.375 0 46.875 0 47.375V49.625C0 53 2.75 55.625 6 55.625H45.125H50V55.75ZM45.25 53.625H6C3.875 53.625 2 51.875 2 49.625V48.375H5.375H26.5C26.5 50.375 28.125 52 30.25 52H39.625C41.625 52 43.25 50.375 43.375 48.375H64.25H67.875V49.625C67.875 51.75 66.125 53.625 63.875 53.625H50H45.25ZM39.75 50H30.375C29.5 50 28.75 49.25 28.75 48.5H41.375C41.25 49.375 40.625 50 39.75 50ZM63.25 46.375H6.5V9.25C6.5 8.125 7.5 7.125 8.625 7.125H61.125C62.25 7.125 63.25 8.125 63.25 9.25V46.375ZM15.25 8.875H9.25C8.625 8.875 8.25 9.375 8.25 9.875V43.5C8.25 44.125 8.75 44.5 9.25 44.5H60.375C61 44.5 61.375 44 61.375 43.5V9.875C61.375 9.25 60.875 8.875 60.375 8.875H20.125H15.25ZM20.125 11H59.375V42.5H10.375V11H15.25H20.125Z" fill="url(#paint1_2_linear)"/>
+                  <path d="M56 1L66.6 1C67.7046 1 68.6 1.89543 68.6 3L68.6 12.2875" stroke="#F65E64" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <defs>
+                  <linearGradient id="paint1_2_linear" x1="0" y1="30.375" x2="70" y2="30.375" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#038C73"/>
+                  <stop offset="1" stop-color="#6CC47B"/>
+                  </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="advantages-block-item-txt">
+                На сайтах, <br>поддерживающих Google Pay
+              </div>
+            </div>
+            <div class="advantages-block-item">
+              <div class="advantages-block-item-img">
+                <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+                  <g clip-path="url(#clip1_3)">
+                  <path d="M53.9201 42.69C52.3901 46.73 49.6701 50.06 46.2701 52.4C45.7701 52.75 45.6801 53.45 46.0501 53.94C46.0501 53.95 46.0601 53.95 46.0601 53.96C46.4001 54.42 47.0501 54.54 47.5201 54.21C51.2701 51.62 54.2601 47.92 55.9501 43.46C56.2001 42.81 55.8001 42.09 55.1101 41.98C54.6001 41.9 54.1101 42.2 53.9201 42.69Z" fill="#F65E64"/>
+                  <path d="M22.31 0H7.44C3.34 0 0 3.34 0 7.44V43.57C0 47.66 3.34 51 7.44 51H9.56C10.15 51 10.62 50.52 10.62 49.94C10.62 49.35 10.14 48.88 9.56 48.88H7.44C4.51 48.88 2.13 46.5 2.13 43.57V7.44C2.13 4.51 4.51 2.13 7.44 2.13H22.31C25.24 2.13 27.62 4.51 27.62 7.44V18.07C27.62 18.66 28.1 19.13 28.68 19.13C29.26 19.13 29.74 18.65 29.74 18.07V7.44C29.75 3.34 26.41 0 22.31 0ZM28.69 8.5H1.06C0.48 8.5 0 8.98 0 9.56C0 10.14 0.48 10.62 1.06 10.62H28.68C29.27 10.62 29.74 10.14 29.74 9.56C29.74 8.98 29.27 8.5 28.69 8.5ZM19.12 38.25H1.06C0.48 38.25 0 38.73 0 39.31C0 39.9 0.48 40.37 1.06 40.37H19.12C19.71 40.37 20.18 39.89 20.18 39.31C20.19 38.73 19.71 38.25 19.12 38.25ZM18.06 4.25H11.68C11.09 4.25 10.62 4.73 10.62 5.31C10.62 5.89 11.1 6.37 11.68 6.37H18.06C18.65 6.37 19.12 5.89 19.12 5.31C19.12 4.73 18.65 4.25 18.06 4.25ZM22.36 4.25H22.34C21.75 4.25 21.29 4.73 21.29 5.31C21.29 5.89 21.78 6.37 22.36 6.37C22.94 6.37 23.42 5.89 23.42 5.31C23.42 4.73 22.94 4.25 22.36 4.25ZM47.96 28.12L39.97 19.34C38.39 17.76 35.81 17.76 34.22 19.35C33.71 19.86 33.37 20.46 33.19 21.11C31.6 19.89 29.31 20.01 27.84 21.48C27.34 21.99 26.99 22.59 26.81 23.24C25.22 22.02 22.93 22.14 21.47 23.61C20.97 24.11 20.63 24.7 20.45 25.32L16.68 21.55C15.1 19.97 12.52 19.97 10.93 21.56C9.35 23.14 9.35 25.72 10.93 27.3L25.4 41.78L16.82 43.13C14.5 43.46 12.75 45.48 12.75 47.82C12.75 49.58 14.18 51.01 15.94 51.01H35.98C39.1 51.01 42.04 49.79 44.24 47.59L47.58 44.25C49.79 42.05 51 39.11 51 36C51 33.07 49.92 30.28 47.96 28.12ZM46.08 42.73L42.74 46.07C40.93 47.88 38.53 48.87 35.98 48.87H15.94C15.35 48.87 14.88 48.39 14.88 47.81C14.88 46.52 15.84 45.41 17.14 45.22L27.8 43.55C28.2 43.49 28.52 43.21 28.65 42.83C28.77 42.45 28.67 42.03 28.39 41.75L12.43 25.8C11.68 25.05 11.68 23.82 12.44 23.05C12.82 22.67 13.31 22.48 13.81 22.48C14.31 22.48 14.8 22.67 15.18 23.05L25.81 33.68C26.22 34.09 26.9 34.09 27.31 33.68C27.52 33.47 27.62 33.2 27.62 32.93C27.62 32.66 27.52 32.39 27.31 32.18L22.97 27.84C22.22 27.09 22.22 25.86 22.98 25.09C23.73 24.34 24.96 24.34 25.71 25.09L30.05 29.43C30.46 29.84 31.14 29.84 31.55 29.43C31.76 29.22 31.86 28.95 31.86 28.68C31.86 28.41 31.76 28.14 31.56 27.94L29.34 25.72C28.59 24.97 28.59 23.74 29.35 22.97C30.1 22.22 31.33 22.22 32.08 22.97L34.3 25.19C34.72 25.58 35.37 25.58 35.78 25.17C36.19 24.76 36.19 24.08 35.78 23.67L35.69 23.58C35.32 23.21 35.12 22.73 35.12 22.21C35.12 21.69 35.32 21.21 35.7 20.83C36.45 20.08 37.68 20.08 38.4 20.79L46.36 29.53C47.96 31.29 48.84 33.57 48.84 35.96C48.88 38.53 47.88 40.93 46.08 42.73Z" fill="url(#paint1_3_linear)"/>
+                  </g>
+                  <defs>
+                  <linearGradient id="paint1_3_linear" x1="0" y1="25.5" x2="51" y2="25.5" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#038C73"/>
+                  <stop offset="1" stop-color="#6CC47B"/>
+                  </linearGradient>
+                  <clipPath id="clip1_3">
+                  <rect width="56" height="56" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div class="advantages-block-item-txt">
+                В приложениях, <br>поддерживающих Google Pay
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="info-block">
+          <div class="info-block-image">
+            <img src="" alt="">
+          </div>
+          <div class="info-block-content">
+            <div class="info-block-content-title"><h2>Это безопасно?</h2></div>
+            <div class="info-block-content-desc">Конечно, безопасно, ведь смартфон не хранит номер карты!</div>
+            <div class="info-block-content-text">
+              <p>В момент оплаты передается токен - это уникальная комбинация цифр, созданная случайным образом, которая не содержит номера карты и прочих данных.</p>
+              <p>Если мошенник каким-то образом сможет перехватить токен, то он с ним ничего не сделает, так как его повторное использование с другого мобильного устройства или с другого интернет-сервиса тут же приведёт к блокировке операции оплаты со стороны платёжных систем.</p>
+            </div>
+          </div>
+        </div>
+        <div class="advantages pay-page google-pay">
+          <div class="advantages-title">
+            <h2>Что нужно для подключения</h2>
+          </div>
+          <div class="advantages-block">
+            <div class="advantages-block-item">
+              <div class="advantages-block-item-img">
+                <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+                  <path d="M35.2 5.59999L37.7 1.49999C38 0.999992 37.8 0.399993 37.4 0.0999925C36.9 -0.100007 36.3 -7.48038e-06 36 0.499993L33.4 4.79999C31.9 4.29999 30.2 3.89999 28.5 3.89999C26.8 3.89999 25.1 4.19999 23.6 4.79999L21 0.499993C20.7 -7.48038e-06 20.1 -0.100008 19.7 0.199993C19.2 0.399993 19 0.999992 19.3 1.49999L21.8 5.59999C17.1 8.09999 13.8 13 13.8 18.7C13.8 19.2 14.2 19.7 14.8 19.7H42.3C42.8 19.7 43.3 19.3 43.3 18.7C43.2 13 40 7.99999 35.2 5.59999ZM15.8 17.7C16.3 11.1 21.8 5.89999 28.5 5.89999C35.2 5.89999 40.7 11.1 41.2 17.7H15.8ZM35.4 11.2H34.1C33.7 11.2 33.5 11.5 33.5 11.8V13.1C33.5 13.5 33.8 13.7 34.1 13.7H35.4C35.8 13.7 36 13.4 36 13.1V11.8C36 11.5 35.7 11.2 35.4 11.2ZM22.9 11.2H21.6C21.2 11.2 21 11.5 21 11.8V13.1C21 13.5 21.3 13.7 21.6 13.7H22.9C23.3 13.7 23.5 13.4 23.5 13.1V11.8C23.6 11.5 23.3 11.2 22.9 11.2ZM42.3 20.6H14.7C14.2 20.6 13.7 21 13.7 21.6V41.4C13.7 44 15.8 46.1 18.4 46.1H19.5V52C19.5 54.2 21.3 55.9 23.4 55.9C25.5 55.9 27.3 54.1 27.3 52V46.1H29.3V52C29.3 54.2 31.1 55.9 33.2 55.9C35.3 55.9 37.1 54.1 37.1 52V46.1H38.2C40.8 46.1 42.9 44 42.9 41.4V21.6C43.2 21.1 42.8 20.6 42.3 20.6ZM41.3 41.4C41.3 42.9 40.1 44.2 38.5 44.2H36.4C35.9 44.2 35.4 44.6 35.4 45.2V52.1C35.4 53.2 34.5 54.1 33.4 54.1C32.3 54.1 31.4 53.2 31.4 52.1V45.2C31.4 44.7 31 44.2 30.4 44.2H26.5C26 44.2 25.5 44.6 25.5 45.2V52.1C25.5 53.2 24.6 54.1 23.5 54.1C22.4 54.1 21.5 53.2 21.5 52.1V45.2C21.5 44.7 21.1 44.2 20.5 44.2H18.4C16.9 44.2 15.6 43 15.6 41.4V22.6H41.1V41.4H41.3ZM47.7 20.6C45.8 20.6 44.3 22.1 44.3 24V37.7C44.3 39.6 45.8 41.1 47.7 41.1C49.6 41.1 51.1 39.6 51.1 37.7V24.1C51.1 22.2 49.6 20.6 47.7 20.6ZM49.1 37.8C49.1 38.6 48.4 39.3 47.6 39.3C46.8 39.3 46.1 38.6 46.1 37.8V24.1C46.1 23.3 46.8 22.6 47.6 22.6C48.4 22.6 49.1 23.3 49.1 24.1V37.8ZM9.29999 20.6C7.39999 20.6 5.89999 22.1 5.89999 24V37.7C5.89999 39.6 7.39999 41.1 9.29999 41.1C11.2 41.1 12.7 39.6 12.7 37.7V24.1C12.8 22.2 11.2 20.6 9.29999 20.6ZM10.8 37.8C10.8 38.6 10.1 39.3 9.29999 39.3C8.49999 39.3 7.79999 38.6 7.79999 37.8V24.1C7.79999 23.3 8.49999 22.6 9.29999 22.6C10.1 22.6 10.8 23.3 10.8 24.1V37.8Z" fill="url(#paint2_1_linear)"/>
+                  <path d="M43.2197 4.92238L43.2196 4.92246L43.2251 4.92766C46.2724 7.79568 48.0692 11.4738 48.8789 15.4322L48.8808 15.4416L48.8834 15.4508C48.9851 15.8067 49.1708 16.1144 49.4485 16.3044C49.7299 16.4968 50.0763 16.5482 50.4518 16.4445C51.1254 16.3239 51.5867 15.6456 51.3657 14.954C50.4459 10.5512 48.3335 6.41903 44.8434 3.11175C44.2725 2.54408 43.2718 2.6637 42.8248 3.33418L42.8008 3.37021L42.7903 3.41223C42.6804 3.85148 42.7872 4.48996 43.2197 4.92238Z" fill="#F65E64" stroke="#F65E64" stroke-width="0.5"/>
+                  <defs>
+                  <linearGradient id="paint2_1_linear" x1="5.90449" y1="27.9996" x2="51.0965" y2="27.9996" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#038C73"/>
+                  <stop offset="1" stop-color="#6CC47B"/>
+                  </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="advantages-block-item-txt">
+                Смартфон с бесконтактной <br>технологией оплаты NFC**, на ОС <br>Android версии 5.0 и новее
+              </div>
+            </div>
+            <div class="advantages-block-item">
+              <div class="advantages-block-item-img">
+                <svg xmlns="http://www.w3.org/2000/svg" width="94" height="56" viewBox="0 0 94 56" fill="none">
+                  <g clip-path="url(#clip2_2)">
+                  <path d="M44.4822 31.4355V42.4291H40.9572V15.1987H50.1893C52.3715 15.1987 54.5536 16.0444 56.2322 17.5666C57.9107 18.9196 58.75 21.1184 58.75 23.3171C58.75 25.5158 57.9107 27.5454 56.2322 29.0676C54.5536 30.5898 52.5393 31.4355 50.1893 31.4355H44.4822ZM44.4822 18.5814V28.0528H50.3572C51.7 28.0528 52.875 27.5454 53.7143 26.6997C55.5607 25.0084 55.5607 21.964 53.8822 20.2727L53.7143 19.9344C52.7072 18.9196 51.5322 18.4122 50.3572 18.5814H44.4822ZM66.6393 23.3171C69.1572 23.3171 71.1714 23.9936 72.6822 25.5158C74.1929 26.8689 74.8643 28.8985 74.8643 31.2663V42.5982H71.5072V40.0612H71.3393C69.9965 42.2599 67.9822 43.2747 65.6322 43.2747C63.6179 43.2747 61.9393 42.7673 60.4286 41.5834C59.0857 40.3995 58.2465 38.7082 58.2465 37.0168C58.2465 35.1564 58.9179 33.6342 60.4286 32.4503C61.9393 31.2663 63.7857 30.7589 66.1357 30.7589C68.3179 30.7589 69.8286 31.0972 71.1715 31.9429V31.0972C71.1715 29.9133 70.6679 28.7293 69.8286 28.0528C68.8214 27.2071 67.6464 26.6997 66.4715 26.6997C64.4572 26.6997 62.9465 27.5454 61.9393 29.2367L58.9179 27.3763C60.9322 24.501 63.2822 23.3171 66.6393 23.3171ZM62.1072 36.8477C62.1072 37.8625 62.6107 38.539 63.2822 39.0464C64.1215 39.5538 64.9607 40.0612 65.9679 40.0612C67.3107 40.0612 68.8214 39.5538 69.8286 38.3699C71.0036 37.3551 71.5072 36.002 71.5072 34.649C70.5 33.8033 68.9893 33.2959 66.975 33.2959C65.6322 33.2959 64.4572 33.6342 63.45 34.3107C62.6107 34.9872 62.1072 35.6638 62.1072 36.8477ZM94 23.8245L82.4179 50.7166H78.8929L83.2572 41.4143L75.5357 23.9936H79.2286L84.7679 37.3551H84.9357L90.3072 23.9936L94 23.8245ZM30.3822 29.0676C30.3822 28.0528 30.2143 26.8689 30.2143 25.8541H15.6107V31.9429H24.0036C23.6679 33.8033 22.6607 35.6638 20.9822 36.6786V40.5686H26.0179C28.8715 37.8625 30.3822 33.8033 30.3822 29.0676ZM15.6107 44.2895C19.8072 44.2895 23.3322 42.9365 26.0179 40.5686L20.9822 36.6786C19.6393 37.6934 17.7929 38.2008 15.7786 38.2008C11.75 38.2008 8.22503 35.4946 7.05003 31.7737H1.6786V35.8329C4.36431 41.076 9.73574 44.2895 15.6107 44.2895ZM6.88217 31.7737C6.21074 29.9133 6.21074 27.7145 6.88217 25.6849V21.6258H1.6786C-0.503543 26.0232 -0.503543 31.2663 1.6786 35.6638L6.88217 31.7737ZM15.6107 19.2579C17.7929 19.2579 19.975 20.1036 21.6536 21.6258L26.1857 17.0592C23.3322 14.5222 19.6393 13 15.7786 13C9.9036 13 4.53217 16.3827 1.84646 21.6258L7.05003 25.6849C8.05717 21.964 11.5822 19.2579 15.6107 19.2579Z" fill="url(#paint2_2_linear)"/>
+                  </g>
+                  <defs>
+                  <linearGradient id="paint2_2_linear" x1="2.79034e-05" y1="31.9429" x2="94" y2="31.9429" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#038C73"/>
+                  <stop offset="1" stop-color="#6CC47B"/>
+                  </linearGradient>
+                  <clipPath id="clip2_2">
+                  <rect width="94" height="56" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div class="advantages-block-item-txt">
+                Установить приложение Google Pay <br>из Google Play маркет <br>(услуга бесплатна)
+              </div>
+            </div>
+            <div class="advantages-block-item">
+              <div class="advantages-block-item-img">
+                <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+                  <g clip-path="url(#clip2_3)">
+                  <path d="M45.36 24.85L36.4 13.65V4.69C36.4 2.1 34.3 0 31.71 0H13.09C10.5 0 8.40002 2.1 8.40002 4.69V38.29C8.40002 40.88 10.5 42.98 13.09 42.98H21.49V45.43C21.49 51.31 26.25 56.07 32.13 56.07H46.69C47.18 56.07 47.6 55.65 47.6 55.16V31.36C47.6 28.98 46.83 26.67 45.36 24.85ZM31.71 1.89C33.25 1.89 34.51 3.15 34.51 4.69V29.19L30.8 25.2V1.89H31.71ZM28.91 23.17L27.3 21.49C26.95 21.14 26.53 20.79 26.11 20.58V1.89H28.91V23.17ZM10.29 38.29V4.69C10.29 3.15 11.55 1.89 13.09 1.89H24.29V20.16C23.17 20.16 22.05 20.58 21.28 21.35L21.21 21.42C19.6 23.03 19.53 25.55 20.93 27.23L24.29 31.22V41.09H13.09C11.55 41.09 10.29 39.83 10.29 38.29ZM29.05 41.09H26.18V33.46L28.98 36.75V39.62C28.91 40.11 28.98 40.6 29.05 41.09ZM45.71 54.11H32.06C27.23 54.11 23.31 50.19 23.31 45.36V42.91H29.4C30.45 46.69 33.25 49.84 37.03 51.24L37.66 49.49C33.53 47.95 30.8 43.96 30.8 39.62V36.4C30.8 36.19 30.73 35.98 30.59 35.77L22.33 26.04C21.49 25.06 21.56 23.66 22.54 22.68C23.03 22.26 23.66 21.98 24.29 21.98C24.92 21.98 25.55 22.26 25.97 22.75L38.5 36.05L39.83 34.79L36.33 31.08V16.66L43.82 26.04C45.01 27.51 45.64 29.4 45.64 31.29V54.11H45.71ZM14.91 16.8H13.02V4.69H14.91V16.8ZM19.6 12.11H17.71V4.69H19.6V12.11ZM19.6 30.8H14C13.51 30.8 13.09 31.22 13.09 31.71V37.31C13.09 37.8 13.51 38.22 14 38.22H19.6C20.09 38.22 20.51 37.8 20.51 37.31V31.71C20.51 31.22 20.09 30.8 19.6 30.8ZM18.69 36.4H14.98V32.69H18.69V36.4Z" fill="url(#paint2_3_linear)"/>
+                  <path d="M40.9501 5.25L41.09 11.55C41.09 12.18 41.3 12.81 41.65 13.37L46.34 19.25" stroke="#F65E64" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round"/>
+                  </g>
+                  <defs>
+                  <linearGradient id="paint2_3_linear" x1="8.40002" y1="28" x2="47.6" y2="28" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#038C73"/>
+                  <stop offset="1" stop-color="#6CC47B"/>
+                  </linearGradient>
+                  <clipPath id="clip2_3">
+                  <rect width="56" height="56" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div class="advantages-block-item-txt">
+                Добавить в приложение карту <br>Mastercard СКБ-банка
+                <div class="ui-tip">
+                  <div class="ui-tip-ico">
+                  </div>
+                  <div class="ui-tip-drop">
+                    1
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="functions sm">
+          <div class="functions-title">
+            <h2>Добавить карту в Google Pay</h2>
+          </div>
+          <div class="functions-content">
+            <div class="functions-content-block">
+              <div class="functions-content-block-item">
+                <div class="functions-content-block-item-img">
+                  <img src="media/img/1_droid_1.png" alt="error">
+                </div>
+              </div>
+              <div class="functions-content-block-item">
+                <div class="functions-content-block-item-img">
+                  <img src="media/img/IPhoneX2.png" alt="error">
+                </div>
+                <div class="functions-content-block-item-tips">
+                  <div class="functions-content-block-item-tips-tip slide-2-1">
+                    <div class="functions-content-block-item-tips-tip-txt">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa repellat
+                      quaerat quod ipsum vero.
+                    </div>
+                  </div>
+                  <div class="functions-content-block-item-tips-tip slide-2-2">
+                    <div class="functions-content-block-item-tips-tip-img">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32"
+                        viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" fill="url(#pattern0)" />
+                        <defs>
+                          <pattern id="pattern0" patternContentUnits="objectBoundingBox"
+                            width="1" height="1">
+                            <use xlink:href="#image0" transform="scale(0.0178571)" />
+                          </pattern>
+                          <image id="image0" width="56" height="56"
+                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY2QjQwMDFGMDEyMTExRUE4RjFGOEYzRUIyQzY0Q0U3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY2QjQwMDIwMDEyMTExRUE4RjFGOEYzRUIyQzY0Q0U3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjZCNDAwMUQwMTIxMTFFQThGMUY4RjNFQjJDNjRDRTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjZCNDAwMUUwMTIxMTFFQThGMUY4RjNFQjJDNjRDRTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5bsfgjAAAHG0lEQVR42txa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" />
+                        </defs>
+                      </svg>
+                    </div>
+                    <div class="functions-content-block-item-tips-tip-txt">
+                      Автоплатеж имеет гибкую настройку и&nbsp;сделает оплату вовремя
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="functions-content-block-item">
+                3
+              </div>
+              <div class="functions-content-block-item">
+                4
+              </div>
+            </div>
+          </div>
+          <div class="functions-steps">
+            <div class="functions-steps-tabs-list">
+              <div class="functions-steps-tabs-list-item">
+                <div class="functions-steps-tabs-list-item-title">
+                  <div class="functions-steps-tabs-list-item-title-round"></div>
+                  <div class="functions-steps-tabs-list-item-title-txt">
+                    Откройте приложение Google Pay
+                  </div>
+                </div>
+                <div class="functions-steps-tabs-list-item-desc">
+                  или скачайте приложение Google Pay в Google Play, если оно не предустановленно на вашем устройстве с ОС не ниже Android 5.0.
+                </div>
+              </div>
+              <div class="functions-steps-tabs-list-item">
+                <div class="functions-steps-tabs-list-item-title">
+                  <div class="functions-steps-tabs-list-item-title-round"></div>
+                  <div class="functions-steps-tabs-list-item-title-txt">
+                    Введите данные карты
+                  </div>
+                </div>
+                <div class="functions-steps-tabs-list-item-desc">
+                  Добавьте номер карты вручную или сфотографируйте ее с помощью камеры. Если карта уже связана с вашим аккаунтом Google, достаточно подтвердить ее платежные данные.
+                </div>
+              </div>
+              <div class="functions-steps-tabs-list-item">
+                <div class="functions-steps-tabs-list-item-title">
+                  <div class="functions-steps-tabs-list-item-title-round"></div>
+                  <div class="functions-steps-tabs-list-item-title-txt">
+                    Введите код подтверждения
+                  </div>
+                </div>
+                <div class="functions-steps-tabs-list-item-desc">
+                  Введите код подтверждения из СМС и нажмите «Готово». Карта добавлена!
+                </div>
+              </div>
+              <div class="functions-steps-tabs-list-item">
+                <div class="functions-steps-tabs-list-item-title">
+                  <div class="functions-steps-tabs-list-item-title-round"></div>
+                  <div class="functions-steps-tabs-list-item-title-txt">
+                    Карта добавлена!
+                  </div>
+                </div>
+                <div class="functions-steps-tabs-list-item-desc">
+                  Можно оплачивать покупки. Если возникла ошибка при получении кода подтверждения, обратитесь в любое отделение СКБ-банка для подключения SMS-информирования.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="deposits-steps pay-page google-pay">
+          <div class="deposits-steps-promo">
+            <div class="deposits-steps-promo-title">
+              Платить смартфоном <span>просто</span>
+            </div>
+            <div class="deposits-steps-promo-txt">
+              При оплате смартфоном
+              если сумма оплаты менее
+              1 000 рублей, ПИН-код
+              не&nbsp;вводится.
+            </div>
+          </div>
+          <div class="deposits-steps-block">
+            <div class="deposits-steps-block-item">
+              <div class="deposits-steps-block-item-img">
+                <img src="media/img/sams-steps1.png" alt="error">
+              </div>
+              <div class="deposits-steps-block-item-content">
+                <div class="deposits-steps-block-item-content-txt">
+                  Выведите смартфон <br>из спящего режима <br>и разблокируйте.
+                </div>
+              </div>
+            </div>
+            <div class="deposits-steps-block-item">
+              <div class="deposits-steps-block-item-img">
+                <img src="media/img/sams-steps2.png" alt="error">
+              </div>
+              <div class="deposits-steps-block-item-content">
+                <div class="deposits-steps-block-item-content-txt">
+                  Поднесите смартфон <br>задней панелью <br>к терминалу оплаты.
+                </div>
+              </div>
+            </div>
+            <div class="deposits-steps-block-item">
+              <div class="deposits-steps-block-item-img">
+                <img src="media/img/sams-steps3.png" alt="error">
+              </div>
+              <div class="deposits-steps-block-item-content">
+                <div class="deposits-steps-block-item-content-txt">
+                  Оплата прошла, если <br>появилась галочка <br>на экране смартфона.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="banners pay-page">
+          <div class="banners-promo">
+            <div class="banners-promo-img">
+              <img src="media/img/samsung-banners-promo.png" alt="error">
+            </div>
+            <div class="banners-promo-content">
+              <div class="banners-promo-content-title">
+                <h2>У&nbsp;вас нет карты СКБ-банка?</h2>
+              </div>
+              <div class="banners-promo-content-txt">
+                <ul class="list">
+                  <li>
+                    Бесплатный выпуск и&nbsp;обслуживание карты
+                  </li>
+                  <li>
+                    Начисление процентов на&nbsp;остаток
+                  </li>
+                  <li>
+                    Cashback рублями
+                  </li>
+                  <li>
+                    Скидки от&nbsp;платежной системы MasterCard
+                  </li>
+                </ul>
+              </div>
+              <div class="ui-btn-hollow">
+                <a href="#">Подробнее о карте</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tariffs google-pay">
+          <div class="tariffs-title">
+              <h2 class="sm">Документы</h2>
+          </div>
+          <div class="tariffs-content-list">
+              <div class="docs-list-item"><a href="#">Условия использования карт в сервисах бесконтактной оплаты (Apple Pay, Samsung Pay, Google Pay) для физических лиц в ПАО «СКБ-банк» (публичная оферта). Версия 1.0</a></div>
+          </div>
+        </div>
+        <div class="footnotes">
+          <div class="footnotes-item">* Google Pay и Android являются товарными знаками Google LLC. Подробнее о сервисе (<a href="#">Google Pay</a>)</div>
+          <div class="footnotes-item">** NFC (сокр. от англ. Near Field Communication – ближняя бесконтактная связь) - технология, позволяющая совершать бесконтактные платежи с помощью смартфона.</div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="f-inner">
+        <div class="top">
+          <div class="logo">
+            <a href="#">
+              <svg viewBox="0 0 179 33">
+                <g clip-path="url(#clip_f)">
+                  <path
+                    d="M16.1119 22.3294C14.8843 24.2357 12.7408 25.4285 10.0854 25.4285C5.91603 25.4285 3.17154 22.4069 3.17154 18.2932C3.17154 14.0118 5.90325 11.1579 10.0854 11.1579C12.3093 11.1579 14.226 12.0674 15.5157 13.5453L17.5827 11.4326C15.769 9.45235 13.131 8.24207 10.0854 8.24207C4.19402 8.24207 0 12.2622 0 18.2932C0 24.0878 4.21228 28.3444 10.0854 28.3444C13.5839 28.3444 16.4511 26.8738 18.2228 24.4867L16.1119 22.3294Z"
+                    fill="#038C73" />
+                  <path
+                    d="M174.454 27.942L166.928 19.7339H163.427C163.427 24.361 163.427 27.0969 163.467 27.942H160.248C160.288 26.0107 160.288 22.7919 160.288 18.2854C160.288 13.7789 160.288 10.5599 160.248 8.62854H163.467C163.427 10.2782 163.427 12.974 163.427 16.7562H167.009L174.293 8.62854H178.317L169.906 18.0035L178.961 27.942H174.454Z"
+                    fill="#F65E64" />
+                  <path
+                    d="M35.6319 27.9499L28.1062 19.7418H24.6048C24.6048 24.3689 24.6048 27.1048 24.6451 27.9499H21.426C21.466 26.0186 21.466 22.7996 21.466 18.2933C21.466 13.7869 21.466 10.5678 21.426 8.63647H24.6451C24.6048 10.2862 24.6048 12.9819 24.6048 16.7642H28.1866L35.4709 8.63647H39.4957L31.0845 18.0115L40.1392 27.9499H35.6319Z"
+                    fill="#038C73" />
+                  <path
+                    d="M51.4298 8.98006C48.7899 8.87873 46.3747 9.83481 44.5715 11.4571C44.9118 8.69352 46.8199 6.40489 49.3731 5.56593C52.5398 4.52511 56.6426 6.05545 60.7327 2.31833L58.4138 0C55.4383 2.81399 51.8065 1.6005 48.9557 2.36813C44.6166 3.53674 41.4078 7.5042 41.3632 12.2419H41.3607V18.6585C41.3607 24.0078 45.6982 28.3442 51.049 28.3442C56.5239 28.3442 60.9381 23.8033 60.7292 18.2826C60.5395 13.2635 56.4499 9.17258 51.4298 8.98006ZM51.5814 25.1694C47.5607 25.4898 44.216 22.146 44.5365 18.1259C44.7885 14.9625 47.3518 12.3998 50.516 12.1476C54.5367 11.8276 57.8809 15.1712 57.5609 19.1911C57.3089 22.3546 54.7456 24.9172 51.5814 25.1694Z"
+                    fill="#038C73" />
+                  <path
+                    d="M104.889 8.98006C102.249 8.87873 99.8345 9.83481 98.0308 11.4571C98.3715 8.69352 100.279 6.40489 102.832 5.56593C105.999 4.52511 110.102 6.05545 114.192 2.31833L111.873 0C108.898 2.81399 105.266 1.6005 102.416 2.36813C98.0759 3.53674 94.8671 7.5042 94.8225 12.2419H94.8204V18.6585C94.8204 24.0078 99.1575 28.3442 104.508 28.3442C109.983 28.3442 114.397 23.8033 114.189 18.2826C113.999 13.2635 109.909 9.17258 104.889 8.98006ZM105.041 25.1694C101.02 25.4898 97.6753 22.146 97.9958 18.1259C98.2478 14.9625 100.811 12.3998 103.975 12.1476C107.996 11.8276 111.341 15.1712 111.02 19.1911C110.768 22.3546 108.205 24.9172 105.041 25.1694Z"
+                    fill="#F65E64" />
+                  <path
+                    d="M152.472 27.942V19.5728H142.331V27.942H139.111V8.62854H142.331V16.5955H152.472V8.62854H155.692V27.942H152.472Z"
+                    fill="#F65E64" />
+                  <path
+                    d="M134.873 24.6774C134.482 25.321 133.92 25.6512 133.264 25.4855C132.643 25.3285 132.227 24.74 132.227 24.0991V14.6239C132.227 10.9221 129.047 8.22632 124.741 8.22632C122.077 8.22632 119.858 9.09965 118.499 10.5039L120.652 12.6562C121.358 11.7526 122.758 11.1635 124.5 11.1635C127.115 11.1635 129.007 12.8132 129.007 15.0261V16.4746C126.029 16.7967 123.937 17.0782 122.689 17.3599C118.825 18.1645 116.531 20.2166 116.531 23.3148C116.531 26.3327 118.946 28.3443 122.649 28.3443C125.265 28.3443 127.397 27.7992 129.087 25.8277C129.45 27.5578 131.14 28.3443 133.273 28.3443C134.714 28.3443 135.981 27.7147 136.867 26.6713L134.873 24.6774ZM129.007 22.2598C127.599 24.1908 125.385 25.358 123.011 25.358C121.119 25.358 119.872 24.5219 119.872 22.9528C119.872 21.6651 120.878 20.7085 122.608 20.2257C123.937 19.8637 126.069 19.7117 129.007 19.3497V22.2598Z"
+                    fill="#F65E64" />
+                  <path
+                    d="M81.8663 15.7485L74.6952 7.78821L72.3033 9.9423L79.7001 18.153L81.8663 15.7485Z"
+                    fill="#038C73" />
+                  <path
+                    d="M81.8664 15.7485L72.2466 26.4264L74.6385 28.5805L84.0307 18.151L81.8664 15.7485Z"
+                    fill="#F65E64" />
+                </g>
+                <defs>
+                  <clipPath id="clip_f">
+                    <rect fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
+          <div class="f-inner-row">
+            <div class="f-inner-row-clm">
+              <div class="f-inner-row-clm-menu">
+                <div class="f-inner-row-clm-menu-item"><a href="#">О банке</a></div>
+                <div class="f-inner-row-clm-menu-item"><a href="#">Партнерам</a></div>
+                <div class="f-inner-row-clm-menu-item"><a href="#">Безопасность</a></div>
+                <div class="f-inner-row-clm-menu-item"><a href="#">Новости</a></div>
+                <div class="f-inner-row-clm-menu-item"><a href="#">Вакансии</a></div>
+                <div class="f-inner-row-clm-menu-item"><a href="#">Офисы и банкоматы</a></div>
+                <div class="f-inner-row-clm-menu-item"><a href="#">Акции и бонусы</a></div>
+                <div class="f-inner-row-clm-menu-item"><a href="#">Реквизиты</a></div>
+                <div class="f-inner-row-clm-menu-item"><a href="#">Раскрытие информации</a></div>
+                <div class="f-inner-row-clm-menu-item"><a href="#">Пресс-центр</a></div>
+              </div>
+              <div class="f-inner-row-clm-subtxt">
+                <a href="#">Карта сайта</a>
+              </div>
+            </div>
+            <div class="f-inner-row-clm">
+              <div class="f-inner-row-clm-valutes">
+                <table>
+                  <tr>
+                    <th></th>
+                    <th>Покупка</th>
+                    <th>Продажа</th>
+                    <th>ЦБ РФ</th>
+                  </tr>
+                  <tr>
+                    <td><span>USD</span></td>
+                    <td><span class="up">63,04</span></td>
+                    <td><span class="up">65,22</span></td>
+                    <td><span>65,22</span></td>
+                  </tr>
+                  <tr>
+                    <td><span>EUR</span></td>
+                    <td><span class="up">68,89</span></td>
+                    <td><span class="down">72,34</span></td>
+                    <td><span>72,34</span></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="f-inner-row-clm-subtxt">
+                Действуют с 10:04 МСК 19.09.2019
+              </div>
+            </div>
+            <div class="f-inner-row-clm">
+              <div class="f-inner-row-clm-contacting">
+                <div class="f-inner-row-clm-contacting-info">
+                  Бесплатно по России
+                </div>
+                <div class="f-inner-row-clm-contacting-phone">
+                  <a href="#">8 800 1000 600</a>
+                </div>
+                <div class="f-inner-row-clm-contacting-callback">
+                  <a href="#">Обратная связь</a>
+                </div>
+              </div>
+              <div class="f-inner-row-clm-care">
+                <img src="media/img/care.png" alt="error">
+              </div>
+            </div>
+          </div>
+          <div class="f-inner-row">
+            <div class="f-inner-row-clm">
+              <div class="f-inner-row-clm-serv-links">
+                <a href="#">Раскрытие информации профессионального участника рынка ценных бумаг</a>
+                <a href="#">Раскрытие информации на&nbsp;странице ООО &laquo;Интерфакс-ЦРКИ&raquo;</a>
+              </div>
+            </div>
+            <div class="f-inner-row-clm">
+              <div class="f-inner-row-clm-serv-links">
+                <a href="#">Список лиц, под контролем либо значительным влиянием которых находится
+                  банк</a>
+                <a href="#">Информация о&nbsp;максимальных процентных ставках по&nbsp;вкладам физических
+                  лиц</a>
+              </div>
+            </div>
+            <div class="f-inner-row-clm">
+              <div class="f-inner-row-clm-owner">
+                <a href="#">
+                  <span>Наш акционер</span>
+                  <img src="media/img/sinara.png" alt="error">
+                </a>
+              </div>
+              <div class="f-inner-row-clm-group">
+                <div class="f-inner-row-clm-group-title">
+                  Банковская группа СКБ-банка:
+                </div>
+                <div class="f-inner-row-clm-group-list">
+                  <div class="f-inner-row-clm-group-list-item"><a href="#">СКБ-банк</a></div>
+                  <div class="f-inner-row-clm-group-list-item"><a href="#">СКБ-финанс</a></div>
+                  <div class="f-inner-row-clm-group-list-item"><a href="#">Газэнергобанк</a></div>
+                  <div class="f-inner-row-clm-group-list-item"><a href="#">SKB LAB</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bot">
+          <div class="f-inner-row">
+            <div class="f-inner-row-clm">
+              <div class="f-inner-row-clm-license">
+                &copy;&nbsp;СКБ-банк, 2019 Генеральная лицензия &#8470;&nbsp;705 Центрального банка
+                Российской Федерации
+              </div>
+            </div>
+            <div class="f-inner-row-clm">
+              <div class="f-inner-row-clm-socials-list">
+                <div class="f-inner-row-clm-socials-list-item">
+                  <a href="#">
+                    <img src="media/img/fb.svg" alt="error">
+                  </a>
+                </div>
+                <div class="f-inner-row-clm-socials-list-item">
+                  <a href="#">
+                    <img src="media/img/vk.svg" alt="error">
+                  </a>
+                </div>
+                <div class="f-inner-row-clm-socials-list-item">
+                  <a href="#">
+                    <img src="media/img/inst.svg" alt="error">
+                  </a>
+                </div>
+                <div class="f-inner-row-clm-socials-list-item">
+                  <a href="#">
+                    <img src="media/img/ok.svg" alt="error">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="f-inner-row-clm">
+              <div class="ui-app-list">
+                <div class="ui-app-list-item">
+                  <a href="#">
+                    <img class="default" src="media/img/app_store_footer.svg" alt="error">
+                    <img class="hover" src="media/img/app_store_footer_hover.svg" alt="error">
+                  </a>
+                </div>
+                <div class="ui-app-list-item">
+                  <a href="#">
+                    <img class="default" src="media/img/google_play_footer.svg" alt="error">
+                    <img class="hover" src="media/img/google_play_footer_hover.svg" alt="error">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="src/extensions/jquery.js"></script>
+    <script src="src/extensions/jquery-ui.js"></script>
+    <script src="src/extensions/jquery-ui-touch.js"></script>
+    <script src="src/extensions/slick.min.js"></script>
+    <script src="src/ui-manager.js"></script>
+    <script src="src/sliders.js"></script>
+    <script src="src/events.js"></script>
+  </div>
+</body>
+
+</html>

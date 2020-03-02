@@ -1240,6 +1240,12 @@ body .wrapper .promo.pay-page .promo-static-info {
 body .wrapper .promo.pay-page .promo-static-info-txt {
   max-width: 610px;
 }
+body .wrapper .promo.pay-page.google-pay .promo-static-info {
+  padding-bottom: 75px;
+}
+body .wrapper .promo.pay-page.google-pay .promo-static-info-txt {
+  max-width: 540px;
+}
 body .wrapper .promo.inner-page .promo-static {
   background: #f2f2f2;
 }
@@ -1670,6 +1676,7 @@ body .wrapper main .m-inner .credit-body-result-content-block-item:first-child {
 body .wrapper main .m-inner .credit-body-result-content-block-item-val {
   font: 800 42px/1 'Gilroy', sans-serif;
   color: #262626;
+  white-space: nowrap;
 }
 body .wrapper main .m-inner .credit-body-result-content-block-item-prop {
   font: 15px/28px 'Gilroy', sans-serif;
@@ -2122,6 +2129,14 @@ body .wrapper main .m-inner .advantages.pay-page .advantages-block-item-txt a {
 }
 body .wrapper main .m-inner .advantages.pay-page .advantages-block-item-txt a:hover {
   text-decoration: none;
+}
+body .wrapper main .m-inner .advantages.pay-page.google-pay {
+  margin-top: 100px;
+}
+body .wrapper main .m-inner .advantages.pay-page.google-pay .ui-tip {
+  display: inline-block;
+  margin-left: 5px;
+  margin-bottom: -3px;
 }
 body .wrapper main .m-inner .advantages-block {
   margin-top: 40px;
@@ -3398,6 +3413,9 @@ body .wrapper main .m-inner .deposits-steps.pay-page .deposits-steps-block-item-
   font-size: 18px;
   line-height: 22px;
 }
+body .wrapper main .m-inner .deposits-steps.pay-page.google-pay .deposits-steps-promo {
+  max-width: 250px;
+}
 body .wrapper main .m-inner .deposits-steps-promo {
   max-width: 210px;
 }
@@ -4464,6 +4482,9 @@ body .wrapper main .m-inner .tariffs.collection-page {
 body .wrapper main .m-inner .tariffs.pay .tariffs-content-list {
   max-width: 820px;
 }
+body .wrapper main .m-inner .tariffs.google-pay .tariffs-content-list {
+  max-width: 820px;
+}
 body .wrapper main .m-inner .systems {
   padding: 75px 0 60px 0;
 }
@@ -4711,6 +4732,130 @@ body .wrapper main .m-inner .pay-advantages-content-icons svg {
 }
 body .wrapper main .m-inner .pay-advantages-content-icons svg:first-child {
   margin-left: 0;
+}
+body .wrapper main .m-inner .info-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 60px 120px 0 165px;
+  background: #f2f2f2;
+  border-radius: 10px;
+}
+body .wrapper main .m-inner .info-block-image {
+  width: 300px;
+  background: #ccc;
+}
+body .wrapper main .m-inner .info-block-content {
+  max-width: 700px;
+  margin-bottom: 60px;
+}
+body .wrapper main .m-inner .info-block-content-desc {
+  margin-top: 25px;
+  font: 500 20px/1.5 'Gilroy', sans-serif;
+}
+body .wrapper main .m-inner .info-block-content-text {
+  margin-top: 20px;
+}
+body .wrapper main .m-inner .info-block-content-text p {
+  margin-top: 20px;
+  margin-bottom: 0;
+  font: 18px/1.5 'Gilroy', sans-serif;
+}
+body .wrapper main .m-inner .info-block-content-text p:first-child {
+  margin-top: 0;
+}
+body .wrapper main .m-inner .participation {
+  padding: 40px 0 110px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+body .wrapper main .m-inner .participation ul {
+  max-width: 680px;
+}
+body .wrapper main .m-inner .footnotes {
+  margin-top: 100px;
+}
+body .wrapper main .m-inner .footnotes-item {
+  margin-top: 10px;
+  font: 12px/1.2 'Gilroy', sans-serif;
+  color: #858f9a;
+}
+body .wrapper main .m-inner .footnotes-item:first-child {
+  margin-top: 0;
+}
+body .wrapper main .m-inner .footnotes-item a {
+  text-decoration: underline;
+  color: inherit;
+}
+body .wrapper main .m-inner .history {
+  padding: 35px 0 140px 0;
+}
+body .wrapper main .m-inner .history-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+body .wrapper main .m-inner .history-content:last-child .history-content-txt {
+  padding-bottom: 0;
+}
+body .wrapper main .m-inner .history-content-year {
+  min-width: 50px;
+  font: 700 22px/1.3 'Gilroy', sans-serif;
+  color: #038c73;
+}
+body .wrapper main .m-inner .history-content-circle {
+  position: relative;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  margin-left: 20px;
+  margin-right: -14px;
+  background: #038c73;
+  border-radius: 50%;
+}
+body .wrapper main .m-inner .history-content-circle::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+body .wrapper main .m-inner .history-content-txt {
+  position: relative;
+  padding-left: 55px;
+  padding-bottom: 55px;
+  max-width: 1060px;
+}
+body .wrapper main .m-inner .history-content-txt:before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #ededed;
+  z-index: -1;
+}
+body .wrapper main .m-inner .history-content-txt p {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+body .wrapper main .m-inner .history-content-txt p:last-child {
+  margin-bottom: 0;
 }
 body .wrapper footer .f-inner {
   max-width: 1480px;
