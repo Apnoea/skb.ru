@@ -303,9 +303,9 @@ body {
         display: flex;
         flex-wrap: wrap;
         &-item {
-          margin-left: 15px;
-          &:first-child {
-            margin-left: 0;
+          margin-right: 15px;
+          &:last-child {
+            margin-right: 0;
           }
           &.active,
           &:hover {
@@ -1040,6 +1040,28 @@ body {
                 }
               }
             }
+            &-lk {
+              font: 10px/1.2 @font;
+              a {
+                text-transform: uppercase;
+                font: inherit;
+                color: @red;
+              }
+            }
+            &-mb {
+              margin-left: 15px;
+              cursor: pointer;
+              span {
+                display: block;
+                width: 18px;
+                margin-top: 4px;
+                border: 1px solid #262626;
+                border-radius: 15px;
+                &:first-child {
+                  margin-top: 0;
+                }
+              }
+            }
             &-search {
               margin-left: 25px;
               &-toggle {
@@ -1291,7 +1313,6 @@ body {
           &-item {
             position: relative;
             overflow: hidden;
-            margin: 0 10px;
             border-radius: 10px;
             &-img {
               background: @gray-promo-bg;
@@ -1432,7 +1453,6 @@ body {
                 display: flex;
                 flex-direction: column;
                 height: 370px;
-                margin: 0 10px;
                 padding: 55px 105px 50px 60px;
                 background: @gray-bg url(../media/img/offers_slide_bg.svg) 100% 100% no-repeat;
                 background-size: contain;
@@ -1667,17 +1687,17 @@ body {
             &-block {
               &-item {
                 position: relative;
+                background: @gray-promo-bg;
+                border-radius: 10px;
                 &-img {
+                  position: absolute;
+                  right: 65px;
+                  bottom: 0;
                   img {
                     max-width: 100%;
                   }
                 }
                 &-content {
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  right: 0;
-                  bottom: 0;
                   padding: 50px 50px 50px 150px;
                   display: flex;
                   align-items: flex-start;
@@ -2006,6 +2026,14 @@ body {
           }
           .tags {
             margin-top: 25px;
+            &-block {
+              &-item {
+                a {
+                  line-height: 41px;
+                  border: 2px solid @green;
+                }
+              }
+            }
           }
         }
         .advantages {
@@ -4688,6 +4716,23 @@ body {
                 color: @gray-txt-2;
                 &:hover {
                   text-decoration: underline;
+                }
+              }
+              .safety {
+                position: relative;
+                margin-right: 20px;
+                padding-left: 25px;
+                color: @red;
+                &:before {
+                  content: '';
+                  position: absolute;
+                  left: 0;
+                  top: 50%;
+                  width: 18px;
+                  height: 22px;
+                  transform: translateY(-50%);
+                  background: url(../media/img/icon_safety.svg) no-repeat;
+                  background-size: contain;
                 }
               }
             }
