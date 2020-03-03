@@ -4785,6 +4785,45 @@ body {
             }
           }
         }
+        .clients {
+          padding: 40px 0 110px 0;
+          &-content {
+            display: flex;
+            justify-content: space-between;
+            ul {
+              max-width: 680px;
+            }
+          }
+          span {
+            font: 300 18px/26px @font;
+            display: block;
+            margin-top: 60px;
+            strong {
+              font-weight: 700;
+            }
+          }
+        }
+        .introduction {
+          padding: 40px 0 280px 0;
+          &-item {
+            margin-bottom: 20px;
+            display: flex;
+            &:last-child {
+              margin-bottom: 0;
+            }
+            .date {
+              min-width: 100px;
+              font: 500 18px/28px @font;
+              color: @green;
+            }
+            .branch {
+              p {
+                font-size: 18px;
+                line-height: 28px;
+              }
+            }
+          }
+        }
       }
     }
     footer {

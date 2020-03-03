@@ -104,6 +104,9 @@
   body .wrapper main .m-inner .participation ul {
     max-width: 580px;
   }
+  body .wrapper main .m-inner .clients-content ul {
+    max-width: 580px;
+  }
   body .wrapper footer .f-inner {
     max-width: 1220px;
   }
@@ -252,6 +255,9 @@
   body .wrapper main .m-inner .participation ul:first-child {
     padding-top: 0;
   }
+  body .wrapper main .m-inner .clients-content ul {
+    max-width: 480px;
+  }
   body .wrapper footer .f-inner {
     max-width: 960px;
   }
@@ -360,6 +366,16 @@
   body .wrapper main .m-inner .share-slider-block-item-content-txt-desc {
     font-size: 18px;
   }
+  body .wrapper main .m-inner .clients-content {
+    display: block;
+  }
+  body .wrapper main .m-inner .clients-content ul {
+    max-width: 100%;
+    padding-top: 22px;
+  }
+  body .wrapper main .m-inner .clients-content ul:first-child {
+    padding-top: 0;
+  }
   body .wrapper footer .f-inner {
     max-width: 740px;
   }
@@ -408,6 +424,38 @@
   }
   body .wrapper main .m-inner .history-content-txt p {
     font-size: 16px;
+  }
+  body .wrapper main .m-inner .clients {
+    padding: 20px 0 60px 0;
+  }
+  body .wrapper main .m-inner .clients-content ul {
+    padding-top: 18px;
+  }
+  body .wrapper main .m-inner .clients-content ul.list.big li {
+    font-size: 16px;
+    margin-top: 18px;
+    line-height: 22px;
+  }
+  body .wrapper main .m-inner .clients-content ul.list.big li:first-child {
+    margin-top: 0;
+  }
+  body .wrapper main .m-inner .clients-content ul.list.big.imp li::before {
+    width: 6px;
+    height: 6px;
+  }
+  body .wrapper main .m-inner .clients span {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+  body .wrapper main .m-inner .introduction {
+    padding: 30px 0 140px 0;
+  }
+  body .wrapper main .m-inner .introduction-item .date {
+    font-size: 16px;
+  }
+  body .wrapper main .m-inner .introduction-item .branch p {
+    font-size: 16px;
+    line-height: 20px;
   }
   body .wrapper footer .f-inner {
     max-width: 100%;

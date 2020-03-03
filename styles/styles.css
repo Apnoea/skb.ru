@@ -4909,6 +4909,49 @@ body .wrapper main .m-inner .history-content-txt p {
 body .wrapper main .m-inner .history-content-txt p:last-child {
   margin-bottom: 0;
 }
+body .wrapper main .m-inner .clients {
+  padding: 40px 0 110px 0;
+}
+body .wrapper main .m-inner .clients-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+body .wrapper main .m-inner .clients-content ul {
+  max-width: 680px;
+}
+body .wrapper main .m-inner .clients span {
+  font: 300 18px/26px 'Gilroy', sans-serif;
+  display: block;
+  margin-top: 60px;
+}
+body .wrapper main .m-inner .clients span strong {
+  font-weight: 700;
+}
+body .wrapper main .m-inner .introduction {
+  padding: 40px 0 280px 0;
+}
+body .wrapper main .m-inner .introduction-item {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+body .wrapper main .m-inner .introduction-item:last-child {
+  margin-bottom: 0;
+}
+body .wrapper main .m-inner .introduction-item .date {
+  min-width: 100px;
+  font: 500 18px/28px 'Gilroy', sans-serif;
+  color: #038c73;
+}
+body .wrapper main .m-inner .introduction-item .branch p {
+  font-size: 18px;
+  line-height: 28px;
+}
 body .wrapper footer .f-inner {
   max-width: 1480px;
   margin: 0 auto;
