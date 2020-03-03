@@ -45,7 +45,15 @@ $(() => {
         zIndex: 5,
         // autoplay: true,
         autoplaySpeed: 8000,
-        appendArrows: offersSliderArrows
+        appendArrows: offersSliderArrows,
+        responsive: [
+            {
+                breakpoint: 759,
+                settings: {
+                    variableWidth: true
+                }
+            },
+        ]
     });
 
     shareSlider.slick({
