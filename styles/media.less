@@ -410,7 +410,7 @@
 
                             &.three_items {
                                 text-align: left;
-                                
+
                                 .advantages-block-item {
                                     margin-top: 0;
                                 
@@ -630,6 +630,19 @@
                                         justify-content: center;
                                     }
                                 }
+                            }
+                        }
+                    }
+
+                    &-row {
+                        &:nth-child(3) {
+                            margin-top: -100px;
+                            margin-left: 55%;
+                        }
+
+                        &-clm {
+                            &-care {
+                                margin-top: 0;
                             }
                         }
                     }
@@ -981,6 +994,75 @@
             footer {
                 .f-inner {
                     max-width: 740px;
+
+                    .top {
+                        .f-inner {
+                            &-row {
+                                &-clm {
+                                    &:last-child {
+                                        margin-top: 0;
+                                    }
+
+                                    &-menu {
+                                        margin-bottom: 0;
+
+                                        &-item {
+                                            width: ~'calc((100% - 60px)/4)';
+                                        }
+                                    }
+
+                                    &-valutes {
+                                        table {
+                                            tr {
+                                                td {
+                                                    span {
+                                                        font-size: 16px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &-contacting {
+                                        &-phone {
+                                            a {
+                                                font-size: 24px;
+                                            }
+                                        }
+                                    }
+
+                                    &-care {
+                                        margin-top: 15px;
+                                    }
+                                }
+
+                                &:nth-child(2) {
+                                    border-bottom: 0;
+                                    
+                                    .f-inner-row-clm {
+                                        &:first-child {
+                                            width: 100%;
+                                            margin-bottom: 25px;
+                                            padding-bottom: 25px;
+                                            border-bottom: 1px solid @gray-br-2;
+                                        }
+
+                                        &:last-child {
+                                            flex-direction: column;
+                                            justify-content: flex-start;
+                                            margin-top: 0;
+                                        }
+                                    }
+                                }
+
+                                &:nth-child(3) {
+                                    margin: 0;
+                                    padding: 0 0 25px;
+                                    border-bottom: 1px solid @gray-br-2;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
