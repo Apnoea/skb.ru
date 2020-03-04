@@ -998,6 +998,26 @@
   body .wrapper main .m-inner .helping-contacts {
     padding: 30px 10px 65px;
   }
+  body .wrapper main .m-inner .verifying {
+    padding: 40px 0 200px 0;
+  }
+  body .wrapper main .m-inner .verifying .questions-tabs-list-item-toggle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  body .wrapper main .m-inner .verifying .questions-tabs-list-item-toggle::after {
+    width: 15px;
+    height: 14px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  body .wrapper main .m-inner .verifying .questions-tabs-list-item-drop {
+    padding: 15px;
+    font-size: 14px;
+  }
+  body .wrapper main .m-inner .verifying .docs-list-item a {
+    font-size: 16px;
+  }
   body .wrapper .promo-slider-block-item {
     padding: 50px 150px 80px 25px;
     border-radius: 0;
