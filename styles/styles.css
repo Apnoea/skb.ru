@@ -4966,6 +4966,36 @@ body .wrapper main .m-inner .introduction-item .branch p {
   font-size: 18px;
   line-height: 28px;
 }
+body .wrapper main .m-inner .verifying {
+  padding: 40px 0 400px 0;
+}
+body .wrapper main .m-inner .verifying .questions-tabs-list {
+  background-color: transparent;
+  margin-top: 0;
+}
+body .wrapper main .m-inner .verifying .questions-tabs-list-item:first-child {
+  border-color: #e0dfdf;
+}
+body .wrapper main .m-inner .verifying .questions-tabs-list-item:last-child {
+  border-bottom: 1px solid #e0dfdf;
+}
+body .wrapper main .m-inner .verifying .questions-tabs-list-item-toggle {
+  position: relative;
+  padding: 10px 40px 10px 0;
+  font: 300 18px/50px 'Gilroy', sans-serif;
+  color: #767474;
+}
+body .wrapper main .m-inner .verifying .questions-tabs-list-item-toggle::after {
+  position: absolute;
+  right: 20px;
+  top: 45%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-size: contain;
+}
+body .wrapper main .m-inner .verifying .docs-list {
+  margin-top: 30px;
+}
 body .wrapper footer .f-inner {
   max-width: 1480px;
   margin: 0 auto;
