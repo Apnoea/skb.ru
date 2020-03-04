@@ -233,6 +233,9 @@ body {
         }
       }
     }
+    .mobile-content { 
+      display: none;
+    }
     .logo {
       a {
         display: block;
@@ -1973,9 +1976,16 @@ body {
               left: 170px;
               bottom: 0;
               width: 530px;
+              &-main {
+                z-index: 2;
+              }
+              &-green {
+                position: relative;
+                z-index: 1;
+              }
               &-tip {
                 position: absolute;
-                z-index: 1;
+                z-index: 3;
                 padding: 14px 17px;
                 display: flex;
                 align-items: center;
@@ -2108,14 +2118,6 @@ body {
               }
             }
           }
-          &.safe-page {
-            .advantages-block {
-              padding: 50px 160px 55px 130px;
-              &-item {
-                width: ~'calc((100% - 255px)/3)';
-              }
-            }
-          }
           &.collection-page {
             .advantages-block {
               margin-top: 0;
@@ -2186,6 +2188,12 @@ body {
                 margin-top: 16px;
                 font: 300 18px/21px @font;
                 color: @black;
+              }
+            }
+            &.three_items {
+              padding: 50px 160px 55px 130px;
+              .advantages-block-item{
+                width: ~'calc((100% - 255px)/3)';
               }
             }
           }
