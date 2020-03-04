@@ -62,7 +62,16 @@ $(() => {
         zIndex: 5,
         // autoplay: true,
         autoplaySpeed: 8000,
-        appendDots: shareSliderDots
+        appendDots: shareSliderDots,
+        responsive: [
+            {
+                breakpoint: 759,
+                settings: {
+                    dots: false,
+                    variableWidth: true
+                }
+            },
+        ]
     });
 
     tabs.each(function () {
