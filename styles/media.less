@@ -324,7 +324,6 @@
               }
               &-info {
                 padding: 70px 0 0 50px;
-
                 &-txt {
                   max-width: 440px;
                   margin-top: 20px;
@@ -347,17 +346,14 @@
                 &:nth-child(-n + 2) {
                   margin-top: 0;
                 }
-
                 &-img {
                   margin: 0 auto;
                 }
               }
               &.three_items {
                 text-align: left;
-
                 .advantages-block-item {
                   margin-top: 0;
-
                   &-img {
                     margin: 0;
                   }
@@ -535,6 +531,17 @@
                     justify-content: center;
                   }
                 }
+              }
+            }
+          }
+          &-row {
+            &:nth-child(3) {
+              margin-top: -100px;
+              margin-left: 55%;
+            }
+            &-clm {
+              &-care {
+                margin-top: 0;
               }
             }
           }
@@ -755,7 +762,6 @@
               &::-webkit-scrollbar {
                 display: none;
               }
-
               &-item {
                 flex-shrink: 0;
                 width: 300px;
@@ -827,6 +833,65 @@
       footer {
         .f-inner {
           max-width: 740px;
+          .top {
+            .f-inner {
+              &-row {
+                &-clm {
+                  &:last-child {
+                    margin-top: 0;
+                  }
+                  &-menu {
+                    margin-bottom: 0;
+                    &-item {
+                      width: ~'calc((100% - 60px)/4)';
+                    }
+                  }
+                  &-valutes {
+                    table {
+                      tr {
+                        td {
+                          span {
+                            font-size: 16px;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  &-contacting {
+                    &-phone {
+                      a {
+                        font-size: 24px;
+                      }
+                    }
+                  }
+                  &-care {
+                    margin-top: 15px;
+                  }
+                }
+                &:nth-child(2) {
+                  border-bottom: 0;
+                  .f-inner-row-clm {
+                    &:first-child {
+                      width: 100%;
+                      margin-bottom: 25px;
+                      padding-bottom: 25px;
+                      border-bottom: 1px solid @gray-br-2;
+                    }
+                    &:last-child {
+                      flex-direction: column;
+                      justify-content: flex-start;
+                      margin-top: 0;
+                    }
+                  }
+                }
+                &:nth-child(3) {
+                  margin: 0;
+                  padding: 0 0 25px;
+                  border-bottom: 1px solid @gray-br-2;
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -1250,33 +1315,6 @@
           .helping-contacts {
             padding: 30px 10px 65px;
           }
-          .verifying {
-            padding: 40px 0 200px 0;
-            .questions-tabs-list {
-              &-item {
-                &-toggle {
-                  font-size: 16px;
-                  line-height: 24px;
-                  &::after {
-                    width: 15px;
-                    height: 14px;
-                    flex-shrink: 0;
-                  }
-                }
-                &-drop {
-                  padding: 15px;
-                  font-size: 14px;
-                }
-              }
-            }
-            .docs-list {
-              &-item {
-                a {
-                  font-size: 16px;
-                }
-              }
-            }
-          }
         }
       }
       .promo {
@@ -1324,11 +1362,9 @@
             }
           }
         }
-
         &-static {
           min-height: 310px;
           border-radius: 0;
-
           &-info {
             padding: 30px 25px 0;
             &-txt {
@@ -1368,7 +1404,6 @@
       footer {
         .f-inner {
           max-width: 100%;
-          padding: 0 15px;
         }
       }
       .tags {
