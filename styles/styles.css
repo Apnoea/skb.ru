@@ -1157,6 +1157,9 @@ body .wrapper .promo.biometric-page .promo-static-info-txt {
 body .wrapper .promo.biometric-page .promo-static-info .ui-btn {
   margin-top: 60px;
 }
+body .wrapper .promo.online-page .promo-static-img img {
+  max-height: 100%;
+}
 body .wrapper .promo.online-page .promo-static-info h1 {
   font-size: 54px;
   line-height: 60px;
@@ -2264,6 +2267,9 @@ body .wrapper main .m-inner .steps-advantages.collection-page {
   background-color: #f2f2f2;
   border-radius: 10px;
   overflow: hidden;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 body .wrapper main .m-inner .steps-advantages.collection-page .steps-advantages-img {
   max-width: 635px;
@@ -2341,6 +2347,8 @@ body .wrapper main .m-inner .helping-contacts.international-calcs .helping-conta
 body .wrapper main .m-inner .helping-contacts-img {
   width: 72px;
   height: 53px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 body .wrapper main .m-inner .helping-contacts-img svg {
   max-width: 100%;
@@ -2942,6 +2950,7 @@ body .wrapper main .m-inner .sub-banners-list-item {
   width: 31.5%;
   background: #f2f2f2;
   border-radius: 10px;
+  overflow: hidden;
 }
 body .wrapper main .m-inner .sub-banners-list-item.big {
   width: calc(68.5% - 40px);
@@ -2956,6 +2965,7 @@ body .wrapper main .m-inner .sub-banners-list-item-img {
   position: absolute;
   bottom: 0;
   right: 0;
+  pointer-events: none;
 }
 body .wrapper main .m-inner .sub-banners-list-item-img img {
   pointer-events: none;
@@ -2999,20 +3009,13 @@ body .wrapper main .m-inner .online-advantages {
           justify-content: space-between;
 }
 body .wrapper main .m-inner .online-advantages-img {
-  position: relative;
-  min-height: 620px;
+  width: calc(58% - 40px);
 }
 body .wrapper main .m-inner .online-advantages-img img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  pointer-events: none;
-  -webkit-transform: translateX(140px);
-          transform: translateX(140px);
+  max-width: 100%;
 }
 body .wrapper main .m-inner .online-advantages-content {
-  padding-top: 60px;
-  max-width: 620px;
+  width: 42%;
 }
 body .wrapper main .m-inner .online-advantages-content span {
   margin-top: 30px;

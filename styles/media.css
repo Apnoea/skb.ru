@@ -21,6 +21,9 @@
   body .wrapper .promo.biometric-page .promo-static-img {
     padding-right: 60px;
   }
+  body .wrapper .promo.online-page .promo-static-img {
+    right: -120px;
+  }
 }
 @media (max-width: 1499px) {
   body .wrapper h1 {
@@ -100,17 +103,31 @@
   body .wrapper main .m-inner .offers-static {
     width: calc(45% - 60px);
   }
+  body .wrapper main .m-inner .sub-banners.online-page .sub-banners-list-item-img {
+    right: -70px;
+  }
   body .wrapper main .m-inner .share-slider-block-item-img {
     right: 25px;
   }
   body .wrapper main .m-inner .share-slider-block-item-content {
     padding: 50px;
   }
+  body .wrapper main .m-inner .steps-advantages.collection-page .steps-advantages-info {
+    padding: 60px 80px 70px 60px;
+  }
   body .wrapper .promo-static-info {
     padding: 60px 0 60px 50px;
   }
   body .wrapper .promo.biometric-page .promo-static-info-txt {
     max-width: 560px;
+  }
+  body .wrapper .promo.collection-page .promo-static-img {
+    top: auto;
+    right: -20px;
+    width: 600px;
+  }
+  body .wrapper .promo.online-page .promo-static-img {
+    right: -280px;
   }
   body .wrapper .promo.safe-page .promo-static-img {
     display: -webkit-box;
@@ -190,6 +207,25 @@
   body .wrapper .promo.biometric-page .promo-static-info-txt {
     max-width: 480px;
   }
+  body .wrapper .promo.collection-page .promo-static-img {
+    right: -60px;
+    width: 500px;
+  }
+  body .wrapper .promo.collection-page .promo-static-info h1 {
+    max-width: 500px;
+  }
+  body .wrapper .promo.collection-page .promo-static-info-txt {
+    max-width: 450px;
+    margin-top: 20px;
+  }
+  body .wrapper .promo.online-page .promo-static-info h1 {
+    max-width: 530px;
+    font-size: 30px;
+    line-height: 1.3;
+  }
+  body .wrapper .promo.online-page .promo-static-info-txt {
+    max-width: 500px;
+  }
   body .wrapper .promo.safe-page .promo-static-img img {
     width: 470px;
   }
@@ -226,6 +262,17 @@
   }
   body .wrapper main .m-inner .advantages-block.three_items .advantages-block-item-img {
     margin: 0;
+  }
+  body .wrapper main .m-inner .advantages.collection-page .advantages-block {
+    padding: 40px 0 0;
+    text-align: left;
+  }
+  body .wrapper main .m-inner .advantages.collection-page .advantages-block ul.list {
+    max-width: none;
+    margin-top: 22px;
+  }
+  body .wrapper main .m-inner .advantages.collection-page .advantages-block ul.list:first-child {
+    margin-top: 0;
   }
   body .wrapper main .m-inner .banners-promo {
     padding: 40px;
@@ -333,6 +380,45 @@
   body .wrapper main .m-inner .steps-advantages-content {
     width: 65%;
   }
+  body .wrapper main .m-inner .steps-advantages.collection-page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 50px 60px 0;
+  }
+  body .wrapper main .m-inner .steps-advantages.collection-page .steps-advantages-img {
+    width: 360px;
+    margin: 0 auto;
+  }
+  body .wrapper main .m-inner .steps-advantages.collection-page .steps-advantages-info {
+    width: 100%;
+    margin: 0 0 40px;
+    padding: 0;
+  }
+  body .wrapper main .m-inner .steps-advantages.collection-page .steps-advantages-info-txt,
+  body .wrapper main .m-inner .steps-advantages.collection-page .steps-advantages-info h2 {
+    max-width: none;
+  }
+  body .wrapper main .m-inner .sub-banners-list {
+    display: block;
+  }
+  body .wrapper main .m-inner .sub-banners-list-item {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  body .wrapper main .m-inner .sub-banners-list-item:last-child {
+    margin-bottom: 0;
+  }
+  body .wrapper main .m-inner .sub-banners-list-item.big {
+    width: 100%;
+  }
+  body .wrapper main .m-inner .sub-banners.online-page .sub-banners-list-item-img {
+    right: 0;
+  }
   body .wrapper footer .f-inner {
     max-width: 960px;
   }
@@ -401,6 +487,14 @@
   body .wrapper ul.list li {
     font-size: 14px;
   }
+  body .wrapper ul.list.big li {
+    margin-top: 18px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  body .wrapper ul.list.big li:first-child {
+    margin-top: 0;
+  }
   body .wrapper header .h-inner .top-helpers-phone,
   body .wrapper header .h-inner .top-helpers-terminals,
   body .wrapper header .h-inner .top-helpers-geo {
@@ -442,6 +536,25 @@
   body .wrapper .promo.biometric-page .promo-static-info-txt {
     max-width: 380px;
   }
+  body .wrapper .promo.collection-page .promo-static-img {
+    width: 420px;
+  }
+  body .wrapper .promo.collection-page .promo-static-info h1 {
+    max-width: 400px;
+  }
+  body .wrapper .promo.collection-page .promo-static-info-txt {
+    max-width: 400px;
+  }
+  body .wrapper .promo.online-page .promo-static-img {
+    right: -380px;
+  }
+  body .wrapper .promo.online-page .promo-static-info h1 {
+    max-width: 400px;
+    font-size: 26px;
+  }
+  body .wrapper .promo.online-page .promo-static-info-txt {
+    max-width: 350px;
+  }
   body .wrapper .promo.safe-page .promo-static-img img {
     width: 400px;
   }
@@ -465,6 +578,12 @@
   }
   body .wrapper main .m-inner .advantages-block.three_items .advantages-block-item {
     width: calc((100% - 70px)/3);
+  }
+  body .wrapper main .m-inner .advantages.collection-page .advantages-block {
+    padding: 30px 0 0;
+  }
+  body .wrapper main .m-inner .advantages.collection-page .advantages-block ul.list {
+    margin-top: 18px;
   }
   body .wrapper main .m-inner .banners-promo {
     height: 265px;
@@ -531,6 +650,11 @@
   body .wrapper main .m-inner .credit-body-result {
     padding: 20px;
   }
+  body .wrapper main .m-inner .functions {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   body .wrapper main .m-inner .news-block {
     max-width: 100vw;
     overflow-x: scroll;
@@ -563,6 +687,12 @@
   body .wrapper main .m-inner .offers-slider-block-item-list-item:first-child {
     margin-top: 0;
   }
+  body .wrapper main .m-inner .online-advantages-content {
+    width: 100%;
+  }
+  body .wrapper main .m-inner .online-advantages-img {
+    display: none;
+  }
   body .wrapper main .m-inner .share-slider-block-item-img {
     right: -220px;
   }
@@ -573,17 +703,49 @@
     font-size: 18px;
   }
   body .wrapper main .m-inner .steps-advantages {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 40px 0 20px 0;
   }
   body .wrapper main .m-inner .steps-advantages-img {
-    display: none;
+    width: 85%;
+    margin-bottom: 40px;
   }
   body .wrapper main .m-inner .steps-advantages-content {
     width: 100%;
     padding-left: 0;
   }
+  body .wrapper main .m-inner .steps-advantages-content h2 {
+    margin-bottom: 25px;
+  }
+  body .wrapper main .m-inner .steps-advantages.safe-page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
   body .wrapper main .m-inner .steps-advantages.safe-page .steps-advantages-content {
     padding-right: 0;
+  }
+  body .wrapper main .m-inner .steps-advantages.safe-page .steps-advantages-content-block-item {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  body .wrapper main .m-inner .steps-advantages.safe-page .steps-advantages-content span {
+    margin-top: 30px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  body .wrapper main .m-inner .sub-banners-list-item-content {
+    padding: 25px;
+  }
+  body .wrapper main .m-inner .sub-banners.online-page .sub-banners-list-item:nth-child(1) .sub-banners-list-item-img {
+    right: -150px;
   }
   body .wrapper footer .f-inner {
     max-width: 740px;
@@ -733,10 +895,10 @@
   }
   body .wrapper main .m-inner {
     max-width: 100%;
-    padding: 25px 15px;
+    padding: 25px 10px;
   }
   body .wrapper main .m-inner .advantages {
-    padding: 35px 10px 30px;
+    padding: 35px 0 30px;
   }
   body .wrapper main .m-inner .advantages-block {
     display: block;
@@ -990,13 +1152,51 @@
     line-height: 18px;
   }
   body .wrapper main .m-inner .steps-advantages {
-    padding: 25px 10px 30px;
+    padding: 25px 0 30px;
+  }
+  body .wrapper main .m-inner .steps-advantages-img {
+    width: 95%;
+  }
+  body .wrapper main .m-inner .steps-advantages.collection-page {
+    padding: 30px 20px 0;
+  }
+  body .wrapper main .m-inner .steps-advantages.collection-page .steps-advantages-img {
+    width: 100%;
+    max-width: 300px;
+  }
+  body .wrapper main .m-inner .steps-advantages.collection-page .steps-advantages-info-txt p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 22px;
   }
   body .wrapper main .m-inner .tariffs {
-    padding: 30px 10px;
+    padding: 30px 0;
+  }
+  body .wrapper main .m-inner .tariffs-title h2 {
+    font-size: 16px;
+  }
+  body .wrapper main .m-inner .tariffs.collection-page {
+    padding: 30px 0;
+  }
+  body .wrapper main .m-inner .tabs {
+    padding: 30px 0;
+  }
+  body .wrapper main .m-inner .tabs-headings-list-item button {
+    font-size: 16px;
+    line-height: 36px;
   }
   body .wrapper main .m-inner .helping-contacts {
-    padding: 30px 10px 65px;
+    padding: 30px 0 65px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  body .wrapper main .m-inner .helping-contacts-img {
+    width: 50px;
+  }
+  body .wrapper main .m-inner .helping-contacts-txt {
+    font-size: 14px;
+    line-height: 20px;
   }
   body .wrapper main .m-inner .verifying {
     padding: 40px 0 200px 0;
@@ -1017,6 +1217,18 @@
   }
   body .wrapper main .m-inner .verifying .docs-list-item a {
     font-size: 16px;
+  }
+  body .wrapper .docs-list-item {
+    margin-top: 20px;
+  }
+  body .wrapper .docs-list-item a {
+    min-height: 20px;
+    padding: 0 0 0 30px;
+    font-size: 14px;
+  }
+  body .wrapper .docs-list-item a:before {
+    width: 18px;
+    height: 20px;
   }
   body .wrapper .promo-slider-block-item {
     padding: 50px 150px 80px 25px;
@@ -1056,7 +1268,7 @@
     height: 7px;
   }
   body .wrapper .promo-static {
-    min-height: 310px;
+    min-height: 270px;
     border-radius: 0;
   }
   body .wrapper .promo-static-info {
@@ -1070,10 +1282,33 @@
     padding-right: 10px;
   }
   body .wrapper .promo.biometric-page .promo-static-img img {
-    width: 160px;
+    width: 140px;
+  }
+  body .wrapper .promo.collection-page .promo-static-img {
+    right: -90px;
+    width: 210px;
+  }
+  body .wrapper .promo.collection-page .promo-static-info h1 {
+    max-width: 290px;
+  }
+  body .wrapper .promo.collection-page .promo-static-info-txt {
+    max-width: 210px;
+  }
+  body .wrapper .promo.online-page .promo-static-img {
+    right: -320px;
+  }
+  body .wrapper .promo.online-page .promo-static-info h1 {
+    max-width: 230px;
+    font-size: 18px;
+  }
+  body .wrapper .promo.online-page .promo-static-info-txt {
+    max-width: 190px;
+  }
+  body .wrapper .promo.online-page .promo-static-info .ui-btn {
+    margin-top: 40px;
   }
   body .wrapper .promo.safe-page .promo-static-img img {
-    width: 260px;
+    width: 200px;
   }
   body .wrapper .promo.safe-page .promo-static-info {
     padding: 30px 25px 0;
