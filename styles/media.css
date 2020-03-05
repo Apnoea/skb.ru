@@ -419,6 +419,9 @@
   body .wrapper main .m-inner .sub-banners.online-page .sub-banners-list-item-img {
     right: 0;
   }
+  body .wrapper main .m-inner .supervision-content p span {
+    display: inline-block;
+  }
   body .wrapper footer .f-inner {
     max-width: 960px;
   }
@@ -746,6 +749,12 @@
   }
   body .wrapper main .m-inner .sub-banners.online-page .sub-banners-list-item:nth-child(1) .sub-banners-list-item-img {
     right: -150px;
+  }
+  body .wrapper main .m-inner .responsible-content-item .name {
+    padding-right: 25px;
+  }
+  body .wrapper main .m-inner .responsible-content-item .num {
+    padding-right: 25px;
   }
   body .wrapper footer .f-inner {
     max-width: 740px;
@@ -1216,6 +1225,41 @@
     font-size: 14px;
   }
   body .wrapper main .m-inner .verifying .docs-list-item a {
+    font-size: 16px;
+  }
+  body .wrapper main .m-inner .supervision .detail {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  body .wrapper main .m-inner .supervision-content {
+    padding: 30px 0 150px 0;
+  }
+  body .wrapper main .m-inner .supervision-content p {
+    font-size: 16px;
+  }
+  body .wrapper main .m-inner .supervision-content p span {
+    display: inline-block;
+  }
+  body .wrapper main .m-inner .responsible .detail {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  body .wrapper main .m-inner .responsible-content {
+    padding: 20px 0 150px 0;
+  }
+  body .wrapper main .m-inner .responsible-content-item {
+    display: block;
+    padding: 10px 0;
+  }
+  body .wrapper main .m-inner .responsible-content-item .name {
+    padding-right: 0;
+    font-size: 16px;
+  }
+  body .wrapper main .m-inner .responsible-content-item .num {
+    padding-right: 0px;
+    font-size: 16px;
+  }
+  body .wrapper main .m-inner .responsible-content-item .mail {
     font-size: 16px;
   }
   body .wrapper .docs-list-item {

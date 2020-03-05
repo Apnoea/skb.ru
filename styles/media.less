@@ -619,6 +619,15 @@
               right: 0;
             }
           }
+          .supervision {
+            &-content {
+              p {
+                span {
+                  display: inline-block;
+                }
+              }
+            }
+          }
         }
       }
       footer {
@@ -708,8 +717,8 @@
         li {
           font-size: 14px;
         }
-        &.big {       
-          li {   
+        &.big {
+          li {
             margin-top: 18px;
             font-size: 14px;
             line-height: 22px;
@@ -1052,8 +1061,20 @@
             }
             &.online-page .sub-banners-list-item {
               &:nth-child(1) {
-                .sub-banners-list-item-img {                
+                .sub-banners-list-item-img {
                   right: -150px;
+                }
+              }
+            }
+          }
+          .responsible {
+            &-content {
+              &-item {
+                .name {
+                  padding-right: 25px;
+                }
+                .num {
+                  padding-right: 25px;
                 }
               }
             }
@@ -1622,6 +1643,47 @@
               }
             }
           }
+          .supervision {
+            .detail {
+              font-size: 20px;
+              line-height: 26px;
+            }
+
+            &-content {
+              padding: 30px 0 150px 0;
+
+              p {
+                font-size: 16px;
+                span {
+                  display: inline-block;
+                }
+              }
+            }
+          }
+          .responsible {
+            .detail {
+              font-size: 20px;
+              line-height: 26px;
+            }
+            &-content {
+              padding: 20px 0 150px 0;
+              &-item {
+                display: block;
+                padding: 10px 0;
+                .name {
+                  padding-right: 0;
+                  font-size: 16px;
+                }
+                .num {
+                  padding-right: 0px;
+                  font-size: 16px;
+                }
+                .mail {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
         }
       }
       .docs-list {
@@ -1741,7 +1803,7 @@
                 }
               }
             }
-          }          
+          }
         }
         &.safe-page {
           .promo {

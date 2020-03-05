@@ -4999,6 +4999,53 @@ body .wrapper main .m-inner .verifying .questions-tabs-list-item-toggle::after {
 body .wrapper main .m-inner .verifying .docs-list {
   margin-top: 30px;
 }
+body .wrapper main .m-inner .supervision .detail {
+  max-width: 755px;
+}
+body .wrapper main .m-inner .supervision-content {
+  padding: 40px 0 270px 0;
+  max-width: 1000px;
+}
+body .wrapper main .m-inner .supervision-content p {
+  font-size: 18px;
+  line-height: 26px;
+}
+body .wrapper main .m-inner .supervision-content p span {
+  display: block;
+  font-weight: 500;
+}
+body .wrapper main .m-inner .responsible .detail {
+  max-width: 765px;
+}
+body .wrapper main .m-inner .responsible-content {
+  padding: 40px 0 360px 0;
+}
+body .wrapper main .m-inner .responsible-content-item {
+  max-width: 890px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 22px 0;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+}
+body .wrapper main .m-inner .responsible-content-item:first-child {
+  border-bottom: none;
+}
+body .wrapper main .m-inner .responsible-content-item .name {
+  padding-right: 100px;
+  font: bold 18px/28px 'Gilroy', sans-serif;
+  color: #262626;
+}
+body .wrapper main .m-inner .responsible-content-item .num {
+  padding-right: 100px;
+  font: 300 18px/28px 'Gilroy', sans-serif;
+  color: #262626;
+}
+body .wrapper main .m-inner .responsible-content-item .mail {
+  font: 300 18px/28px 'Gilroy', sans-serif;
+  color: #262626;
+}
 body .wrapper footer .f-inner {
   max-width: 1480px;
   margin: 0 auto;

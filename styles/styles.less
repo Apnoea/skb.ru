@@ -1165,7 +1165,7 @@ body {
       &.online-page {
         .promo-static {
           &-img {
-            img {              
+            img {
               max-height: 100%;
             }
           }
@@ -4868,6 +4868,55 @@ body {
           }
           .docs-list {
             margin-top: 30px;
+          }
+        }
+        .supervision {
+          .detail {
+            max-width: 755px;
+          }
+          &-content {
+            padding: 40px 0 270px 0;
+            max-width: 1000px;
+            p {
+              font-size: 18px;
+              line-height: 26px;
+              span {
+                display: block;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+        .responsible {
+          .detail {
+            max-width: 765px;
+          }
+          &-content {
+            padding: 40px 0 360px 0;
+            &-item {
+              max-width: 890px;
+              display: flex;
+              padding: 22px 0;
+              border-top: 1px solid @gray-lt;
+              border-bottom: 1px solid @gray-lt;
+              &:first-child {
+                border-bottom: none;
+              }
+              .name {
+                padding-right: 100px;
+                font: bold 18px/28px @font;
+                color: @black;
+              }
+              .num {
+                padding-right: 100px;
+                font: 300 18px/28px @font;
+                color: @black;
+              }
+              .mail {
+                font: 300 18px/28px @font;
+                color: @black;
+              }
+            }
           }
         }
       }
